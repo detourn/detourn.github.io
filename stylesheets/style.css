@@ -3,14 +3,14 @@ body { background-color: gray;}
 
 p { font-color:#000000; }
 
-#top, #bottom {
+.top, .bottom {
 	background: #000000;
 	position: fixed;
 	}
 		
-	#top, #bottom {
+	.top, .bottom {
 		left: 0; right: 0;
 		height: 8%;
 		}
-		#top { top: 0; }
-		#bottom { bottom: 0; }
+		.top { top: 0; }
+		.bottom { bottom: 0; }
