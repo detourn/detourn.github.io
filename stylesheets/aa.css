@@ -2,3 +2,6 @@ a { text-decoration:none };
 body { background-color: gray;}
 
 p { font-color:#000000; }
+
+.border1 {width:100%; height:16%; color:black;margin-top:0px;}
+.border2 {width:100%; height:16%; color:black;margin-bottom:0px;}
