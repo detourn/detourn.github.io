@@ -1,9 +1,10 @@
 a { text-decoration:none };
-background: rgb(0,0,0),
-background: rgb(204,204,204);
+body { background: rgb(0,0,0),
+background: rgb(204,204,204);}
 .multiplebgs body {
    /* Awesome multiple BG declarations that transcend reality and impress chicks */
 }
 .no-multiplebgs body {
   /* laaaaaame fallback */
 }
+p { font-color:#000000; }
