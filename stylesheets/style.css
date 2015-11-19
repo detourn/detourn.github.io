@@ -10,7 +10,7 @@ p { font-color:#000000; }
 		
 	.top, .bottom {
 		left: 0; right: 0;
-		height: 8%;
+		height: 12%;
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
