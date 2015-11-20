@@ -39,11 +39,11 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
     var map = new Datamap({
         element: document.getElementById('container'),
         fills: {
-            HIGH: '#afafaf',
-            LOW: '#123456',
-            MEDIUM: 'blue',
+            HIGH: 'white',
+            LOW: '#888',
+            MEDIUM: 'gray',
             UNKNOWN: 'rgb(0,0,0)',
-            defaultFill: 'green'
+            defaultFill: 'black'
         },
         data: {
             IRL: {
@@ -54,11 +54,16 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
                 fillKey: 'MEDIUM',
                 numberOfThings: 10381
             }
+        },
+        geographyConfig: {
+            popupTemplate: function(geo, data) {
+                return ['<div class="hoverinfo"><strong>',
+                        'Number of things in ' + geo.properties.name,
+                        ': ' + data.numberOfThings,
+                        '</strong></div>'].join('');
+            }
         }
     });
-
-    //draw a legend for this map
-    map.legend();
 </script>
 
 
