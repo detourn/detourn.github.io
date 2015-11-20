@@ -34,13 +34,13 @@ body { background-color: gray;}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
 		
-#rectangle {
+.rectangle {
 	width: 200px;
 	height: 100px;
 	background: #505456;
 }
 
-#parallelogramb {
+.parallelogramb {
 	width: 200px;
 	height: 20px;
 	-webkit-transform: skew(20deg);
@@ -48,7 +48,7 @@ body { background-color: gray;}
 	     -o-transform: skew(20deg);
 	background: #aca4ac;
 }
-#parallelogramr {
+.parallelogramr {
 	width: 20px;
 	height: 100px;
 	-webkit-transform: skew(20deg);
