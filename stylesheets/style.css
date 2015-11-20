@@ -1,8 +1,9 @@
 a { text-decoration:none };
-body { background-color: gray;}
+body { background-color: #cccccc;}
 
 p { color:#000000;
-    font-family:'Inconsolata', sans-serif;}
+    font-family:'arial, helvetica';
+}
 
 .top, .bottom {
 	background: #000000;
