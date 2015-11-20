@@ -38,21 +38,25 @@ body { background-color: gray;}
 	width: 200px;
 	height: 100px;
 	background: #505456;
+	margin-top:100px;
+	position:fixed;
 }
 
 .parallelogramb {
 	width: 200px;
-	height: 20px;
+	height: 15px;
 	-webkit-transform: skew(20deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(20deg);
 	background: #aca4ac;
+	position:relative;
 }
 .parallelogramr {
-	width: 20px;
+	width: 15px;
 	height: 100px;
-	-webkit-transform: skew(20deg);
-	   -moz-transform: skew(20deg);
-	     -o-transform: skew(20deg);
+	-webkit-transform: skew(0deg);
+	   -moz-transform: skew(0deg);
+	     -o-transform: skew(0deg);
 	background: #6d6c6d;
+	position:relative;
 }
