@@ -55,11 +55,11 @@ body { background-color: gray;}
 .parallelogramr {
 	width: 15px;
 	height: 110px;
-	-webkit-transform: skewY(20deg);
-	   -moz-transform: skewY(20deg);
-	     -o-transform: skewY(20deg);
+	-webkit-transform: skewY(25deg);
+	   -moz-transform: skewY(25deg);
+	     -o-transform: skewY(25deg);
 	background: #6d6c6d;
 	position:fixed;
-	margin-top:52px;
-	margin-left:200px;
+	margin-top:42px;
+	margin-left:25px;
 }
