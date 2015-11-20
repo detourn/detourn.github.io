@@ -60,13 +60,7 @@ var series = [
         element: document.getElementById('container1'),
         projection: 'mercator', // big world map
         // countries don't listed in dataset will be painted with this color
-        fills: {
-            HIGH: 'black',
-            MEDIUM: 'gray',
-            LOW: '#e8e8e8',
-            UNKNOWN: 'white',
-            defaultFill: 'white'
-        },
+        fills: {defaultFill: 'white'},
         data: dataset,
         geographyConfig: {
             borderColor: '#DEDEDE',
