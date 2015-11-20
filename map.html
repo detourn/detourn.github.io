@@ -8,7 +8,7 @@ charset=windows-1252">
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="http://prag.ma/code/d3-cartogram/cartogram.js"></script>
 <script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
 
 <title>unilogue > geography</title>
@@ -34,10 +34,11 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
 
 <font face="arial, helvetica" color="#000000" size="-1" color="#FFFFFF">
 
-<div id="container" style="position: relative; width: 800px; height:300px"></div>
+<div id="container" style="position: relative; width: 70%; height:70%"></div>
 <script>
     var map = new Datamap({
         element: document.getElementById('container'),
+        scope: 'world',
         fills: {
             HIGH: 'black',
             LOW: '#888',
@@ -48,22 +49,24 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
         data: {
             IRL: {
                 fillKey: 'LOW',
-                numberOfThings: 2002
+                percent: 2002
             },
             USA: {
                 fillKey: 'MEDIUM',
-                numberOfThings: 10381
+                percent: 10381
             }
         },
         geographyConfig: {
             popupTemplate: function(geo, data) {
                 return ['<div class="hoverinfo"><strong>',
-                        'Number of things in ' + geo.properties.name,
-                        ': ' + data.numberOfThings,
+                        'Percent of visitors in ' + geo.properties.name,
+                        ': ' + data.percent,
                         '</strong></div>'].join('');
             }
         }
     });
+    //draw a legend for this map
+    map.legend();
 </script>
 
 
