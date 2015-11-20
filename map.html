@@ -87,6 +87,10 @@ PRT: {fillKey: 'LOW', percent: 0.5},
         	highlightBorderColor: 'rgba(0, 0, 0, 0)',
         	highlightBorderWidth: 0
         },
+        var subunits = this.svg.select('g.datamaps-subunits');
+    if ( subunits.empty() ) {
+      subunits = this.addLayer('datamaps-subunits', null, true);
+    },
     });
  
     //draw a legend for this map
