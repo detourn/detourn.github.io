@@ -36,7 +36,29 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
 
 <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
 <script>
-    var map = new Datamap({element: document.getElementById('container')});
+    var map = new Datamap({
+        element: document.getElementById('container'),
+        fills: {
+            HIGH: '#afafaf',
+            LOW: '#123456',
+            MEDIUM: 'blue',
+            UNKNOWN: 'rgb(0,0,0)',
+            defaultFill: 'green'
+        },
+        data: {
+            IRL: {
+                fillKey: 'LOW',
+                numberOfThings: 2002
+            },
+            USA: {
+                fillKey: 'MEDIUM',
+                numberOfThings: 10381
+            }
+        }
+    });
+
+    //draw a legend for this map
+    map.legend();
 </script>
 
 
