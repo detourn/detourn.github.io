@@ -50,16 +50,17 @@ body { background-color: gray;}
 	     -o-transform: skew(25deg);
 	background: #aca4ac;
 	position:fixed;
-	margin-top:155px;
+	margin-top:150px;
+	margin-left:5px;
 }
 .parallelogramr {
 	width: 15px;
-	height: 110px;
-	-webkit-transform: skewY(25deg);
-	   -moz-transform: skewY(25deg);
-	     -o-transform: skewY(25deg);
+	height: 115px;
+	-webkit-transform: skewY(30deg);
+	   -moz-transform: skewY(30deg);
+	     -o-transform: skewY(30deg);
 	background: #6d6c6d;
 	position:fixed;
-	margin-top:42px;
+	margin-top:52px;
 	margin-left:200px;
 }
