@@ -1,4 +1,5 @@
-a { text-decoration:none };
+a { text-decoration:none; color:#666666}
+a:visited {text-decoration:none; color: #333333};
 body { background-color: gray;}
 
 
