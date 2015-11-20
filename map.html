@@ -16,7 +16,7 @@ charset=windows-1252">
 
 </head>
 
-<div align="middle" class="top"><font face="arial, helvetica" size="+3" color="#333333">001</font></div>
+<div align="middle" class="top"><font face="arial, helvetica" size="+3" color="#333333"></font></div>
 <div align="middle" class="bottom"><font face="arial, helvetica" size="+3" color="#333333"><a href="http://unilogue.github.io">03</a></font></div>
 
 <body bgcolor="#CCCCCC" link="#666666" alink="#666666" vlink="#333333" cz-shortcut-listen="true"><br>
@@ -35,6 +35,7 @@ align="MIDDLE">
     var map = new Datamap({
         element: document.getElementById('container'),
         scope:'world',
+        projection: 'mercator',
         fills: {
             HIGH: 'black',
             MEDIUM: 'gray',
