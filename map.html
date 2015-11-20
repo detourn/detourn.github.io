@@ -34,7 +34,7 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">001<br><br>
 
 <font face="arial, helvetica" color="#000000" size="-1" color="#FFFFFF">
 
-<div id="container" style="position: relative; width: 200%; height:200%"></div>
+<div id="container" style="position: relative; width: 100%; 1eight:200%"></div>
 <script>
     var map = new Datamap({
         element: document.getElementById('container'),
@@ -83,7 +83,13 @@ PRT: {fillKey: 'LOW', percent: 0.5},
                         'Percent of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         '</strong></div>'].join('');
-            }
+            },
+            popupOnHover: true,
+        	highlightOnHover: true,
+        	highlightFillColor: '#ffffff',
+        	highlightBorderColor: 'rgba(0, 0, 0, 1)',
+        	highlightBorderWidth: 2
+    }
         }
     });
     //draw a legend for this map
