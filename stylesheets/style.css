@@ -38,7 +38,7 @@ body { background-color: gray;}
 	width: 200px;
 	height: 100px;
 	background: #505456;
-	margin-top:100px;
+	margin-top:50px;
 	position:fixed;
 }
 
@@ -50,13 +50,16 @@ body { background-color: gray;}
 	     -o-transform: skew(20deg);
 	background: #aca4ac;
 	position:relative;
+	margin-top:165px;
 }
 .parallelogramr {
 	width: 15px;
 	height: 100px;
-	-webkit-transform: skew(0deg);
-	   -moz-transform: skew(0deg);
-	     -o-transform: skew(0deg);
+	-webkit-transform: skewY(20deg);
+	   -moz-transform: skewY(20deg);
+	     -o-transform: skewY(20deg);
 	background: #6d6c6d;
 	position:relative;
+	margin-top:50px;
+	margin-top:200px;
 }
