@@ -24,5 +24,5 @@ only screen and (max-width: 500px),
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
 
 {
-	#top, #bottom, #left, #right { display: none; }
+	#top, #bottom { display: inline; }
 }
