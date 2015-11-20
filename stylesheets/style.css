@@ -1,7 +1,8 @@
 a { text-decoration:none };
 body { background-color: gray;}
 
-p { font-color:#000000; }
+p { color:#000000;
+    font-family:'Inconsolata', sans-serif;}
 
 .top, .bottom {
 	background: #000000;
@@ -14,15 +15,3 @@ p { font-color:#000000; }
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
-		
-@media 
-
-/* Fairly small screens including iphones */
-only screen and (max-width: 500px),
-
-/* iPads */
-only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
-
-{
-	#top, #bottom { display: inline; }
-}
