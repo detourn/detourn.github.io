@@ -50,7 +50,7 @@ body { background-color: gray;}
 	     -o-transform: skew(25deg);
 	background: #aca4ac;
 	position:fixed;
-	margin-top:165px;
+	margin-top:155px;
 }
 .parallelogramr {
 	width: 15px;
@@ -61,5 +61,5 @@ body { background-color: gray;}
 	background: #6d6c6d;
 	position:fixed;
 	margin-top:42px;
-	margin-left:25px;
+	margin-left:200px;
 }
