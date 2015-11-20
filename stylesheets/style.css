@@ -1,4 +1,7 @@
 a { text-decoration:none };
+body { background-color: gray;}
+
+p { font-color:#000000; }
 
 .top, .bottom {
 	background: #000000;
