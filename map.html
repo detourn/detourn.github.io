@@ -35,7 +35,6 @@ align="MIDDLE">
     var map = new Datamap({
         element: document.getElementById('container'),
         scope:'world',
-        projection: 'mercator',
         fills: {
             HIGH: 'black',
             MEDIUM: 'gray',
@@ -87,11 +86,6 @@ PRT: {fillKey: 'LOW', percent: 0.5},
         	highlightBorderColor: 'rgba(0, 0, 0, 0)',
         	highlightBorderWidth: 0
         },
-        else if ( options.scope === 'world' ) {
-      projection = d3.geo[options.projection]()
-        .scale((width + 1) / 2 / Math.PI)
-        .translate([width / 2, height / (options.projection === "mercator" ? 1.45 : 1.8)]);
-    }
     });
  
     //draw a legend for this map
