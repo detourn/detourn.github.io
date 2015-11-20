@@ -8,6 +8,7 @@ charset=windows-1252">
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
 
 <title>unilogue > geography</title>
@@ -28,7 +29,7 @@ align="MIDDLE">
 			
 
 				<td align="left"><font face="arial, 
-helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
+helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">001<br><br>
 		
 
 <font face="arial, helvetica" color="#000000" size="-1" color="#FFFFFF">
@@ -45,16 +46,37 @@ helvetica"><font color="#ff0000"><font size="+3" color="#FFFFFF">003<br><br>
             UNKNOWN: 'rgb(0,0,0)',
             defaultFill: 'white'
         },
-        data: {
-            IRL: {
-                fillKey: 'LOW',
-                percent: 2002
-            },
-            USA: {
-                fillKey: 'MEDIUM',
-                percent: 10381
-            }
-        },
+        data:
+        {
+USA: {fillKey: 'HIGH', percent: 36.2},	
+GBR: {fillKey: 'MEDIUM', percent: 7.4},	
+CAN: {fillKey: 'MEDIUM', percent: 6.2},	
+DEU: {fillKey: 'MEDIUM', percent: 5.7},	
+FRA: {fillKey: 'LOW', percent: 4.1},	
+ESP: {fillKey: 'LOW', percent: 4.1},	
+ITA: {fillKey: 'LOW', percent: 3.3},	
+MEX: {fillKey: 'LOW', percent: 3.0},	
+AUS: {fillKey: 'LOW', percent: 2.5},	
+NLD: {fillKey: 'LOW', percent: 2.4},	
+IND: {fillKey: 'LOW', percent: 2.1},	
+BRA: {fillKey: 'LOW', percent: 2.0},	
+GRC: {fillKey: 'LOW', percent: 1.4},	
+AUT: {fillKey: 'LOW', percent: 1.2},	
+ROU: {fillKey: 'LOW', percent: 1.2},	
+SRB: {fillKey: 'LOW', percent: 1.0},	
+COL: {fillKey: 'LOW', percent: 0.8},	
+POL: {fillKey: 'LOW', percent: 0.8},	
+ZAF: {fillKey: 'LOW', percent: 0.7},	
+SWE: {fillKey: 'LOW', percent: 0.7},	
+DNK: {fillKey: 'LOW', percent: 0.6},	
+VEN: {fillKey: 'LOW', percent: 0.6},	
+JPN: {fillKey: 'LOW', percent: 0.6},
+KOR: {fillKey: 'LOW', percent: 0.6},
+BEL: {fillKey: 'LOW', percent: 0.5},
+RUS: {fillKey: 'LOW', percent: 0.5},
+PRT: {fillKey: 'LOW', percent: 0.5},
+	        
+},
         geographyConfig: {
             popupTemplate: function(geo, data) {
                 return ['<div class="hoverinfo"><strong>',
