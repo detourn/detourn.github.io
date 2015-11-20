@@ -54,19 +54,19 @@ var series = [
         var iso = item[0],
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
-        fills: {
-            HIGH: 'black',
-            MEDIUM: '#cccccc',
-            LOW: '#e8e8e8',
-            UNKNOWN: 'white',
-        },
     });
     // render map
     new Datamap({
         element: document.getElementById('container1'),
         projection: 'mercator', // big world map
         // countries don't listed in dataset will be painted with this color
-        fills: { defaultFill: 'white' },
+        fills: {
+            HIGH: 'black',
+            MEDIUM: 'gray',
+            LOW: '#e8e8e8',
+            UNKNOWN: 'white',
+            defaultFill: 'white'
+        },
         data: dataset,
         geographyConfig: {
             borderColor: '#DEDEDE',
