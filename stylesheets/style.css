@@ -1,8 +1,7 @@
 a { text-decoration:none };
-body { background-color: #cccccc;}
-
-p { color:#000000;
-    font-family:'arial, helvetica';
+body { background-color: #cccccc;
+       color:#000000;
+       font-family:'arial, helvetica';
 }
 
 .top, .bottom {
