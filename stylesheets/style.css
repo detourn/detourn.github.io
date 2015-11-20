@@ -44,22 +44,22 @@ body { background-color: gray;}
 
 .parallelogramb {
 	width: 200px;
-	height: 20px;
-	-webkit-transform: skew(20deg);
-	   -moz-transform: skew(20deg);
-	     -o-transform: skew(20deg);
+	height: 15px;
+	-webkit-transform: skew(25deg);
+	   -moz-transform: skew(25deg);
+	     -o-transform: skew(25deg);
 	background: #aca4ac;
 	position:fixed;
 	margin-top:165px;
 }
 .parallelogramr {
 	width: 15px;
-	height: 100px;
+	height: 110px;
 	-webkit-transform: skewY(20deg);
 	   -moz-transform: skewY(20deg);
 	     -o-transform: skewY(20deg);
 	background: #6d6c6d;
 	position:fixed;
-	margin-top:50px;
+	margin-top:52px;
 	margin-left:200px;
 }
