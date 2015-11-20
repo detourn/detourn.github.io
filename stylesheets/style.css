@@ -7,6 +7,21 @@ p { font-color:#000000; }
     border: 0px solid blue;
 }
 
+.sub {
+	display: inline-block;
+	margin-left:15px;
+	width:15px;
+	height:7px;
+	border-left:1px dotted gray;
+	border-bottom:1px dotted gray;
+	border-right:0px dotted gray;
+	border-top:0px dotted gray;
+	}
+	
+.f {
+	vertical-align:top; display: inline-block;
+}
+
 .top, .bottom {
 	background: #000000;
 	position: fixed;
