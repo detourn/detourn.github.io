@@ -54,6 +54,12 @@ var series = [
         var iso = item[0],
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
+        fills: {
+            HIGH: 'black',
+            MEDIUM: '#cccccc',
+            LOW: '#e8e8e8',
+            UNKNOWN: 'white',
+        },
     });
     // render map
     new Datamap({
