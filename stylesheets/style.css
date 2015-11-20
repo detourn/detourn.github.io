@@ -43,7 +43,7 @@ body { background-color: gray;}
 }
 
 .parallelogramb {
-	width: 200px;
+	width: 205px;
 	height: 15px;
 	-webkit-transform: skew(25deg);
 	   -moz-transform: skew(25deg);
@@ -56,12 +56,12 @@ body { background-color: gray;}
 }
 .parallelogramr {
 	width: 15px;
-	height: 115px;
-	-webkit-transform: skewY(35deg);
-	   -moz-transform: skewY(35deg);
-	     -o-transform: skewY(35deg);
+	height: 100px;
+	-webkit-transform: skewY(40deg);
+	   -moz-transform: skewY(40deg);
+	     -o-transform: skewY(40deg);
 	background: #6d6c6d;
 	position:fixed;
-	margin-top:52px;
+	margin-top:55px;
 	margin-left:200px;
 }
