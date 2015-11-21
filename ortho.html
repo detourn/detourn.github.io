@@ -29,7 +29,6 @@ align="MIDDLE">
 <td align="left"><br><br>
 
 <font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (a)</p></font>
-<p>Vice Audience Geography (a)</p>
 <div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
       //basic map config with custom fills, mercator projection
@@ -97,7 +96,8 @@ align="MIDDLE">
     
       map.graticule();
       
-</script><p>Vice Audience Geography (b)</p>
+</script>
+<font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (a)</p></font>
 <div style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
@@ -151,7 +151,8 @@ align="MIDDLE">
                 // don't show tooltip if country don't present in dataset
                 if (!data) { return ; }
                 // tooltip content
-                return ['','% of visitors in ' + geo.properties.name,
+                return ['',
+                	'% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
