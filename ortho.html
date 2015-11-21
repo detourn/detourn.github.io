@@ -28,7 +28,7 @@ align="MIDDLE">
 <tbody><tr>
 <td align="left"><br><br>
 
-<p><p>Vice Audience Geography (a)</p>
+<font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (a)</p></font>
 <div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
@@ -83,7 +83,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '% of visitors in ' + geo.properties.name,
+                        '<div style="opacity: 0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -96,7 +96,7 @@ align="MIDDLE">
     
       map.graticule();
       
-</script><p>Vice Audience Geography (b)</p>
+</script><font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (b)</p></font>
 
 <div id="world2" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
@@ -119,7 +119,7 @@ align="MIDDLE">
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]); // color
+            .range(["rgba(255,255,255,0.6)","rgba(0,0,0,0.6)"]); // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -133,7 +133,7 @@ align="MIDDLE">
         element: document.getElementById('world2'),
         projection: 'orthographic',
         projectionConfig: {
-          rotation: [300,-30]
+          rotation: [350,-30]
         },
          fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
@@ -152,7 +152,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '% of visitors in ' + geo.properties.name,
+                        '<div style="opacity: 0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -165,7 +165,7 @@ align="MIDDLE">
     
       map.graticule();
       
-</script><br><br><font face="arial, helvetica" size="-2">Created with <a href="https://github.com/unilogue/datamaps" target="_blank" style="color:#cccccc;">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank" style="color:#cccccc;">Alexa.</a></font></p>
+</script>
 			<br><br>
 							
 <font face="arial, helvetica" size="-2" color="gray"><p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p></font><br>
