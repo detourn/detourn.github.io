@@ -89,8 +89,8 @@ body {
 	}
 		
 	.top, .bottom {
-		left: -250;
-		height: 4%; width:10.5%;
+		left: 250px;
+		height: 14%; width:10.5%;
         margin:0 auto;
 		}
 		.top { top: 0; }
