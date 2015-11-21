@@ -197,6 +197,53 @@ d3.json("/javascripts/world.110m.json", function(error, world) {
       .attr("class", "land")
       .attr("d", path);
 });
+//datamaps
+var onlyValues = series.map(function(obj){ return obj[1]; });
+    var minValue = Math.min.apply(null, onlyValues),
+            maxValue = Math.max.apply(null, onlyValues);
+    // create color palette function
+    // color can be whatever you wish
+    var paletteScale = d3.scale.linear()
+            .domain([minValue,maxValue])
+            .range(["rgba(255,255,255,0.6)","rgba(0,0,0,0.6)"]); // color
+    // fill dataset in appropriate format
+    series.forEach(function(item){ //
+        // item example value ["USA", 36.2]
+        var iso = item[0],
+                value = item[1];
+        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
+    });
+    
+      var map = new Datamap({
+        scope: 'world',
+        element: document.getElementById('world2'),
+        projection: 'orthographic',
+        projectionConfig: {
+          rotation: [350,-30]
+        },
+         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
+        data: dataset,
+        geographyConfig: {
+            borderColor: 'rgba(222,222,222,0.2)',
+            highlightBorderWidth: 1,
+            // don't change color on mouse hover
+            highlightFillColor: function(geo) {
+                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
+            },
+            // only change border
+            highlightBorderColor: 'rgba(222,222,222,0.5)',
+            // show desired information in tooltip
+            popupTemplate: function(geo, data) {
+                // don't show tooltip if country don't present in dataset
+                if (!data) { return ; }
+                // tooltip content
+                return ['',
+                        '<div style="opacity: 0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                        ': ' + data.percent,
+                        ''].join('');
+            }
+        }
+    });
 </script>
 
 			<br><br>
