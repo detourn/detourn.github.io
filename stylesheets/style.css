@@ -1,6 +1,6 @@
 a { text-decoration:none;}
 a:visited {text-decoration:none; color: #333333};
-body { background-color: gray;}
+body { background-color: #cccccc; font-family:helvetica;}
 
 
 #wrapper {
