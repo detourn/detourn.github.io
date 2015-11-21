@@ -1,31 +1,38 @@
-a { text-decoration:none; color:red;}
+a { text-decoration:none;}
 
 body {
-  background-color:f8f8f8;
+  background-color:#000000;
 }
 
 
 #wrapper {
     font-family: verdana;
     background:#f8f8f8;
-    width:100%; height:100%;
+    width:30.5%; height:80%;
+    margin-top:50%;
+    margin:0 auto;
+    border:1px solid blue;
+    position:relative;
+    z-index:-999999999999999;
 }
 
 .header {
-    width: 213px;
-	height: 99px;
-    font-family:'Inconsolata', sans-serif;
-    font-size:28px;
-    color:#f8f8f8;
-    margin-top:10%;
-    margin-left:15%;
+    margin-top:-1%;
+    margin-left:5%;
     position:fixed;
+    z-index:999999999999999;
+}
+
+.header a {
+  font-family: 'Sarpanch', sans-serif;
+  font-size:16px;
+  color:#f8f8f8;
 }
 
 .footer {
-  top:90%;
+  top:95%;
   left:95%;
-  position: absolute;
+  position: fixed;
 }
 .footer a {
   color:#707070;
@@ -35,23 +42,24 @@ body {
 
 .r1, .r2, .r3 {
 	width: 185px;
-	height: 20px;
-    font-family:'Inconsolata', sans-serif;
+	height: 60px;
+    font-family:'Sarpanch', sans-serif;
     font-size:18px;
     margin:0px auto;
-    margin-top:100%;
-    margin-left:5%;
+    margin-top:10%;
+    margin-left:0%;
     position:relative;
     padding:10px;
 	border:1px solid #808080;
     border-top:0px solid #808080;
+    background:#808080;
 }
 
 .p1, .p2, .p3 {
-	width: 190px;
+	width: 188px;
 	height: 15px;
-    margin-left:-3px;
-    margin-top:-30px;
+    margin-left:-2px;
+    margin-top:-25px;
     position:relative;
 	border:1px solid #808080;
     border-bottom:0px solid #808080;
@@ -59,12 +67,13 @@ body {
 	-webkit-transform: skew(50deg);
 	   -moz-transform: skew(50deg);
 	     -o-transform: skew(50deg);
+     background:#cccccc;
 }
 .c1, .c2, .c3 {
 	width: 200px;
-	height: 18px;
-    margin-left:-12px;
-    margin-top:-30px;
+	height: 15px;
+    margin-left:-11px;
+    margin-top:-15px;
     padding:10px;
     position:relative;
 	border-left:1px solid #808080;
@@ -72,6 +81,19 @@ body {
     border-bottom:0px dotted #808080;
     border-right:0px solid #808080;
 }
+
+
+.top, .bottom {
+	position: fixed;
+	}
+		
+	.top, .bottom {
+		right: -274;
+		height: 4%; width:10.5%;
+        margin:0 auto;
+		}
+		.top { top: 0; }
+		.bottom { bottom: 0; }
 
 #sub {
 	display: inline-block;
@@ -87,15 +109,3 @@ body {
 #f {
 	vertical-align:top; display: inline-block;
 }
-
-.top, .bottom {
-	background: #333333;
-	position: fixed;
-	}
-		
-	.top, .bottom {
-		left: 0; right: 0;
-		height: 16%;
-		}
-		.top { top: 0; }
-		.bottom { bottom: 0; }
