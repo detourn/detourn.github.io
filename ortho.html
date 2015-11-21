@@ -83,7 +83,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '% of visitors in ' + geo.properties.name,
+                        '<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -97,8 +97,8 @@ align="MIDDLE">
       map.graticule();
       
 </script>
-<font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (a)</p></font>
-<div style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
+<font face="arial, helvetica" size="-1><p>Vice Audience Geography (a)</p></font>
+<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -152,7 +152,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -169,7 +169,7 @@ align="MIDDLE">
 
 			<br><br>
 							
-<font face="arial, helvetica" size="-2" color="gray"><p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p></font><br>
+<font face="arial, helvetica" size="-1"><p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p></font><br>
 		</td>
 						</tr>
 </tbody></table>
