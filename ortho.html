@@ -28,7 +28,7 @@ align="MIDDLE">
 <tbody><tr>
 <td align="left"><br><br>
 
-<font face="arial, helvetica" size="-2" color="gray"><p>Vice Audience Geography (a)</p></font>
+<font face="arial, helvetica" size="-1"><p>Vice Audience Geography (a)</p></font>
 <div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
       //basic map config with custom fills, mercator projection
@@ -50,7 +50,7 @@ align="MIDDLE">
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(92,92,92,0.6)","rgba(195,195,195,0.6)"]); // color
+            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]);  // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -83,7 +83,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                        '<div class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -119,7 +119,7 @@ align="MIDDLE">
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(92,92,92,0.6)","rgba(195,195,195,0.6)"]); // color
+            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]); // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -152,7 +152,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
