@@ -60,7 +60,7 @@ body {
     margin-left:-2px;
     margin-top:-25px;
     position:relative;
-	border:1px solid #808080;
+	border:0px solid red;
     border-bottom:0px solid #808080;
     border-left:0px solid #808080;
 	-webkit-transform: skew(50deg);
