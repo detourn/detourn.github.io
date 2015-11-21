@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-    margin-top:-1%;
+    margin-top:0%;
     margin-left:5%;
     position:fixed;
     z-index:999999999999999;
@@ -85,13 +85,13 @@ body {
 
 .top, .bottom {
 	position: fixed;
-    opacity:1;
+    	opacity:1;
 	}
 		
 	.top, .bottom {
-		left: 250px;
+		left: 475px;
 		height: 14%; width:10.5%;
-        margin:0 auto;
+        	margin:0 auto;
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
