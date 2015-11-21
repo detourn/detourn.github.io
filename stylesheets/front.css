@@ -6,12 +6,11 @@ body {
 
 
 #wrapper {
-    font-family: verdana;
-    background:#f8f8f8;
+    background:#rgb(0.0.0.0);
     width:30.5%; height:80%;
     margin-top:50%;
     margin:0 auto;
-    border:1px solid blue;
+    border:0px solid blue;
     position:relative;
     z-index:-999999999999999;
 }
