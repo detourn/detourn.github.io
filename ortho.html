@@ -66,7 +66,7 @@ align="MIDDLE">
         projectionConfig: {
           rotation: [90,-30]
         },
-         fills: {defaultFill: 'rgba(204,204,204,0.1)'},
+         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
         geographyConfig: {
             borderColor: 'rgba(222,222,222,0.2)',
@@ -83,7 +83,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '<div class="hoverinfo">% of visitors in ' + geo.properties.name,
+                        '<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -97,7 +97,7 @@ align="MIDDLE">
       map.graticule();
       
 </script>
-<font face="arial, helvetica" size="-1><p>Vice Audience Geography (a)</p></font>
+<font face="arial, helvetica" size="-1><p>Vice Audience Geography (b)</p></font>
 <div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
@@ -152,7 +152,7 @@ align="MIDDLE">
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
