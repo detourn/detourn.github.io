@@ -66,14 +66,14 @@ align="MIDDLE">
         projectionConfig: {
           rotation: [90,-30]
         },
-         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
+         fills: {defaultFill: 'rgba(204,204,204,0.1)'},
         data: dataset,
         geographyConfig: {
             borderColor: 'rgba(222,222,222,0.2)',
             highlightBorderWidth: 1,
             // don't change color on mouse hover
             highlightFillColor: function(geo) {
-                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
+                return geo['fillColor'] || 'rgba(204,204,204,0.5)';
             },
             // only change border
             highlightBorderColor: 'rgba(222,222,222,0.5)',
