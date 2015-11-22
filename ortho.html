@@ -27,7 +27,7 @@ align="MIDDLE">
 <table width="350">
 <tbody><tr>
 <td align="left"><br><br>
-
+<div class="wrapper">
 <font face="arial, helvetica" size="-1"><p>Vice Audience Geography (a)</p></font>
 <div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
@@ -58,13 +58,13 @@ align="MIDDLE">
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
     });
-    
       var map = new Datamap({
         scope: 'world',
         element: document.getElementById('world'),
         projection: 'orthographic',
         projectionConfig: {
-          rotation: [90,-30]
+          rotation: [90,-30],
+          scale: [4]
         },
          fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
@@ -202,7 +202,7 @@ align="MIDDLE">
         element: document.getElementById('world'),
         projection: 'orthographic',
         projectionConfig: {
-          rotation: [-99,-30]
+          rotation: [-99,-10]
         },
          fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
@@ -242,7 +242,7 @@ align="MIDDLE">
 						</tr>
 </tbody></table>
 </td></tr>
-</tbody></table>
+</tbody></table></div>
 		
 
 									
