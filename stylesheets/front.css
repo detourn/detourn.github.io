@@ -7,6 +7,7 @@ body {
   color: white;
   margin-top:15%;
   position:relative;
+  width:80%;
 }
 
 
@@ -16,28 +17,27 @@ body {
     margin-top:5%;
     margin:0 auto;
     border:0px solid blue;
-    position:relative;
+    position:absolute;
     z-index:-999999999999999;
 }
 
 .header {
     margin-top:5%;
     margin-left:5%;
-    position:absolute;
+    position:relative
     z-index:999999999999999;
 }
 
 .header a {
   font-family: 'Lato', sans-serif;
   font-size:25px; font-weight:200;
-  color:white;
+  color:#cecece;
 }
 
 .bottom {
 	background:#1A1A1A;
 	width:100%;
 	height:20%;
-	top:80%;
   	position: absolute;
   	margin:0 auto;
   	bottom:0;
