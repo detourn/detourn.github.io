@@ -23,7 +23,7 @@ body {
 }
 
 .header a {
-  font-family: "Source Code Pro", "monaco", "PT Mono", "Courier", monospace;
+ font-family: 'Source Code Pro', ;
   font-size:16px;
   color:#f8f8f8;
 }
@@ -42,7 +42,7 @@ body {
 .r1, .r2, .r3 {
 	width: 185px;
 	height: 60px;
-    font-family:"Source Code Pro", "monaco", "PT Mono", "Courier", monospace;
+    font-family: 'Source Code Pro', ;
     font-size:18px;
     margin:0px auto;
     margin-top:10%;
