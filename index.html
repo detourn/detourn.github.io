@@ -48,9 +48,8 @@ TypingText.runAll();</script>
         <div class="container" style="position: relative;">
        
  <p>$ Vice Audience Geography</p><br><br><br>
-<div id="world" style="color:black; height: 600px; width: 500px; margin-top:-50px;"></div>
+<div id="world" style="fill-opacity:0.7; color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
 <script>
-
       //basic map config with custom fills, mercator projection
        
        var series = [
@@ -70,7 +69,7 @@ TypingText.runAll();</script>
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]);  // color
+            .range(["rgb(0,0,0)","rgb(219,219,219)"]);  // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -78,8 +77,6 @@ TypingText.runAll();</script>
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
     });
-      var m0,
-          o0;
       var map = new Datamap({
         done: function(datamap) {
     datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
@@ -91,8 +88,7 @@ TypingText.runAll();</script>
         element: document.getElementById('world'),
         projection: 'orthographic',
         projectionConfig: {
-          rotation: [90,-30],
-          scale: [4]
+          rotation: [90,-30]
         },
          fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
@@ -111,19 +107,21 @@ TypingText.runAll();</script>
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                        '<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
-                        ''].join('');
-              
+                        ''].join('');        
+                        
             }
         }
-    }); 
-  
-    map.graticule();
+    });
+    
+ 
+    //draw a legend for this map
+    map.legend();
+    
+      map.graticule();
       
-</script>
-
-<div id="world" style="color:black; height: 600px; width: 500px;"></div>
+</script><div style="fill-opacity:0.7;color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -144,7 +142,7 @@ TypingText.runAll();</script>
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]); // color
+            .range(["rgb(0,0,0)","rgb(219,219,219)"]); // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -177,20 +175,22 @@ TypingText.runAll();</script>
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
         }
     });
-   
+    
+ 
+    //draw a legend for this map
+    map.legend();
+    
       map.graticule();
       
-</script>
-
-<div id="world" style="color:black; height: 600px; width: 500px;"></div>
+</script><div style="fill-opacity:0.7; color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
 <script>
-       //basic map config with custom fills, mercator projection
+      //basic map config with custom fills, mercator projection
        
        var series = [
 ["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
@@ -209,7 +209,7 @@ TypingText.runAll();</script>
     // color can be whatever you wish
     var paletteScale = d3.scale.linear()
             .domain([minValue,maxValue])
-            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]); // color
+            .range(["rgb(0,0,0)","rgb(219,219,219)"]);  // color
     // fill dataset in appropriate format
     series.forEach(function(item){ //
         // item example value ["USA", 36.2]
@@ -217,13 +217,13 @@ TypingText.runAll();</script>
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
     });
-    
       var map = new Datamap({
         scope: 'world',
         element: document.getElementById('world'),
         projection: 'orthographic',
         projectionConfig: {
-          rotation: [-99,-10]
+          rotation: [-99,-10],
+          scale: [4]
         },
          fills: {defaultFill: 'rgba(30,30,30,0.1)'},
         data: dataset,
@@ -242,16 +242,17 @@ TypingText.runAll();</script>
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.5;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
-                        ''].join('');
+                        ''].join('');        
+                        
             }
         }
     });
-  
+    
       map.graticule();
       
-  </script><br>
+</script><br>
    <p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p>     
           
         </div>
