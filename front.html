@@ -10,6 +10,7 @@
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
 <script type="text/javascript" src="https://unilogue.github.io/javascripts/TypingText.js">
 /****************************************************
 * Typing Text script- By Twey @ Dynamic Drive Forums
@@ -20,13 +21,12 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
  </head>
   
   <body>
     <header class="header">
-      <div class="menu">
-        <ul id="topBar" class="menuBar">
+      <div>
+        <ul id="topBar">
           <li id="name"><div id="example1"><template if="{{loading}}"></template><a href="https://unilogue.github.io">&#62; unilogue<span class="blink">_</span></div></a>
         
 <script type="text/javascript">
@@ -35,8 +35,7 @@ new TypingText(document.getElementById("example1"));
 //Type out examples:
 TypingText.runAll();
 </script>         
-   </div></li>
-           <li><a href="#footer">about</a></li>
+   </div>
       </div>
     </header>
 
@@ -47,7 +46,78 @@ TypingText.runAll();
       </ul>
       <section id="container-holder">
         <div class="container" style="position: relative;">
- <div id="world" style="cursor:crosshair; height: 660px; width: 500px;"></div>
+       
+ <p>$ Vice Audience Geography</p>
+<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
+<script>
+      //basic map config with custom fills, mercator projection
+       
+       var series = [
+["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
+["IND",2.1],["BRA",2.0],["GRC",1.4],["AUT",1.2],["ROU",1.2],["SRB",1.0],["COL",0.8],["POL",0.8],["ZAF",0.7],["SWE",0.7],
+["DNK",0.6],["VEN",0.6],["JPN",0.6],["KOR",0.6],["BEL",0.5],["RUS",0.5],["PRT",0.5]
+                    ];
+               
+ var dataset = {};
+    // We need to colorize every country based on "percent"
+    // colors should be uniq for every value.
+    // For this purpose we create palette(using min/max series-value)
+    var onlyValues = series.map(function(obj){ return obj[1]; });
+    var minValue = Math.min.apply(null, onlyValues),
+            maxValue = Math.max.apply(null, onlyValues);
+    // create color palette function
+    // color can be whatever you wish
+    var paletteScale = d3.scale.linear()
+            .domain([minValue,maxValue])
+            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]);  // color
+    // fill dataset in appropriate format
+    series.forEach(function(item){ //
+        // item example value ["USA", 36.2]
+        var iso = item[0],
+                value = item[1];
+        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
+    });
+      var map = new Datamap({
+        scope: 'world',
+        element: document.getElementById('world'),
+        projection: 'orthographic',
+        projectionConfig: {
+          rotation: [90,-30],
+          scale: [4]
+        },
+         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
+        data: dataset,
+        geographyConfig: {
+            borderColor: 'rgba(222,222,222,0.2)',
+            highlightBorderWidth: 1,
+            // don't change color on mouse hover
+            highlightFillColor: function(geo) {
+                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
+            },
+            // only change border
+            highlightBorderColor: 'rgba(222,222,222,0.5)',
+            // show desired information in tooltip
+            popupTemplate: function(geo, data) {
+                // don't show tooltip if country don't present in dataset
+                if (!data) { return ; }
+                // tooltip content
+                return ['',
+                        '<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                        ': ' + data.percent,
+                        ''].join('');
+            }
+        }
+    });
+    
+ 
+    //draw a legend for this map
+    map.legend();
+    
+      map.graticule();
+      
+</script>
+
+<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -101,7 +171,7 @@ TypingText.runAll();
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div style="opacity:0.7;font-family: 'Source Code Pro',; font-size:14px; color: white;text-transform:uppercase" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -114,7 +184,78 @@ TypingText.runAll();
     
       map.graticule();
       
-          </script></div>
+</script>
+
+<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
+<script>
+       //basic map config with custom fills, mercator projection
+       
+       var series = [
+["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
+["IND",2.1],["BRA",2.0],["GRC",1.4],["AUT",1.2],["ROU",1.2],["SRB",1.0],["COL",0.8],["POL",0.8],["ZAF",0.7],["SWE",0.7],
+["DNK",0.6],["VEN",0.6],["JPN",0.6],["KOR",0.6],["BEL",0.5],["RUS",0.5],["PRT",0.5]
+                    ];
+               
+ var dataset = {};
+    // We need to colorize every country based on "percent"
+    // colors should be uniq for every value.
+    // For this purpose we create palette(using min/max series-value)
+    var onlyValues = series.map(function(obj){ return obj[1]; });
+    var minValue = Math.min.apply(null, onlyValues),
+            maxValue = Math.max.apply(null, onlyValues);
+    // create color palette function
+    // color can be whatever you wish
+    var paletteScale = d3.scale.linear()
+            .domain([minValue,maxValue])
+            .range(["rgba(30,30,30,0.6)","rgba(242,242,242,0.6)"]); // color
+    // fill dataset in appropriate format
+    series.forEach(function(item){ //
+        // item example value ["USA", 36.2]
+        var iso = item[0],
+                value = item[1];
+        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
+    });
+    
+      var map = new Datamap({
+        scope: 'world',
+        element: document.getElementById('world'),
+        projection: 'orthographic',
+        projectionConfig: {
+          rotation: [-99,-10]
+        },
+         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
+        data: dataset,
+        geographyConfig: {
+            borderColor: 'rgba(222,222,222,0.2)',
+            highlightBorderWidth: 1,
+            // don't change color on mouse hover
+            highlightFillColor: function(geo) {
+                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
+            },
+            // only change border
+            highlightBorderColor: 'rgba(222,222,222,0.5)',
+            // show desired information in tooltip
+            popupTemplate: function(geo, data) {
+                // don't show tooltip if country don't present in dataset
+                if (!data) { return ; }
+                // tooltip content
+                return ['',
+                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                        ': ' + data.percent,
+                        ''].join('');
+            }
+        }
+    });
+    
+ 
+    //draw a legend for this map
+    map.legend();
+    
+      map.graticule();
+      
+  </script>        
+          
+        </div>
       </section>
     </div>
     <footer>
