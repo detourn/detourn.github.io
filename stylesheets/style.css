@@ -29,21 +29,21 @@ body a {
 }
 
 body a:after {
-  color: #c0c0c0;
+  color: #b8b8b8;
   display:block;
   content: '';
-  border-bottom: solid 1px #c0c0c0;  
+  border-bottom: solid 1px #b8b8b8;  
   transform: scaleX(0.0001);  
   transition: transform 250ms ease-in-out;
 }
 
 body a:hover:after {
   transform: scaleX(1);
-  color: #c0c0c0;
+  color: #b8b8b8;
 }
 
 body a:hover {
-  color: #c0c0c0;
+  color: #b8b8b8;
 }
 
 pre {
@@ -191,6 +191,10 @@ hr {
 
 .datamap path.datamaps-graticule { pointer-events: all;}
 .datamap path.datamaps-subunit { pointer-events: all;}
+
+.datamaps-hoverover {display: none; font-family: 'Source Code Pro', sans-serif; }
+.hoverinfo {padding: 4px; font-size: 12px; color:#ccc; border: 0px solid #CCC; }
+.hoverinfo hr {border:0px dotted #CCC; }
 
 @media (max-width: 690px) {
 	h1 {
