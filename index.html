@@ -5,7 +5,7 @@
     <title>unilogue</title>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <link rel="icon" href="https://unilogue.github.io/favi.png">
-<link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/style.css">
+<link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/front.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -23,9 +23,9 @@
 <script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
  </head>
   
-  <body>
-    <header class="header">
-      <div>
+  <header>
+   <section id="header">
+  <div class="header">
           <ul id="topBar" class="menuBar">
           <li id="name"><div id="example1"><template if="{{loading}}"></template><a href="https://unilogue.github.io">&#62; unilogue<span class="blink">_</span></a></div></li>
 <script type="text/javascript">
@@ -35,8 +35,10 @@ new TypingText(document.getElementById("example1"));
 TypingText.runAll();</script>
         </ul>
       </div>
-    </header>
-
+    </section>
+     </header>
+  
+  <body>
 
     <div id="content">
       <ul class="menuBar">
@@ -45,9 +47,10 @@ TypingText.runAll();</script>
       <section id="container-holder">
         <div class="container" style="position: relative;">
        
- <p>$ Vice Audience Geography</p>
-<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
+ <p>$ Vice Audience Geography</p><br><br><br>
+<div id="world" style="color:black; height: 600px; width: 500px; margin-top:-50px;"></div>
 <script>
+
       //basic map config with custom fills, mercator projection
        
        var series = [
@@ -75,7 +78,15 @@ TypingText.runAll();</script>
                 value = item[1];
         dataset[iso] = { percent: value, fillColor: paletteScale(value) };
     });
+      var m0,
+          o0;
       var map = new Datamap({
+        done: function(datamap) {
+    datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
+    function redraw() {
+        datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
+},
         scope: 'world',
         element: document.getElementById('world'),
         projection: 'orthographic',
@@ -103,19 +114,16 @@ TypingText.runAll();</script>
                         '<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
+              
             }
         }
-    });
-    
- 
-    //draw a legend for this map
-    map.legend();
-    
-      map.graticule();
+    }); 
+  
+    map.graticule();
       
 </script>
 
-<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
+<div id="world" style="color:black; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -175,16 +183,12 @@ TypingText.runAll();</script>
             }
         }
     });
-    
- 
-    //draw a legend for this map
-    map.legend();
-    
+   
       map.graticule();
       
 </script>
 
-<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
+<div id="world" style="color:black; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -244,14 +248,11 @@ TypingText.runAll();</script>
             }
         }
     });
-    
- 
-    //draw a legend for this map
-    map.legend();
-    
+  
       map.graticule();
       
-  </script>        
+  </script><br>
+   <p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p>     
           
         </div>
       </section>
