@@ -1,8 +1,10 @@
-<html>
-  
-<head>
-  
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>u n i l o g u e
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <link rel="icon" href="https://unilogue.github.io/favi.png">
 <link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/front.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
@@ -12,20 +14,23 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
-
-<title>unilogue</title>
-
-</head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
+ </head>
   
-<div class="header"><a href="https://unilogue.github.io">unilogue</a></div>
-
-<div id="wrapper">  
-
-<body>
-   
-<p>VICE AUDIENCE GEOGRAPHY</p>
-
-<div id="world" style="color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
+  <body>
+    <header class="header">
+      <div class="menu">
+        <ul id="topBar" class="menuBar">
+          <li id="name"><a href="https://unilogue.github.io">u n i l o g u e</a></li>
+      </div>
+    </header>
+    <div id="content">
+      <ul id="filters" class="menuBar">
+        <li class="filter">about</li>
+      </ul>
+      <section id="container-holder">
+        <div class="container" style="position: relative; height: 660px;">
+ <div id="world" style="cursor:crosshair; height: 600px; width: 500px;"></div>
 <script>
        //basic map config with custom fills, mercator projection
        
@@ -79,7 +84,7 @@
                 if (!data) { return ; }
                 // tooltip content
                 return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
+                	'<div style="opacity:0.7;font-family: 'Source Code Pro',; font-size:14px; color: white;text-transform:uppercase" class="hoverinfo">% of visitors in ' + geo.properties.name,
                         ': ' + data.percent,
                         ''].join('');
             }
@@ -93,10 +98,16 @@
       map.graticule();
       
 </script>
-
-
-</body>
-
-</div>
-
-</html>
+      </section>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav">
+        </div>
+        <section class="copy">
+          <p>© 2015 unilogue</p>
+        </section>
+      </div>
+    </footer>
+  
+</body></html>
