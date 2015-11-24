@@ -10,26 +10,11 @@ body {
   padding-left: 8%;
 }
 
-
-body, a {
-  color: #404040;
-  font-family: 'Source Code Pro', ;
-}
-
 body a {
   color: #404040;
   display:inline-block;
-  border-bottom: 1px solid #303030;
-}
-body a:after {
-  display:block;
-  content: '';
-  border-bottom: solid 1px;  
-  transform: scaleX(0.0001);  
-  transition: transform 250ms ease-in-out;
-}
-body a:hover:after {
-  transform: scaleX(1);
+  border-bottom: 0px solid;
+  font-family: 'Source Code Pro', ;
 }
 
 pre {
@@ -40,11 +25,6 @@ pre {
   border-radius: 0.25em;
   margin-bottom: 1.8em;
   padding: 1em;
-}
-
-a:hover {
-  color: #f8f8f8;
-  text-decoration: underline;
 }
 
 .blink {
@@ -59,10 +39,6 @@ a:hover {
         to { opacity: 0.0; }
       }
 
-
-p {
-  
-}
 
 h1 {
   font-size: 2.2em;
@@ -173,20 +149,21 @@ hr {
 }
 
 
-footer {
+.footer {
     background:#1A1A1A;
     width:100%;
-	height:15%;
-  	position: fixed;
-  	margin:0 auto;
+	height:5%;
+  	position: absolute;
   	bottom:0;
-    left:0%;
     padding: 3 3em;
 }
 
 footer .nav {
   text-align: left;
-  width:100%;
+  background:#1A1A1A;
+    width:100%;
+	height:5%;
+  	bottom:0;
 }
 
 footer .nav a {
@@ -198,16 +175,11 @@ footer .copy {
   text-align: left;
   font-size: 0.7em;
   margin-top: 3em;
-  bottom:0;
-  padding: 3 3em;
-  width:100%;
-}
-
-footer .copy, footer .copy a {
-  color: #8e8e8e;
   background:#1A1A1A;
-  padding: 3 3em;
-  width:100%;
+    width:100%;
+	height:5%;
+  	bottom:0;
+    padding: 3 3em;
 }
 
 #iframe{
@@ -216,18 +188,12 @@ footer .copy, footer .copy a {
   height: 800px;
 }
 
-
-.menuBar li
-{
-	display: inline;
-	width: 800px;
+#topBar li{
+	padding-right: 40px;
+    display: inline;
 	list-style-type: none;
 	cursor: pointer;
 	margin: 0px;
-}
-
-#topBar li{
-	padding-right: 40px;
 }
 
 #name{
@@ -251,10 +217,9 @@ footer .copy, footer .copy a {
   /*margin: 0;*/
 }
 
-.header a, .header a:hover, a:after, a:hover:after {
+.header a, .header a:hover {
   text-decoration: none;
   color: #c0c0c0;
-  border-bottom:0px solid;
 }
 
 .content-wrap {
