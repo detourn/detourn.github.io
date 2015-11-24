@@ -29,21 +29,21 @@ body a {
 }
 
 body a:after {
-  color: #b8b8b8;
+  color: #A8A8A8;
   display:block;
   content: '';
-  border-bottom: solid 1px #b8b8b8;  
+  border-bottom: solid 1px #A8A8A8;  
   transform: scaleX(0.0001);  
   transition: transform 250ms ease-in-out;
 }
 
 body a:hover:after {
   transform: scaleX(1);
-  color: #b8b8b8;
+  color: #A8A8A8;
 }
 
 body a:hover {
-  color: #b8b8b8;
+  color: #A8A8A8;
 }
 
 pre {
