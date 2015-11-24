@@ -192,7 +192,10 @@ hr {
 .datamap path.datamaps-graticule { pointer-events: all;}
 .datamap path.datamaps-subunit { pointer-events: all;}
 
-.hoverinfo {padding: 4px; font-family: 'Source Code Pro', sans-serif; font-size: 16px; color:#ccc; border: 0px solid #CCC; }
+.hoverinfo {
+	padding: 4px; font-family: 'Source Code Pro', sans-serif; border-radius: 1px;
+	background-color: transparent; box-shadow: 0px 0px 0px #CCC; font-size: 36px; color:#ccc; border: 0px solid #CCC; }
+.hoverinfo hr {border:0px dotted #CCC; }')
 
 @media (max-width: 690px) {
 	h1 {
