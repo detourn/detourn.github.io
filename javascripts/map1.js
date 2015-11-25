@@ -33,7 +33,7 @@
             }
         },
                 scope: 'world',
-                element: document.getElementById('div1'),
+                element: document.getElementById('world'),
                 projection: 'orthographic',
                 projectionConfig: {
                   rotation: [90,-30]
