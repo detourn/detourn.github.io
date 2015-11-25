@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6, body, img, ul, ol, blockquote, pre {
 
 ::selection {
   color: #0d0d0d; background: #c0c0c0;
+}
 
 input {
   border: 0px solid white;
