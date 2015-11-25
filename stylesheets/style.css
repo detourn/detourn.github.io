@@ -1,5 +1,4 @@
-h1, h2, h3, h4, h5, h6, p,
-body, a, img, ul, ol, blockquote, pre {
+h1, h2, h3, h4, h5, h6, body, img, ul, ol, blockquote, pre {
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,6 +11,9 @@ body, a, img, ul, ol, blockquote, pre {
 ::-webkit-input-placeholder {
   color: #303030;
 }
+
+::selection {
+  color: #0d0d0d; background: #c0c0c0;
 
 input {
   border: 0px solid white;
@@ -53,6 +55,10 @@ body p {
   display: inline-block;
   font-family: 'Source Code Pro', sans-serif;
 }
+  
+  .div1 {
+    visibility:hidden;
+    }
 
 .div1 a {
   text-decoration: none;
