@@ -1,274 +1,100 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>unilogue</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<link rel="icon" href="https://unilogue.github.io/favi.png">
-<link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/style.css">
-<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,200' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
-<script type="text/javascript" src="https://unilogue.github.io/javascripts/TypingText.js">
-/****************************************************
-* Typing Text script- By Twey @ Dynamic Drive Forums
-* Visit Dynamic Drive for this script and more: http://www.dynamicdrive.com
-* Please keep this notice intact
-****************************************************/
-</script>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>unilogue</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <link rel="icon" href="https://unilogue.github.io/favi.png">
+  <link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,200' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
+  <script type="text/javascript" src="https://unilogue.github.io/javascripts/TypingText.js">
+    /****************************************************
+    * Typing Text script- By Twey @ Dynamic Drive Forums
+    * Visit Dynamic Drive for this script and more: http://www.dynamicdrive.com
+    * Please keep this notice intact
+    ****************************************************/
+  </script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-<script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
- </head>
-  
-  <header>
-   <section id="header">
-  <div class="header">
-          <ul id="topBar" class="menuBar">
-          <li id="name"><div id="example1"><template if="{{loading}}"></template><a href="https://unilogue.github.io">&#62; unilogue<span class="blink">_</span></a></div></li>
-<script type="text/javascript">
-//Define first typing example:
-new TypingText(document.getElementById("example1"));
-//Type out examples:
-TypingText.runAll();</script>
-        </ul>
-      </div>
-    </section>
-     </header>
-  
-  <body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
+</head>
 
-    <div id="content">
-      <ul class="menuBar">
-        
-      </ul>
-      <section id="container-holder">
-        <div class="container" style="position: relative;">
-       
- <p>$ Vice Audience Geography</p><br><br><br>
-<div id="world" style="fill-opacity:0.7; color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
-<script>
-      //basic map config with custom fills, mercator projection
-       
-       var series = [
-["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
-["IND",2.1],["BRA",2.0],["GRC",1.4],["AUT",1.2],["ROU",1.2],["SRB",1.0],["COL",0.8],["POL",0.8],["ZAF",0.7],["SWE",0.7],
-["DNK",0.6],["VEN",0.6],["JPN",0.6],["KOR",0.6],["BEL",0.5],["RUS",0.5],["PRT",0.5]
-                    ];
-               
- var dataset = {};
-    // We need to colorize every country based on "percent"
-    // colors should be uniq for every value.
-    // For this purpose we create palette(using min/max series-value)
-    var onlyValues = series.map(function(obj){ return obj[1]; });
-    var minValue = Math.min.apply(null, onlyValues),
-            maxValue = Math.max.apply(null, onlyValues);
-    // create color palette function
-    // color can be whatever you wish
-    var paletteScale = d3.scale.linear()
-            .domain([minValue,maxValue])
-            .range(["rgb(0,0,0)","rgb(219,219,219)"]);  // color
-    // fill dataset in appropriate format
-    series.forEach(function(item){ //
-        // item example value ["USA", 36.2]
-        var iso = item[0],
-                value = item[1];
-        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
-    });
-      var map = new Datamap({
-        done: function(datamap) {
-    datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
-    function redraw() {
-        datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-    }
-},
-        scope: 'world',
-        element: document.getElementById('world'),
-        projection: 'orthographic',
-        projectionConfig: {
-          rotation: [90,-30]
-        },
-         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
-        data: dataset,
-        geographyConfig: {
-            borderColor: 'rgba(222,222,222,0.2)',
-            highlightBorderWidth: 1,
-            // don't change color on mouse hover
-            highlightFillColor: function(geo) {
-                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
-            },
-            // only change border
-            highlightBorderColor: 'rgba(222,222,222,0.5)',
-            // show desired information in tooltip
-            popupTemplate: function(geo, data) {
-                // don't show tooltip if country don't present in dataset
-                if (!data) { return ; }
-                // tooltip content
-                return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
-                        ': ' + data.percent,
-                        ''].join('');        
-                        
-            }
-        }
-    });
-    
- 
-    //draw a legend for this map
-    map.legend();
-    
-      map.graticule();
-      
-</script><div style="fill-opacity:0.7;color:black; cursor:crosshair; height: 600px; width: 500px;"></div>
-<script>
-       //basic map config with custom fills, mercator projection
-       
-       var series = [
-["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
-["IND",2.1],["BRA",2.0],["GRC",1.4],["AUT",1.2],["ROU",1.2],["SRB",1.0],["COL",0.8],["POL",0.8],["ZAF",0.7],["SWE",0.7],
-["DNK",0.6],["VEN",0.6],["JPN",0.6],["KOR",0.6],["BEL",0.5],["RUS",0.5],["PRT",0.5]
-                    ];
-               
- var dataset = {};
-    // We need to colorize every country based on "percent"
-    // colors should be uniq for every value.
-    // For this purpose we create palette(using min/max series-value)
-    var onlyValues = series.map(function(obj){ return obj[1]; });
-    var minValue = Math.min.apply(null, onlyValues),
-            maxValue = Math.max.apply(null, onlyValues);
-    // create color palette function
-    // color can be whatever you wish
-    var paletteScale = d3.scale.linear()
-            .domain([minValue,maxValue])
-            .range(["rgb(0,0,0)","rgb(219,219,219)"]); // color
-    // fill dataset in appropriate format
-    series.forEach(function(item){ //
-        // item example value ["USA", 36.2]
-        var iso = item[0],
-                value = item[1];
-        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
-    });
-    
-      var map = new Datamap({
-        scope: 'world',
-        element: document.getElementById('world'),
-        projection: 'orthographic',
-        projectionConfig: {
-          rotation: [350,-30]
-        },
-         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
-        data: dataset,
-        geographyConfig: {
-            borderColor: 'rgba(222,222,222,0.2)',
-            highlightBorderWidth: 1,
-            // don't change color on mouse hover
-            highlightFillColor: function(geo) {
-                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
-            },
-            // only change border
-            highlightBorderColor: 'rgba(222,222,222,0.5)',
-            // show desired information in tooltip
-            popupTemplate: function(geo, data) {
-                // don't show tooltip if country don't present in dataset
-                if (!data) { return ; }
-                // tooltip content
-                return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
-                        ': ' + data.percent,
-                        ''].join('');
-            }
-        }
-    });
-    
- 
-    //draw a legend for this map
-    map.legend();
-    
-      map.graticule();
-      
-</script><div style="fill-opacity:0.7; color:black; cursor:crosshair; height: 600px; width: 500px; margin-top:-50px;"></div>
-<script>
-      //basic map config with custom fills, mercator projection
-       
-       var series = [
-["USA",36.2],["GBR",7.4],["CAN",6.2],["DEU",5.7],["FRA", 4.1],["ESP",4.1],["ITA",3.3],["MEX",3.0],["AUS",2.5],["NLD",2.4],
-["IND",2.1],["BRA",2.0],["GRC",1.4],["AUT",1.2],["ROU",1.2],["SRB",1.0],["COL",0.8],["POL",0.8],["ZAF",0.7],["SWE",0.7],
-["DNK",0.6],["VEN",0.6],["JPN",0.6],["KOR",0.6],["BEL",0.5],["RUS",0.5],["PRT",0.5]
-                    ];
-               
- var dataset = {};
-    // We need to colorize every country based on "percent"
-    // colors should be uniq for every value.
-    // For this purpose we create palette(using min/max series-value)
-    var onlyValues = series.map(function(obj){ return obj[1]; });
-    var minValue = Math.min.apply(null, onlyValues),
-            maxValue = Math.max.apply(null, onlyValues);
-    // create color palette function
-    // color can be whatever you wish
-    var paletteScale = d3.scale.linear()
-            .domain([minValue,maxValue])
-            .range(["rgb(0,0,0)","rgb(219,219,219)"]);  // color
-    // fill dataset in appropriate format
-    series.forEach(function(item){ //
-        // item example value ["USA", 36.2]
-        var iso = item[0],
-                value = item[1];
-        dataset[iso] = { percent: value, fillColor: paletteScale(value) };
-    });
-      var map = new Datamap({
-        scope: 'world',
-        element: document.getElementById('world'),
-        projection: 'orthographic',
-        projectionConfig: {
-          rotation: [-99,-10],
-          scale: [4]
-        },
-         fills: {defaultFill: 'rgba(30,30,30,0.1)'},
-        data: dataset,
-        geographyConfig: {
-            borderColor: 'rgba(222,222,222,0.2)',
-            highlightBorderWidth: 1,
-            // don't change color on mouse hover
-            highlightFillColor: function(geo) {
-                return geo['fillColor'] || 'rgba(30,30,30,0.5)';
-            },
-            // only change border
-            highlightBorderColor: 'rgba(222,222,222,0.5)',
-            // show desired information in tooltip
-            popupTemplate: function(geo, data) {
-                // don't show tooltip if country don't present in dataset
-                if (!data) { return ; }
-                // tooltip content
-                return ['',
-                	'<div style="opacity:0.7;" class="hoverinfo">% of visitors in ' + geo.properties.name,
-                        ': ' + data.percent,
-                        ''].join('');        
-                        
-            }
-        }
-    });
-    
-      map.graticule();
-      
-</script><br><br><br>
-   <p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p>     
-          
-        </div>
-      </section>
-    </div>
-    <footer>
-      <section id="footer">
-        
-        <div class="footer">
-          <p>spectacle 1. noun
+  <ul id="topBar" class="menuBar">
+    <li id="name">
+      <div id="example1">
+        <div class="header"><p><a href="https://unilogue.github.io">&#62; unilogue<span class="blink">_</span></a><br>
+        &#62; what do you want to see?
+          <br>&#62;
+          <input type="text" id="c" name="c" size="100%" placeholder="type '10' for vice audience geography" value="" onkeyup="cnt(document.script.w,this)" onchange="showDiv()" />
+          </form>
+        </p>
+      </div></div>
 
-The organization of appearances made possible through modern means of communication (media). The ease with which images can be detached and alienated from their sources, and reorganized for re-presentation in accord with the ideology of the ruling power, forms the technical basis of the unprecedented scope of the modern spectacle, where "everything that was once directly lived has moved away into its representation". Communications of lived experience become communications of (and about) spectacles, communication of passivity, non-communication. The spectacle in general names the ensemble of the social relations of non-communication, of isolation. Real means of communication would be means to dialogue as opposed to the technologies of "unilogue" which have developed with the spectacle. Unilateral, one-way communication is always authoritarian: the giving of orders. The nightmare of the spectacle, of images which take on a "life" of their own, is fully realized when people consciously attempt to live up to the images with which they are presented: even in lovemaking, potentially the most perfect form of communication (the unity of pleasure-giving and pleasure-getting), human beings are constantly trying to present images of themselves to each other -- "stud", "sensuous woman", etc. -- the immediate contact of two human beings is lost in the pseudo-lovemaking of their spectacular images. The spectacle, in its various forms, rules the world: the world which it re-presents as its world.
-The materialization of ideology.
-AÂ set of social relations mediated by images and representations. Â It hides more than it shows.</p>
-        </div>
-      </section>
-    </footer>
+      <script type="text/javascript">
+        //Define first typing example:
+          new TypingText(document.getElementById("example1"), 100);
+          //Type out examples:
+          TypingText.runAll();
+new TypingText(document.getElementById("cmd"));
+          //Type out examples:
+          TypingText.run();
+      </script>
+  </ul>
+    
+<script>function showDiv() {
+    var myNumValue = document.getElementById('c').value,
+        
+        // Get the minimum value between myNumValue / 100 and 6
+        myNum = Math.min(Math.floor(parseInt(myNumValue, 10) / 100), 6),
+        
+        // Create an array containing our 7 div IDs,
+        myArr = ["div1", "div2", "div3", "div4", "div5", "div6", "div7"];
+        
+
+    // Hide all divs except the one that matches myNum
+    for (var i=0, len = myArr.length; i < len; i++) 
+        document.getElementById(myArr[i]).style.visibility = i == myNum ? "visible" : "hidden"; 
+}</script>
+
+<div id="div1" style="visibility:hidden;">
   
-</body></html>
+  <p>$ Vice Audience Geography</p>
+  
+  <div id="world" style="fill-opacity:0.7; color:black; height: 600px; width: 500px; margin-top:-50px;"><script type="text/javascript" src="http://unilogue.github.io/javascripts/map1.js"></script></div><br>
+    
+  <p style="font-size:12px;">Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p>
+
+</div>
+
+
+<div id="div2" style="visibility:hidden;">
+Price level 2!
+</div>
+
+<div id="div3" style="visibility:hidden;">
+Price level 3!
+</div>
+
+<div id="div4" style="visibility:hidden;">
+Price level 4!
+</div>
+
+<div id="div5" style="visibility:hidden;">
+Price level 5!
+</div>
+
+<div id="div6" style="visibility:hidden;">
+Price level 6!
+</div>
+
+<div id="div7" style="visibility:hidden;">
+Price level 7!
+</div>
+
+</html>
