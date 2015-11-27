@@ -36,7 +36,7 @@
                 element: document.getElementById('world'),
                 projection: 'orthographic',
                 projectionConfig: {
-                  rotation: [-99,-30]
+                  rotation: [-99,-10]
                 },
                  fills: {defaultFill: 'rgba(30,30,30,0.1)'},
                 data: dataset,
