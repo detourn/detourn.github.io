@@ -1,19 +1,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>unilogue</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <link rel="icon" href="https://unilogue.github.io/favi.png">
-  <link rel="stylesheet" href="https:/unilogue.github.io/stylesheets/style.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,200' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,700">
-  <script type="text/javascript" src="https://unilogue.github.io/javascripts/TypingText.js">
+  <link rel="stylesheet" href="//unilogue.github.io/stylesheets/style.css">
+  <script type="text/javascript" src="//unilogue.github.io/javascripts/index.js">
+  <script type="text/javascript" src="//unilogue.github.io/javascripts/TypingText.js">
     /****************************************************
     * Typing Text script- By Twey @ Dynamic Drive Forums
     * Visit Dynamic Drive for this script and more: http://www.dynamicdrive.com
@@ -23,117 +16,34 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   <script src="http://unilogue.github.io/javascripts/datamaps.world.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 </head>
-
-<ul id="topBar" class="menuBar">
-  <li id="name">
-    <div id="example1">
-      <div class="header">
-        <p><a href="https://unilogue.github.io">UNILOGUE<span class="blink">_</span></a><br>
-        (c) 2015<br><br>
-        
-          COMMANDS:<br>
-          10 = VICE AUDIENCE GEOGRAPHY<br>
-          100 = GLOSSARY
-          
-          <br><br>
-          &#62; <input type="text" id="c" name="c" value="" size="100%" placeholder="ENTER COMMAND" value="" onkeyup="cnt(document.script.w,this)" onchange="showDiv()" />
-          </form>
-        </p>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-      //Define first typing example:
-          new TypingText(document.getElementById("example1"));
-          //Type out examples:
-          TypingText.runAll();
-new TypingText(document.getElementById("cmd"));
-          //Type out examples:
-          TypingText.run();
-    </script>
-</ul>
-
+  
+  <div class="header">
+    <p><a href="https://unilogue.github.io">&#62; unilogue<span class="blink">_</span></a><br>
+      &#62;  <input type="text" placeholder="ENTER 'MAP' COMMAND" /> </p></div>
+  
  <body>
-
-    <div id="content">
-    
-      <section id="container-holder">
-        <div class="container" style="position: relative; margin-left: 40px;">
-
-<script>
-  function showDiv() {
-      var myNumValue = document.getElementById('c').value,
           
-          // Get the minimum value between myNumValue / 100 and 6
-          myNum = Math.min(Math.floor(parseInt(myNumValue, 10) / 100), 6),
-          
-          // Create an array containing our 7 div IDs,
-          myArr = ["div1", "div2", "div3", "div4", "div5", "div6", "div7"];
-          
-  
-      // Hide all divs except the one that matches myNum
-      for (var i=0, len = myArr.length; i < len; i++) 
-          document.getElementById(myArr[i]).style.display = i == myNum ? "block" : "none"; 
-  }
-</script>
-  
-
-<div id="div1" style="display:none;">
-
-  <p>$ Vice Audience Geography</p>
+<div id="div1">
+  <p>$ Vice Audience Geography<br><br>
+ A majority of Vice's viewers are from core countries, or the first world. The transparent countries mostly consist of peripheral countries, or the third world. Lighter shades indicate more viewership while darker indicates less. The U.S.A. makes up the most at 36.2%. <sup><a href="#fn1" id="ref1">[1]</a></sup></p>
 <br><br>
-  <div id="world" style="fill-opacity:0.7;">
+  <div id="world" style="fill-opacity:0.7;" align="center">
     <script type="text/javascript" src="http://unilogue.github.io/javascripts/map1.js"></script>
-  </div>
-  <br>
-
-  <p>Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a></p>
-
-</div>
-
-
-<div id="div2" style="display:none;">
-  <p><p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[ ]]&nbsp; -&nbsp;&nbsp;this city is a coded spine&nbsp;</strong></p>
-<p>globewars &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;chronogenic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;digital voodoo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cyberotics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;antiproductive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; circuitry</p>
-<p>monotheology &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;morass of &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mutation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;rhizomatics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;æunruly herds &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;meltdown</p>
-<p>virus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; synthetic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; serotonin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;xenosentience &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;eukaryotes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;universities</p>
-<p>gigabucks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trading-systems &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;twang</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;free-fire zones &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3D spatialities &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;asphyxiating</p>
-<p>machinism &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;digitech-heated &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;desiring-machines</p>
-
-<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the story is many&nbsp;bodies without organs&nbsp;[[ ]]</strong>&nbsp;</p>
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://viperslang.tumblr.com/post/63454146164">Scherezade Siobhan ©</a>
-</p>
-</div>
-
-<div id="div3" style="visibility:hidden;">
-  Price level 3!
-</div>
-
-<div id="div4" style="visibility:hidden;">
-  Price level 4!
-</div>
-
-<div id="div5" style="visibility:hidden;">
-  Price level 5!
-</div>
-
-<div id="div6" style="visibility:hidden;">
-  Price level 6!
-</div>
-
-<div id="div7" style="visibility:hidden;">
-  Price level 7!
-</div>
-
-</div>
-      </section>
-    </div>
+   </div>
+ 
+ <br><br>
+  <p>If these countries weren’t being repressed, would Vice still be there? How do the stories that they write about the West/global North differ from the East/global South?
+Why are these countries repressed. Could imperialism and globalization be to blame?
+They are profiting off of silence and neglect.
+Is Vice supposed to appeal to young white millenials? Is it meant to inform their politics or make them feel better about themselves?
+What are the demographics of their correspondents like? Their audience? What about the geography? How does this influence their content? What is “immersionist” journalism?
+What is Adorno’s view on “lifestyle” and the culture industry? How does this relate to advanced capitalism?
+  <hr>
+  <sup id="fn1">1. Created with <a href="https://github.com/unilogue/datamaps" target="_blank">datamaps</a> and <a href="http://www.alexa.com/siteinfo/vice.com" target="_blank">Alexa.</a><a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup></p>
+  
+          </div>
+        
    </body>
-          
 </html>
