@@ -26,12 +26,6 @@
                 dataset[iso] = { percent: value, fillColor: paletteScale(value) };
             });
               var map = new Datamap({
-                done: function(datamap) {
-            datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
-            function redraw() {
-                datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-            }
-        },
                 scope: 'world',
                 element: document.getElementById('world'),
                 projection: 'orthographic',
