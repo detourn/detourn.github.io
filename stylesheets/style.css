@@ -222,6 +222,7 @@ sup {
 
 .header a, .header a:hover, .header a:after, .header a:hover:after {
   text-decoration: none;
+  cursor: help;
   color: #c0c0c0;
   border-bottom: 0px;
   letter-spacing: 1px;
