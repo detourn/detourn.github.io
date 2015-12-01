@@ -74,6 +74,7 @@ svg.datamap {
     height: 600px;
     width: 600px;
     float:left;
+    cursor: crosshair;
 }
 
 #world p {
