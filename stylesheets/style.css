@@ -72,23 +72,31 @@ body a:hover {
 
 svg.datamap {
     height: 600px;
-    width: 100%;
-    margin: 0 auto;
+    width: 600px;
+    float:left;
+}
+
+#world p {
+  padding:1.5em;
+  font-size:24px;
+  text-align:right;
+}
+
+.hoverinfo {
+  position:absolute;
+  background-color:transparent;
+  display:block;
 }
 
 blockquote {
-  font-size: 28px;
-  font-weight:300;
-  line-height: 1.52;
+  font-size: 1.2em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  font-weight: 400;
   color: #404040;
-  display: block;
   font-family: 'Source Code Pro', sans-serif;
-  border-left: 2px solid #303030;
-  border-right: 2px solid #303030;
-  border-radius: 0.5em;
-  width:85%;
-  padding: 1em;
-  white-space: pre-wrap;
+  width:92%;
+  text-align:justify;
 }
 
 pre {
@@ -121,18 +129,17 @@ pre {
 }
 
 h1 {
-  font-size: 4.2em;
-  margin-bottom: 0.4em;
+  font-size: 4.0em;
   font-weight: 400;
   color: #404040;
   font-family: 'Source Code Pro', sans-serif;
-  width:92%;
   text-align:justify;
 }
 
 h2 {
-  font-size: 2.2em;
-  margin-bottom: 0.4em;
+  font-size: 1.5em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
   font-weight: 400;
   color: #404040;
   font-family: 'Source Code Pro', sans-serif;
@@ -141,9 +148,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 0.25em;
   margin-bottom: 0.4em;
-  font-weight: 400;
   color: #404040;
   font-family: 'Source Code Pro', sans-serif;
   width:92%;
@@ -165,7 +171,7 @@ li {
   padding: 1em;
   color:#404040;
   text-align:justify;
-  width:90%;
+  width:80%;
 }
 
 hr {
