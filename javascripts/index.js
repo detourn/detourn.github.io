@@ -1,7 +1,8 @@
- //Define first typing example:
+ (function() {//Define first typing example:
           new TypingText(document.getElementById("example1"), 100);
           //Type out examples:
           TypingText.runAll();
+ })();
 // Hide both <div> by default
 $('#div1').hide();
 $('#div2').hide();
