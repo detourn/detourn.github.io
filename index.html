@@ -38,6 +38,16 @@
   </style>
 
   <body>
+    
+  <script type="text/javascript">
+    $(function() {
+  $('#commands').hide();
+       $('#help').click(function() {
+           $('#commands').slideDown();
+           return false;
+       });        
+   });
+  </script>
   
   <div class="header" style="font-size: 24px;font-weight:200;
   line-height: 1.52;color: #404040;display: inline-block;
