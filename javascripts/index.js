@@ -2,6 +2,7 @@
 $('#div1').hide();
 $('#div2').hide();
 $('#div3').hide();
+$('#error').hide();
 
 // Check on keydown
 $('input').keydown(function() {
@@ -21,5 +22,6 @@ $('input').keydown(function() {
       $('#div1').hide();
       $('#div2').hide();
       $('#div3').hide();
+      $('#error').show();
   }
 });
