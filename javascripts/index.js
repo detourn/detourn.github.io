@@ -15,3 +15,10 @@ $('input').keydown(function() {
       $('#div2').hide();
   }
 });
+$(function() {
+  $('#commands').hide();
+       $('#help').click(function() {
+           $('#commands').slideDown();
+           return false;
+       });        
+   });
