@@ -1,3 +1,6 @@
+#div1, #div2, #div3, #error {
+  display:none;
+}
 @font-face {
   font-family: 'OCR A Extended';
   src: url('//unilogue.github.io/fonts/OCRAEXT.TTF');
