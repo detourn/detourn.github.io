@@ -18,10 +18,15 @@ $('input').keydown(function() {
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').slideDown();
+  } else if ($('input').attr("value", false)) {  // If input value is div2
+       $('#div1').hide();
+       $('#div2').hide();
+       $('#div3').hide();
+       $('#error').slideDown();
   } else {  // If input value is not equal to div1 or div2, hide both
       $('#div1').hide();
       $('#div2').hide();
       $('#div3').hide();
-      $('#error').show();
+      $('#error').hide();
   }
 });
