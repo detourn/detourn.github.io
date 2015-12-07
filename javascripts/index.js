@@ -16,6 +16,9 @@ $('input').keydown(function() {
        
        $('#error').slideDown();
   } else {
-       
+         $('#div1').hide();
+       $('#div2').hide();
+       $('#div3').hide();
+       $('#error').hide();
   }
 });
