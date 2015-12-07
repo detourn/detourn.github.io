@@ -1,5 +1,7 @@
 // Hide both <div> by default
-
+$(".hide").each(function(index,obj)){
+    $(obj).hide(); // Or $(obj).css("display","none")
+}
 
 // Check on keydown
 $('input').keydown(function() {
