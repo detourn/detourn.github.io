@@ -1,3 +1,7 @@
+ //Define first typing example:
+          new TypingText(document.getElementById("example1"), 100);
+          //Type out examples:
+          TypingText.runAll();
 // Hide both <div> by default
 $('#div1').hide();
 $('#div2').hide();
@@ -21,7 +25,7 @@ $('input').keydown(function() {
        $('#div2').hide();
        $('#error').hide();
        $('#div3').slideDown();
-  } else if (0 > $('input').val() < 10) {  // If input value is wrong
+  } else if ($('input') 0 < .val() < 10) {  // If input value is wrong
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').hide();
