@@ -6,7 +6,12 @@ $('#error').hide();
 
 // Check on keydown
 $('input').keydown(function() {
-  if ($('input').val() == 'map') {  // If input value is div1
+   if ($('input').val() > 0) {  // If input value is wrong
+       $('#div1').hide();
+       $('#div2').hide();
+       $('#div3').hide();
+       $('#error').slideDown();
+  } if ($('input').val() == 'map') {  // If input value is div1
        $('#div2').hide();
        $('#div3').hide();
        $('#error').hide();
@@ -16,7 +21,7 @@ $('input').keydown(function() {
        $('#div3').hide();
        $('#error').hide();
        $('#div2').slideDown();
-  } else if ($('input').val() == 'glossary') {  // If input value is div2
+  } else if ($('input').val() == 'glossary') {  // If input value is div3
        $('#div1').hide();
        $('#div2').hide();
        $('#error').hide();
@@ -25,6 +30,6 @@ $('input').keydown(function() {
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').hide();
-       $('#error').slideDown();
+       $('#error').hide();
   }
 });
