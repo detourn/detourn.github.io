@@ -1,3 +1,10 @@
+$(function() {
+  $('#commands').hide();
+       $('#help').click(function() {
+           $('#commands').slideDown();
+           return false;
+       });        
+   });
 // Hide both <div> by default
 $('#div1').hide();
 $('#div2').hide();
@@ -15,10 +22,3 @@ $('input').keydown(function() {
       $('#div2').hide();
   }
 });
-$(function() {
-  $('#commands').hide();
-       $('#help').click(function() {
-           $('#commands').slideDown();
-           return false;
-       });        
-   });
