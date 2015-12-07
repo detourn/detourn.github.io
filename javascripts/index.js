@@ -21,7 +21,7 @@ $('input').keydown(function() {
        $('#div2').hide();
        $('#error').hide();
        $('#div3').slideDown();
-  } else if ($('input') 0 < .val() < 10) {  // If input value is wrong
+  } else if ($('input').val() > 0) {  // If input value is wrong
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').hide();
