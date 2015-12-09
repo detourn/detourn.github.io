@@ -20,8 +20,7 @@ $('input').keydown(function() {
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').slideDown();
-       $('#error').hide();
-  } else if ($('input').val() == 'map') {  // If input value is wrong
+  } else if ($('input').val() == '// wrong input //') {  // If input value is wrong
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').hide();
