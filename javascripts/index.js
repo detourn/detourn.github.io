@@ -30,6 +30,5 @@ $('input').keydown(function() {
        $('#div1').hide();
        $('#div2').hide();
        $('#div3').hide();
-       $('#error').hide();
   }
 });
