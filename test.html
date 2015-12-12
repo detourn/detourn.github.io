@@ -5,28 +5,19 @@
 	<link rel="stylesheet" href="stylesheets/cmd.css">
         <script language="JavaScript" type="text/javascript" src="termlib/termlib.js"></script>
 
-<script>
+<script language="JavaScript" type="text/javascript">
 <!--
 
-var term;
-    
-    function termOpen() {
-          term.open();
-		var y=(n==1)? 70: 280;
-		term =new Terminal(
-			{
-				x: 0,
-				y: 0,
-				rows: 12,
-				greeting: '%+r +++ unilogue +++ %-r%nType "help" for help.%n',
-				id: n,
-				termDiv: 'termDiv'+n,
-				crsrBlinkMode: true,
-				handler: termHandler,
-				exitHandler: termExitHandler
-			}
-		);
-    }
+/*
+  multiple terminal test for termlib.js
+
+  (c) Norbert Landsteiner 2003-2005
+  mass:werk - media environments
+  <http://www.masswerk.at>
+
+*/
+
+var term=new Array();
 
 var helpPage=[
 	'%CS%+r Terminal Help %-r%n',
@@ -46,6 +37,32 @@ var mapPage=[
 	'  This is the map page.',
 	' '
 ];
+
+function termOpen(n) {
+	if (!term[n]) {
+		var y=(n==1)? 70: 280;
+		term[n]=new Terminal(
+			{
+				x: 220,
+				y: y,
+				rows: 12,
+				greeting: '%+r +++ Terminal #'+n+' ready. +++ %-r%nType "help" for help.%n',
+				id: n,
+				termDiv: 'termDiv'+n,
+				crsrBlinkMode: true,
+				handler: termHandler,
+				exitHandler: termExitHandler
+			}
+		);
+		if (term[n]) term[n].open();
+	}
+	else if (term[n].closed) {
+		term[n].open();
+	}
+	else {
+		term[n].focus();
+	}
+}
 
 function termHandler() {
 	// called on <CR> or <ENTER>
@@ -68,11 +85,18 @@ function termHandler() {
 			this.write(mapPage);
 		}
 		else {
-			this.type(+cmd' - Unknown Command.');
+			this.type('You typed: '+cmd);
 			this.newLine();
 		}
 	}
 	this.prompt();
+}
+
+function termExitHandler() {
+	// optional handler called on exit
+	// activate other terminal if open
+	var other=(this.id==1)? 2:1;
+	if ((term[other]) && (term[other].closed==false)) term[other].focus();
 }
 
 //-->
@@ -86,7 +110,10 @@ topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" m
 
 <table border="0" cellspacing="20" cellpadding="0">
 	<tr><td nowrap>
-		Homepage Test<br>&nbsp;
+		Multiple Terminal Test<br>&nbsp;
+	</td></tr>
+	<tr><td nowrap>
+		<a href="javascript:termOpen(1)" onfocus="if(this.blur)this.blur();" onmouseover="window.status='terminal 1'; return true" onmouseout="window.status=''; return true" class="termopen">&gt; open terminal 1 &nbsp;</a>
 	</td></tr>
 	
 	<tr><td nowrap class="lh15">
@@ -97,7 +124,7 @@ topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" m
 </table>
 
 
-<div id="termDiv1" style="position:relative; top:20px; left:100px;"></div>
+<div id="termDiv1" style="position:absolute; top:20px; left:100px;"></div>
 
 </body>
 </html>
