@@ -83,7 +83,7 @@ topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" m
 
 */
 
-var term=new Array();
+var term;
 
 var helpPage=[
 	'%CS%+r Terminal Help %-r%n',
@@ -104,13 +104,13 @@ var mapPage=[
 	' '
 ];
 
-function termOpen(n) {
-	if (!term[n]) {
+function termOpen() {
+	        term.open();
 		var y=(n==1)? 70: 280;
-		term[n]=new Terminal(
+		term =new Terminal(
 			{
-				x: 220,
-				y: y,
+				x: 0,
+				y: 0,
 				rows: 12,
 				greeting: '%+r +++ unilogue +++ %-r%nType "help" for help.%n',
 				id: n,
@@ -120,13 +120,13 @@ function termOpen(n) {
 				exitHandler: termExitHandler
 			}
 		);
-		if (term[n]) term[n].open();
+	
 	}
-	else if (term[n].closed) {
-		term[n].open();
+	else if (term.closed) {
+		term.open();
 	}
 	else {
-		term[n].focus();
+		term.focus();
 	}
 }
 
@@ -158,13 +158,6 @@ function termHandler() {
 	this.prompt();
 }
 
-function termExitHandler() {
-	// optional handler called on exit
-	// activate other terminal if open
-	var other=(this.id==1)? 2:1;
-	if ((term[other]) && (term[other].closed==false)) term[other].focus();
-}
-
 //-->
 </script>
 	</td></tr>
@@ -177,7 +170,7 @@ function termExitHandler() {
 </table>
 
 
-<div id="termDiv1" style="position:absolute; top:20px; left:100px;"></div>
+<div id="termDiv1" style="position:relative; top:20px; left:100px;"></div>
 
 </body>
 </html>
