@@ -10,3 +10,32 @@
     }
   </script>
   </head>
+  <div id="myTerminal1" style="position:absolute; top:100px; left:100px;">
+     <table class="termChrome">
+     	<tbody>
+        <tr>
+           <td class="termTitle">terminal 1</td>
+        </tr>
+        <tr>
+           <td class="termBody"><div id="termDiv1" style="position:relative"></div></td>
+        </tr>
+     	</tbody>
+     </table>
+   </div>
+
+   // get a terminal for this
+
+   var term1 = new Terminal(
+                 {
+                   x: 0,
+                   y: 0,
+                   id: 1,
+                   termDiv: "termDiv1",
+                   handler: myTermHandler
+                 }
+              );
+   term1.open();
+   
+   // and this is how to move the chrome and the embedded terminal
+
+   TermGlobals.setElementXY( "myTerminal1", 200, 80 );
