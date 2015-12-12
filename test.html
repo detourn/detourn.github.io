@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title>termlib Multiple Terminal Test</title>
+	<title>homepage test</title>
 	<script language="JavaScript" type="text/javascript" src="termlib/termlib.js"></script>
 
 <script language="JavaScript" type="text/javascript">
@@ -25,9 +25,8 @@ var helpPage=[
 	'     clear .... clear the terminal',
 	'     exit ..... close the terminal (or <ESC>)',
 	'     id ....... show terminal\'s id',
-	'     switch ... switch to other terminal',
 	'     help ..... show this help page',
-	'     map ..... show map page',
+	'     map ...... show map page',
 	'  other input will be echoed to the terminal.',
 	' '
 ];
@@ -46,7 +45,7 @@ function termOpen(n) {
 				x: 220,
 				y: y,
 				rows: 12,
-				greeting: '%+r +++ Terminal #'+n+' ready. +++ %-r%nType "help" for help.%n',
+				greeting: '%+r +++ unilogue +++ %-r%nType "help" for help.%n',
 				id: n,
 				termDiv: 'termDiv'+n,
 				crsrBlinkMode: true,
@@ -69,11 +68,7 @@ function termHandler() {
 	this.newLine();
 	var cmd=this.lineBuffer;
 	if (cmd!='') {
-		if (cmd=='switch') {
-			var other=(this.id==1)? 2:1;
-			termOpen(other);
-		}
-		else if (cmd=='clear') {
+		if (cmd=='clear') {
 			this.clear();
 		}
 		else if (cmd=='exit') {
@@ -89,7 +84,7 @@ function termHandler() {
 			this.write(mapPage);
 		}
 		else {
-			this.type('You typed: '+cmd);
+			this.type(+cmd' - Unknown Command.');
 			this.newLine();
 		}
 	}
@@ -172,7 +167,7 @@ topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" m
 		Multiple Terminal Test<br>&nbsp;
 	</td></tr>
 	<tr><td nowrap>
-		<a href="javascript:termOpen(1)" onfocus="if(this.blur)this.blur();" onmouseover="window.status='terminal 1'; return true" onmouseout="window.status=''; return true" class="termopen">&gt; open terminal 1 &nbsp;</a>
+		<script src="javascript:termOpen(1)"></script>
 	</td></tr>
 	
 	<tr><td nowrap class="lh15">
