@@ -3,9 +3,6 @@ body,p,a,td,li {
 	font-size: 12px;
 	color: #cccccc;
 }
-.lh15 {
-	line-height: 15px;
-}
 
 .term {
 	font-family: "Courier New",courier,fixed,monospace;
@@ -62,11 +59,6 @@ tt,pre {
 li {
 	line-height: 15px;
 	margin-bottom: 8px !important;
-}
-
-.dimmed,.dimmed *,.dimmed * * {
-	background-color: #222222 !important;
-	color: #333333 !important;
 }
 
 @media print {
