@@ -1,19 +1,4 @@
-/* essential terminal styles */
-
-.term {
-	font-family: courier,fixed,swiss,sans-serif;
-	font-size: 12px;
-	color: #c0c0c0;
-	background: none;
-}
-.termReverse {
-	color: #111111;
-	background: #c0c0c0;
-}
-
-/* other page styles */
-
-body,p,a,td {
+body,p,a,td,li {
 	font-family: courier,fixed,swiss,sans-serif;
 	font-size: 12px;
 	color: #cccccc;
@@ -21,6 +6,19 @@ body,p,a,td {
 .lh15 {
 	line-height: 15px;
 }
+
+.term {
+	font-family: "Courier New",courier,fixed,monospace;
+	font-size: 12px;
+	color: #c0c0c0;
+	background: none;
+	letter-spacing: 1px;
+}
+.term .termReverse {
+	color: #111111;
+	background: #c0c0c0;
+}
+
 a,a:link,a:visited {
 	text-decoration: none;
 	color: #77dd11;
@@ -31,7 +29,7 @@ a:hover {
 }
 a:active {
 	text-decoration: underline;
-	color: #dddddd;
+	color: #eeeeee;
 }
 
 a.termopen,a.termopen:link,a.termopen:visited {
@@ -47,5 +45,51 @@ a.termopen:hover {
 a.termopen:active {
 	text-decoration: none;
 	color: #222222;
-	background: #dddddd;
+	background: #eeeeee;
+}
+
+table.inventory td {
+	padding-bottom: 20px !important;
+}
+
+tt,pre {
+	font-family: courier,fixed,monospace;
+	color: #ccffaa;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+li {
+	line-height: 15px;
+	margin-bottom: 8px !important;
+}
+
+.dimmed,.dimmed *,.dimmed * * {
+	background-color: #222222 !important;
+	color: #333333 !important;
+}
+
+@media print {
+	body { background-color: #ffffff; }
+	body,p,a,td,li,tt {
+		color: #000000;
+	}
+	pre,.prop {
+		color: #000000;
+	}
+	h1 {
+		color: #000000;
+	}
+	a,a:link,a:visited {
+		color: #000000;
+	}
+	a:hover {
+		color: #000000;
+	}
+	a:active {
+		color: #000000;
+	}
+	table.inventory {
+		display: none;
+	}
 }
