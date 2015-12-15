@@ -64,11 +64,6 @@ li {
 	margin-bottom: 8px !important;
 }
 
-.dimmed,.dimmed *,.dimmed * * {
-	background-color: #222222 !important;
-	color: #333333 !important;
-}
-
 @media print {
 	body { background-color: #ffffff; }
 	body,p,a,td,li,tt {
