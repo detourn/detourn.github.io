@@ -35,10 +35,6 @@ function termOpen() {
 		);
 		term.open();
 		
-		// dimm UI text
-		var mainPane = (document.getElementById)?
-			document.getElementById('mainPane') : document.all.mainPane;
-		if (mainPane) mainPane.className = 'lh15 dimmed';
 	}
 }
 
