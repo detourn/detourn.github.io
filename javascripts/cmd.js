@@ -35,7 +35,34 @@ function termOpen() {
 		);
 		term.open();
 		
+		// dimm UI text
+		var mainPane = (document.getElementById)?
+			document.getElementById('mainPane') : document.all.mainPane;
+		if (mainPane) mainPane.className = 'lh15 dimmed';
 	}
+}
+
+function termExitHandler() {
+	// reset the UI
+	var mainPane = (document.getElementById)?
+		document.getElementById('mainPane') : document.all.mainPane;
+	if (mainPane) mainPane.className = 'lh15';
+}
+
+function pasteCommand(text) {
+	// insert given text into the command line and execute
+	var termRef = TermGlobals.activeTerm;
+	if ((!termRef) || (termRef.closed)) {
+		alert('Please open the terminal first.');
+		return;
+	}
+	if ((TermGlobals.keylock) || (termRef.lock)) return;
+	termRef.cursorOff();
+	termRef._clearLine();
+	for (var i=0; i<text.length; i++) {
+		TermGlobals.keyHandler({which: text.charCodeAt(i), _remapped:true});
+	}
+	TermGlobals.keyHandler({which: termKey.CR, _remapped:true});
 }
 
 function termHandler() {
