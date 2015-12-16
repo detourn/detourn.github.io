@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
 <head>
+<meta charset="utf-8">
 <title>unilogue</title>
     <link rel="icon" href="favi.png">
     <link href="jquery.terminal/css/jquery.terminal.css" rel="stylesheet">
@@ -20,13 +20,6 @@
 	
 	<script>
 	jQuery(function($, undefined) {
-			
-		function addhttp(url) {
-		   if (!/^(f|ht)tps?:\/\//i.test(url)) {
-		      url = "http://" + url;
-		   }
-		   return url;
-		}
 		
 	    $('body').terminal({
 			glossary: function() {
@@ -58,6 +51,14 @@
 			this.echo('\tclear.................................clears the screen');
 			this.echo('\tgithub................................my github profile');
 		        this.echo('\thelp..................................this help screen');
+		    },
+		    
+		    terminal_color: function(a) {
+				if (a == 'normal') {
+		          $('body').css("background-color", '#000000');
+		        } else {
+		          $('body').css("background-color", a);
+		        }
 		    },
 
 	    }, {
