@@ -26,7 +26,7 @@ jQuery(function($, undefined) {
 		    
 		    terminal_color: function(a) {
 				if (a == 'normal') {
-		          $('body').css("background-color", '#0d0d0d');
+		          $('body').css("background-color", '#000');
 		        } else {
 		          $('body').css("background-color", a);
 		        }
