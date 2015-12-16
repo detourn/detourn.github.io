@@ -2,7 +2,7 @@ jQuery(function($, undefined) {
 		
 	    $('body').terminal({
 			glossary: function() {
-				this.echo('<a href="http://viperslang.tumblr.com/post/63454146164">http://viperslang.tumblr.com/post/63454146164</a>', {raw:true});
+				window.open('http://viperslang.tumblr.com/post/63454146164');
 			 },
         
         map: function() {
