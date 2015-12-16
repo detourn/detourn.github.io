@@ -3,74 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>unilogue</title>
-    <link rel="icon" href="favi.png">
-    <link href="/jquery.terminal/css/jquery.terminal.css" rel="stylesheet">
-    <script src="/jquery.terminal/js/jquery-1.7.1.min.js"></script>
-    <script src="/jquery.terminal/js/jquery.mousewheel-min.js"></script>
-    <script src="/jquery.terminal/js/jquery.terminal-min.js"></script>
+    <link rel="icon" href="//unilogue.github.io/favi.png">
+    <link href="//unilogue.github.io/stylesheets/cmd.css" rel="stylesheet">
+    <link href="//unilogue.github.io/jquery.terminal/css/jquery.terminal.css" rel="stylesheet">
+    <script src="//unilogue.github.io/jquery.terminal/js/jquery-1.7.1.min.js"></script>
+    <script src="//unilogue.github.io/jquery.terminal/js/jquery.mousewheel-min.js"></script>
+    <script src="//unilogue.github.io/jquery.terminal/js/jquery.terminal-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="/javascripts/datamaps.world.min.js"></script>
-    
-	<style>
-		body{background-color:black;font-family:monospace;color:#aaa;font-size:12px;line-height:14px;}
-	</style>
-	
-	
-	<script>
-	jQuery(function($, undefined) {
-		
-	    $('body').terminal({
-			glossary: function() {
-				this.echo('<img src="favi.png"/>', {raw:true});
-				this.echo('<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[ ]]&nbsp; -&nbsp;&nbsp;this city is a coded spine&nbsp;</strong></p>');
-				this.echo('<p>globewars &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;chronogenic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;digital voodoo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</p>');
-				this.echo('<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cyberotics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;antiproductive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; circuitry</p>');
-				this.echo('<p>monotheology &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;morass of &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mutation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>');
-				this.echo('<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;rhizomatics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;æunruly herds &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;meltdown</p>');
-				this.echo('<p>virus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; synthetic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; serotonin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>');
-				this.echo('<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;xenosentience &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;eukaryotes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;universities</p>');
-				this.echo('<p>gigabucks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trading-systems &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;twang</p>');
-				this.echo('<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;free-fire zones &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3D spatialities &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;asphyxiating</p>');
-				this.echo('<p>machinism &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;digitech-heated &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;desiring-machines</p>');
-				this.echo('<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the story is many&nbsp;bodies without organs&nbsp;[[ ]]</strong>&nbsp;</p>');
-				this.echo('<p><small><a href="http://viperslang.tumblr.com/post/63454146164">© Scherezade Siobhan</a></small></p>', {raw:true});
-			 },
-		
-		
-			github: function() {
-				window.open('https://github.com/unilogue','_blank');
-			},
-		
-		    help: function() {
-		        this.echo('commands:');
-		        this.echo('\tmap...................................research paper');
-		        this.echo('\tderive................................digital personae');
-		        this.echo('\tglossary..............................a poem');
-			this.echo('\tclear.................................clears the screen');
-			this.echo('\tgithub................................my github profile');
-		        this.echo('\thelp..................................this help screen');
-		    },
-		    
-		    terminal_color: function(a) {
-				if (a == 'normal') {
-		          $('body').css("background-color", '#000000');
-		        } else {
-		          $('body').css("background-color", a);
-		        }
-		    },
-
-	    }, {
-	        greetings: 'type `help` for a list of commands.\r\n',
-	        name: 'unilogue',
-	        height: window.innerHeight - 36,
-	        prompt: '> '
-		});
-	});
-	</script>
+    <script src="//unilogue.github.io/javascripts/datamaps.world.min.js"></script> 
 </head>
+<script src="//unilogue.github.io/javascripts/cmd.js"></script>
 <body>
-	<p>unilogue<br>(c) 2015</p>
-	
+<p>unilogue<br>(c) 2015</p>
 </body>
 </html>
