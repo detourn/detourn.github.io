@@ -1,0 +1,43 @@
+body {
+			background-color:#0d0d0d;
+      text-rendering: optimizeLegibility;
+}
+  
+  
+  body p {
+			font-family: monospace;
+			text-align: justify;
+			color:#aaa;
+			font-size:12px;
+			line-height:14px;
+		}
+		
+		body a {
+  			text-decoration:none;
+  			color:#404040;
+  			border-bottom: solid 1px #303030;
+  			display:inline-block;
+  			font-family: 'Source Code Pro', ;
+		}
+
+		body a:after {
+  			color: #b8b8b8;
+  			display:block;
+  			content: '';
+  			border-bottom: solid 1px #b8b8b8;  
+  			transform: scaleX(0.0001);  
+  			transition: transform 250ms ease-in-out;
+		}
+
+		body a:hover:after {
+  			transform: scaleX(1);
+  			color: #b8b8b8;
+		}
+
+		body a:hover {
+  			color: #b8b8b8;
+		}
+		
+		::-webkit-scrollbar {
+  			display: none;
+		}
