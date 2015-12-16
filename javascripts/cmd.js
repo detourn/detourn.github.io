@@ -8,7 +8,7 @@ jQuery(function($, undefined) {
         map: function() {
          
     
-        <input type="text" name="value" value="go" />
+        this.echo('<input type="text" name="value" value="go" />');
         },
 		
 		
@@ -17,13 +17,13 @@ jQuery(function($, undefined) {
 			},
 		
 		    help: function() {
-		        this.echo('commands:');
+		        this.echo('<br>' 'commands:');
 		        this.echo('\tmap...................................research paper');
 		        this.echo('\tderive................................digital personae');
 		        this.echo('\tglossary..............................a cyber love poem');
 			this.echo('\tclear.................................clears the screen');
 			this.echo('\tgithub................................my github profile');
-		        this.echo('\thelp..................................this help screen');
+		        this.echo('\thelp..................................this help screen' '<br>');
 		    },
 		    
 		    terminal_color: function(a) {
