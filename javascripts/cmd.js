@@ -108,7 +108,7 @@ function termHandler() {
 
 		default:
 			if (this.lineBuffer != '') {
-				this.type(this.lineBuffer + ': unknown command');
+				this.type('command not found:' + '"'this.lineBuffer'"');
 				this.newLine();
 			}
 	}
