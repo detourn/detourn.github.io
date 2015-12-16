@@ -6,7 +6,44 @@
 		.terminal .cmd {
 			background-color:#0d0d0d;
 		}
+		
+		/* fix double style of selecting text in terminal */
+.terminal-output span, .terminal-output a, .cmd div, .cmd span, .terminal td,
+.terminal pre, .terminal h1, .terminal h2, .terminal h3, .terminal h4,
+.terminal h5, .terminal h6 {
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+.terminal, .terminal-output, .terminal-output div {
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+/* firefox hack */
+@-moz-document url-prefix() {
+    .terminal, .terminal-output, .terminal-output div {
+        -webkit-touch-callout: initial;
+        -webkit-user-select: initial;
+        -khtml-user-select: initial;
+        -moz-user-select: initial;
+        -ms-user-select: initial;
+        user-select: initial;
+    }
+}
+.terminal .terminal-output div.error, .terminal .terminal-output div.error div {
+    color: #aaa;
+}
 
+	body {
+		background-color:#0d0d0d;
+		}
   		body p {
 			font-family: monospace;
 			text-align: justify;
@@ -21,7 +58,7 @@
   			color:#aaa;
   			border-bottom: solid 1px #aaa;
   			display:inline-block;
-  			font-family: 'Source Code Pro', ;
+  			font-family: monospace;
 		}
 
 		body a:after {
