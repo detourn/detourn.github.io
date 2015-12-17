@@ -1,77 +1,95 @@
-		
 		::-webkit-scrollbar {
-  			display: none;
+		  display: none;
 		}
-		
-		
 		/* fix double style of selecting text in terminal */
-.terminal-output span, .terminal-output a, .cmd div, .cmd span, .terminal td,
-.terminal pre, .terminal h1, .terminal h2, .terminal h3, .terminal h4,
-.terminal h5, .terminal h6 {
-    -webkit-touch-callout: initial;
-    -webkit-user-select: initial;
-    -khtml-user-select: initial;
-    -moz-user-select: initial;
-    -ms-user-select: initial;
-    user-select: initial;
-}
-.terminal, .terminal-output, .terminal-output div {
-    -webkit-touch-callout: initial;
-    -webkit-user-select: initial;
-    -khtml-user-select: initial;
-    -moz-user-select: initial;
-    -ms-user-select: initial;
-    user-select: initial;
-}
-/* firefox hack */
-@-moz-document url-prefix() {
-    .terminal, .terminal-output, .terminal-output div {
-        -webkit-touch-callout: initial;
-        -webkit-user-select: initial;
-        -khtml-user-select: initial;
-        -moz-user-select: initial;
-        -ms-user-select: initial;
-        user-select: initial;
-    }
-}
-.terminal .terminal-output div.error, .terminal .terminal-output div.error div {
-    color: #aaa;
-}
-
-	body {
-		background-color:#000;
+		
+		.terminal-output span,
+		.terminal-output a,
+		.cmd div,
+		.cmd span,
+		.terminal td,
+		.terminal pre,
+		.terminal h1,
+		.terminal h2,
+		.terminal h3,
+		.terminal h4,
+		.terminal h5,
+		.terminal h6 {
+		  -webkit-touch-callout: initial;
+		  -webkit-user-select: initial;
+		  -khtml-user-select: initial;
+		  -moz-user-select: initial;
+		  -ms-user-select: initial;
+		  user-select: initial;
 		}
-  		body p {
-			font-family: monospace;
-			text-align: justify;
-			color:#aaa;
-			font-size:12px;
-			line-height:14px;
-			text-rendering: optimizeLegibility;
+		
+		.terminal,
+		.terminal-output,
+		.terminal-output div {
+		  -webkit-touch-callout: initial;
+		  -webkit-user-select: initial;
+		  -khtml-user-select: initial;
+		  -moz-user-select: initial;
+		  -ms-user-select: initial;
+		  user-select: initial;
+		}
+		/* firefox hack */
+		
+		@-moz-document url-prefix() {
+		  .terminal,
+		  .terminal-output,
+		  .terminal-output div {
+		    -webkit-touch-callout: initial;
+		    -webkit-user-select: initial;
+		    -khtml-user-select: initial;
+		    -moz-user-select: initial;
+		    -ms-user-select: initial;
+		    user-select: initial;
+		  }
+		}
+		
+		body {
+		  background-color: #000;
+		}
+		
+		body p {
+		  font-family: monospace;
+		  text-align: justify;
+		  color: #aaa;
+		  font-size: 12px;
+		  line-height: 14px;
+		  text-rendering: optimizeLegibility;
 		}
 		
 		body a {
-  			text-decoration:none;
-  			color:#aaa;
-  			border-bottom: solid 1px #aaa;
-  			display:inline-block;
-  			font-family: monospace;
+		  text-decoration: none;
+		  color: #aaa;
+		  border-bottom: solid 1px #aaa;
+		  display: inline-block;
+		  font-family: monospace;
 		}
-
+		
 		body a:after {
-  			color: #b8b8b8;
-  			display:block;
-  			content: '';
-  			border-bottom: solid 1px #b8b8b8;  
-  			transform: scaleX(0.0001);  
-  			transition: transform 250ms ease-in-out;
+		  color: #b8b8b8;
+		  display: block;
+		  content: '';
+		  border-bottom: solid 1px #b8b8b8;
+		  transform: scaleX(0.0001);
+		  transition: transform 250ms ease-in-out;
 		}
-
+		
 		body a:hover:after {
-  			transform: scaleX(1);
-  			color: #b8b8b8;
+		  transform: scaleX(1);
+		  color: #b8b8b8;
 		}
-
+		
 		body a:hover {
-  			color: #b8b8b8;
+		  color: #b8b8b8;
+		}
+		
+		#cmd {
+		  bottom: 0%;
+		  width: 100%;
+		  height: 5%;
+		  position: fixed;
 		}
