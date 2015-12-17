@@ -1,37 +1,31 @@
-jQuery(function($, undefined) {
-		
-	    $('#cmd').terminal({
-			g: function() {
-				this.echo('\b\t\t\t\t\t\t\t\t\t\t\t\t[[ ]]\t -\t\tthis city is a coded spine\t\t\b')
-			 },
-        
-        m: function() {
-         $('#div1').load("https://unilogue.github.io/termlib/tests/test1.txt");
-			 },
-		
-		
-			git: function() {
-				window.open('https://github.com/unilogue','_blank');
-			},
-		
-		    '?': function() {
-            this.echo('COMMANDS: [m]ap\t\t[d]erive\t[g]lossary\r\n\t\t  [?] help\t [c]lose\t [git]hub');
-		    },
-        c: function() {
-            close();
-		    },
-        
-		    
-		    terminal_color: function(a) {
-				if (a == 'normal') {
-		          $('body').css("background-color", '#000');
-		        } else {
-		          $('body').css("background-color", a);
-		        }
-		    },
-	    }, {
-	        greetings: 'COMMANDS: [m]ap\t\t[d]erive\t[g]lossary\r\n\t\t  [?] help\t [c]lose\t [git]hub',
-	        name: 'unilogue',
-	        prompt: '> '
-		});
-	});
+$('#cmd').terminal(function(command, term) {
+  if (command == 'm') {
+    $('#command').load("https://unilogue.github.io/commands #div1");
+  } else if (command == 'd') {
+    $('#command').load("https://unilogue.github.io/commands #div2");
+  } else if (command == 'g') {
+    $('#command').load("https://unilogue.github.io/commands #div3");
+  } else if (command == 'git') {
+    window.open('https://github.com/unilogue', '_blank');
+  } else if (command == '?') {
+    term.echo('COMMANDS: [m]ap\t\t[d]erive\t[g]lossary\r\n\t\t  [?] help\t [clear]\t [git]hub');
+  } else if (command !='') {
+    term.echo('Command not found!');
+  }
+}, {
+  greetings: 'COMMANDS: [m]ap\t\t[d]erive\t[g]lossary\r\n\t\t  [?] help\t [clear]\t [git]hub',
+  name: 'unilogue',
+  prompt: '> '
+});
+(function() {
+    var pre = document.getElementsByTagName('pre'),
+        pl = pre.length;
+    for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < num; j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+    }
+})();
