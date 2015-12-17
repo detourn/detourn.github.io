@@ -6,9 +6,7 @@ jQuery(function($, undefined) {
 			 },
         
         m: function() {
-         function load_home(){
-document.getElementById("content").innerHTML='<object type="text/html" data="termlib/tests/test1.txt" ></object>';
-}
+         $('#div1').load("https://unilogue.github.io/termlib/tests/test1.txt");
 			 },
 		
 		
