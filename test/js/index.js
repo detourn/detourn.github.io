@@ -1,10 +1,10 @@
 $('#cmd').terminal(function(command, term) {
   if (command == 'm') {
-    $('#command').load("https://unilogue.github.io/commands #div1");
+term.echo ('<div id="command"></div>', {raw:true});    $('#command').load("https://unilogue.github.io/commands #div1");
   } else if (command == 'd') {
-    $('#command').load("https://unilogue.github.io/commands #div2");
+ term.echo ('<div id="command"></div>', {raw:true});    $('#command').load("https://unilogue.github.io/commands #div2");
   } else if (command == 'g') {
-    $('#command').load("https://unilogue.github.io/commands #div3");
+ term.echo ('<div id="command"></div>' , {raw:true});    $('#command').load("https://unilogue.github.io/commands #div3");
   } else if (command == 'git') {
     window.open('https://github.com/unilogue', '_blank');
   } else if (command == '?') {
