@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>cmd</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>unilogue</title>
+  <link rel="icon" href="//unilogue.github.io/favi.png">
+  <link href="//unilogue.github.io/jquery.terminal/css/jquery.terminal.css" rel="stylesheet">
+  <link href="//unilogue.github.io/stylesheets/cmd.css" rel="stylesheet">
+  <script src="//unilogue.github.io/javascripts/cmd.js"></script>
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="//unilogue.github.io/jquery.terminal/js/jquery-1.7.1.min.js"></script>
+  <script src="//unilogue.github.io/jquery.terminal/js/jquery.mousewheel-min.js"></script>
+  <script src="//unilogue.github.io/jquery.terminal/js/jquery.terminal-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="//unilogue.github.io/javascripts/datamaps.world.min.js"></script>
+</head>
+
+<body>
+  <p>unilogue
+    <br>(c) 2015</p>
+  <div id="cmd"></div>
+  <div id="command"></div>
+</body>
+<script type="text/javascript">
+  (function() {
+    var pre = document.getElementsByTagName('pre'),
+      pl = pre.length;
+    for (var i = 0; i < pl; i++) {
+      pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+      var num = p re[i].innerHTML.split(/\n/).length;
+      for (var j = 0; j < num; j++) {
+        var line_num = p re[i].getElementsByTagName('span')[0];
+        line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+      }
+    }
+  })();
+</script>
+
+</html>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
