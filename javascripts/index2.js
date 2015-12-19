@@ -8,6 +8,9 @@
     		if (e.keyCode == 13) {
           var value = $(this).val();
           $('#error').hide();
+          $('#div1').hide();
+          $('#div2').hide();
+          $('#div3').hide();
           if (value == 'map') { // If input value is div1
             $('#div1').load("https://unilogue.github.io/commands #div1");
           } else if (value == 'derive') { // If input value is div2
@@ -20,5 +23,3 @@
         }
       });
     });
-
-term.echo ('<div id="map"></div>', {raw:true});    $('#map').load("https://unilogue.github.io/commands #div1");
