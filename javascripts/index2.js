@@ -1,9 +1,6 @@
  $(document).ready(function() {
 
       // Hide both <div> by default
-      $('#div1').hide();
-      $('#div2').hide();
-      $('#div3').hide();
       $('#error').hide();
 
       // Check on keydown
