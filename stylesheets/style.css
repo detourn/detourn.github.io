@@ -41,7 +41,7 @@ input:focus {
     }
     
 .header {
-  font-size: 24px;font-weight:200;
+  font-size: 1.1em;font-weight:200;
   line-height: 1.52;color: #404040;display: inline-block;
   font-family: 'Source Code Pro', sans-serif;
 }
@@ -49,7 +49,7 @@ input:focus {
 body {
   background-color: #0d0d0d;
   text-rendering: optimizeLegibility;
-  padding-left: 8%;
+  padding-left: 10%;
 }
 
 body p {
@@ -59,7 +59,7 @@ body p {
   color: #404040;
   display: inline-block;
   font-family: 'Source Code Pro', sans-serif;
-  width:92%;
+  width:95%;
   text-align: justify;
 }
   
@@ -92,7 +92,7 @@ body a:hover {
 svg.datamap {
     height: 600px;
     width: 600px;
-    float:left;
+    float:right;
     cursor: crosshair;
 }
 
@@ -101,6 +101,8 @@ svg.datamap {
   font-size:24px;
   text-align:right;
   font-family: 'OCR A Extended';
+  float:right;
+  width:600px;
 }
 
 blockquote {
