@@ -35,6 +35,16 @@ input:focus {
 #example1 {
       font-size: 24px;font-weight:200;line-height: 1.52;color: #404040;display: inline-block;font-family: 'Source Code Pro', sans-serif;
     }
+    
+#div1 {
+  font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:92%; text-align: justify;float:left;
+    }
+    
+#header {
+  font-size: 24px;font-weight:200;
+  line-height: 1.52;color: #404040;display: inline-block;
+  font-family: 'Source Code Pro', sans-serif;
+}
 
 body {
   background-color: #0d0d0d;
