@@ -8,9 +8,6 @@
     		if (e.keyCode == 13) {
           var value = $(this).val();
           $('#error').hide();
-          $('#div1').hide();
-          $('#div2').hide();
-          $('#div3').hide();
           if (value == 'map') { // If input value is div1
             $('#div1').load("https://unilogue.github.io/commands #div1");
             $('#div1').getScript("https://unilogue.github.io/javascripts/map1.js");
