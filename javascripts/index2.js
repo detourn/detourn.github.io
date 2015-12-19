@@ -1,4 +1,6 @@
- $(document).ready(function() {
+$(document).ready(function() {
+   
+ 
 
       // Hide both <div> by default
       $('#div1').hide();
@@ -17,6 +19,7 @@
           if (value == 'map') { // If input value is div1
             $('#div1').show();
             $('#div1').load("https://unilogue.github.io/map");
+            $.getScript("https://unilogue.github.io/javascripts/map1.js");
           } else if (value == 'derive') { // If input value is div2
             $('#div2').show();
             $('#div2').load("https://unilogue.github.io/derive");
