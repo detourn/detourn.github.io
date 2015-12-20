@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<LANGUAGE="VBSCRIPT">
+ <html>
   
 <body>
   <blockquote><p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[ ]]&nbsp; -&nbsp;&nbsp;this city is a coded spine&nbsp;</strong></p>
