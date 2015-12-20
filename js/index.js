@@ -18,7 +18,7 @@ $(document).ready(function() {
           $('#error').hide();
           if (value == 'map') { // If input value is div1
             $('#div1').show();
-            $('#div1').load("https://unilogue.github.io/commands/map");
+            $('#div1').load("https://unilogue.github.io/commands/map.asp");
             $.getScript("https://unilogue.github.io/js/map1.js");
           } else if (value == 'derive') { // If input value is div2
             $('#div2').show();
