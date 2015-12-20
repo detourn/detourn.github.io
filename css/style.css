@@ -41,7 +41,11 @@ input:focus {
     }
     
 #div1 {
-  font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:92%; text-align: justify;float:left;
+  font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:92%; text-align: justify;
+    }
+    
+#map {
+  float:left;
     }
     
 .header {
