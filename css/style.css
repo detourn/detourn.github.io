@@ -100,13 +100,13 @@ svg.datamap {
     cursor: crosshair;
 }
 
-#cap p {
+#world {
   padding:1.5em;
   font-size:24px;
   text-align:right;
   font-family: 'OCR A Extended';
   float:right;
-  width:600px;
+  color:black; cursor:crosshair; height: 600px; width: 600px; position:relative; fill-opacity:0.7;
 }
 
 blockquote {
