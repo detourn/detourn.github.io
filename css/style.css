@@ -15,6 +15,10 @@
   color: #0d0d0d; background: #c0c0c0;
 }
 
+figure{
+-webkit-filter: grayscale(100%); 
+}
+
 input {
   border: 0px solid white;
   background: #0d0d0d;
@@ -188,9 +192,6 @@ ul {
     list-style-type: none;
 }
 
-li:before {
-  content: "> "
-}
 li {
   font-size: 24px;
   font-weight:200;
