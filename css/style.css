@@ -94,7 +94,7 @@ body a:hover {
 }
 
 svg.datamap {
-    height: 600px;
+    height: 650px;
     width: 600px;
     float:right;
     cursor: crosshair;
