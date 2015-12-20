@@ -21,10 +21,10 @@ $(document).ready(function() {
             $('#div1').load("https://unilogue.github.io/commands/map.asp");
           } else if (value == 'derive') { // If input value is div2
             $('#div2').show();
-            $('#div2').load("https://unilogue.github.io/commands/derive");
+            $('#div2').load("https://unilogue.github.io/commands/derive.asp");
           } else if (value == 'glossary') { // If input value is div3
             $('#div3').show();
-            $('#div3').load("https://unilogue.github.io/commands/glossary");
+            $('#div3').load("https://unilogue.github.io/commands/glossary.php");
           } else if (value != '') { // If input value is wrong
             $('#error').show();
           }
