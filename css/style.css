@@ -19,7 +19,7 @@ figure{
 -webkit-filter: grayscale(100%); 
 }
 
-input {
+input, #error {
   border: 0px solid white;
   background: #0d0d0d;
   margin: 0 0 0 0;
@@ -29,12 +29,14 @@ input {
   font-family: 'Source Code Pro', sans-serif;
   width: 90%;
   display: inline-block;
+  line-height: 1.52;
 }
 
 input:focus {
   border: solid 0px #707070;
   outline: none;
 }
+
 
 #example1 {
       font-size: 24px;font-weight:200;line-height: 1.52;color: #404040;display: inline-block;font-family: 'Source Code Pro', sans-serif;
@@ -43,12 +45,6 @@ input:focus {
 #div1 {
   font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:92%; text-align: justify;float:left;
     }
-    
-.header {
-  font-size: 1.1em;font-weight:200;
-  line-height: 1.52;color: #404040;display: inline-block;
-  font-family: 'Source Code Pro', sans-serif;
-}
 
 body {
   background-color: #0d0d0d;
@@ -102,8 +98,6 @@ svg.datamap {
 
 #world {
   padding:1.5em;
-  float:right;
-  color:black; cursor:crosshair; height: 600px; width: 600px; position:relative; fill-opacity:0.7;
 }
 
 #world p {
@@ -119,7 +113,7 @@ blockquote {
   font-weight: 400;
   color: #404040;
   font-family: 'OCR A Extended';
-  width:92%;
+  width:90%;
   text-align:justify;
 }
 
@@ -206,17 +200,6 @@ li {
   width:80%;
 }
 
-blockquote {
-  font-size: 24px;
-  font-weight:200;
-  line-height: 1.52;
-  font-family: 'OCR A Extended';
-  padding: 1em;
-  color:#404040;
-  text-align:justify;
-  width:80%;
-}
-
 hr {
   border: 0;
   border-top: 1px solid #303030;
@@ -253,27 +236,13 @@ sup {
   text-align: justify;
 }
 
-#topBar li {
-  padding-right: 40px;
-  display: inline;
-  list-style-type: none;
-  margin: 0px;
-}
-
-#name {
-  font-size: 2.1em;
-  font-weight: 200;
-  font-family: 'OCR A Extended';
-  /* margin-left: 10%*/
-}
-
 .header {
   margin: 0em 0em 0em;
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
   color: #404040;
-  display: inline-block;
+  display: block;
 }
 
 .header h1 {
@@ -317,7 +286,4 @@ sup {
 @media (max-width: 690px) {
   h1 {
     font-size: 1.5em;
-  }
-  #name {
-    display: block;
   }
