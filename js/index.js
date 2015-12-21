@@ -13,7 +13,7 @@ $(document).ready(function() {
       // Check on keydown
       $('input').keyup(function (e) {
     		if (e.keyCode == 13) {
-          var ajax_load = "<p>LOADING...</p>";  
+          var ajax_load = "<p>LOADING<span class="blink">_</span></p>";  
               
  var loadMap = "https://unilogue.github.io/commands/map.asp";
  var loadDerive = "https://unilogue.github.io/commands/derive.asp";
@@ -22,6 +22,7 @@ $(document).ready(function() {
  $("#div1").html(ajax_load).load(loadMap); 
  $("#div2").html(ajax_load).load(loadDerive); 
  $("#div3").html(ajax_load).load(loadGlossary); 
+ 
           var value = $(this).val();
           $('#div1').hide();
           $('#div2').hide();
