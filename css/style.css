@@ -16,7 +16,7 @@
 }
 
 figure{
--webkit-filter: grayscale(100%); 
+-webkit-filter: grayscale(100%);
 }
 
 input, #error {
@@ -41,7 +41,7 @@ input:focus {
 #example1 {
       font-size: 24px;font-weight:200;line-height: 1.52;color: #404040;display: inline-block;font-family: 'Source Code Pro', sans-serif;
     }
-    
+
 #div1 {
   font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:92%; text-align: justify;float:left;
     }
@@ -62,7 +62,7 @@ body p {
   width:95%;
   text-align: justify;
 }
-  
+
 body a {
   text-decoration:none;
   color:#404040;
@@ -75,8 +75,8 @@ body a:after {
   color: #b8b8b8;
   display:block;
   content: '';
-  border-bottom: solid 1px #b8b8b8;  
-  transform: scaleX(0.0001);  
+  border-bottom: solid 1px #b8b8b8;
+  transform: scaleX(0.0001);
   transition: transform 250ms ease-in-out;
 }
 
@@ -255,7 +255,7 @@ sup {
 
 .header a, .header a:hover, .header a:after, .header a:hover:after {
   text-decoration: none;
-  color: #c0c0c0;
+  color: #000000;
   border-bottom: 0px;
   letter-spacing: 1px;
 }
