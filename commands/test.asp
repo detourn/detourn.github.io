@@ -1,8 +1,6 @@
 <LANGUAGE="VBSCRIPT">
- <html>
 
   
-<body>
 <h1>Subaltern eat fresh</h1>
   <h2>Mapping the Representation and Consumption of Subaltern Societies in VICE Media</h2>
   
@@ -52,5 +50,3 @@ The VICE Staff published a message to their audience detailing what to expect fr
   <sup id="fn5">5. <a href="http://www.academia.edu/11015722/VICE_from_magazine_to_global_media_corporation" target="_blank">VICE: From Magazine to Global Media Corporation</a><a href="#ref5" title="Jump back to footnote 5 in the text.">↩</a></sup><br>
   <sup id="fn6">6. <a href="http://www.vice.com/read/hbo-gave-us-our-own-tv-show" target="_blank">HBO gave us our own show</a><a href="#ref6" title="Jump back to footnote 6 in the text.">↩</a></sup><br>
   </p>
-</body>
-</html>
