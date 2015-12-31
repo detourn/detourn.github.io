@@ -20,11 +20,15 @@ $(document).ready(function() {
  var loadDerive = "https://unilogue.github.io/commands/derive.asp";
  var loadGlossary = "https://unilogue.github.io/commands/glossary.asp";
  var loadTest = "https://unilogue.github.io/commands/test.asp";
+                document.createElement('div');
+                loadTest.id = 'div5';
+                loadTest.className = 'block';
+                document.getElementsByTagName('body')[0].appendChild(loadTest);
               
  $("#div1").html(ajax_load).load(loadMap); 
  $("#div2").html(ajax_load).load(loadDerive); 
  $("#div3").html(ajax_load).load(loadGlossary); 
- $("#div4").html(ajax_load).load(loadTest); 
+  
  
           var value = $(this).val();
           $('#div1').hide();
@@ -43,7 +47,7 @@ $(document).ready(function() {
             $('#div3').show();
             
           } else if (value == 'test') { // If input value is div3
-            $('#div4').show();
+            $('#div5').show();
             
           } else if (value != '') { // If input value is wrong
             $('#error').show();
