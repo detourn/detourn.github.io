@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'OCR A Extended';
-  src: url('//unilogue.github.io/fonts/OCRAEXT.TTF');
+  font-family: 'ahamono';
+  src: url('//unilogue.github.io/fonts/AHAMONO-Regular.otf');
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +103,7 @@ svg.datamap {
 #world p {
   font-size:24px;
   text-align:right;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
 }
 
 blockquote {
@@ -112,7 +112,7 @@ blockquote {
   margin-right: 0.4em;
   font-weight: 400;
   color: #404040;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
   width:90%;
   text-align:justify;
 }
@@ -123,7 +123,7 @@ blockquote {
   margin-right: 0.4em;
   font-weight: 400;
   color: #404040;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
   width:92%;
   text-align:justify;
 }
@@ -161,7 +161,7 @@ h1 {
   font-size: 3.0em;
   font-weight: 400;
   color: #404040;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
   text-align:justify;
 }
 
@@ -171,7 +171,7 @@ h2 {
   margin-right: 0.4em;
   font-weight: 400;
   color: #404040;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
   width:92%;
   text-align:justify;
 }
@@ -193,7 +193,7 @@ li {
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
-  font-family: 'OCR A Extended';
+  font-family: 'ahamono';
   padding: 1em;
   color:#404040;
   text-align:justify;
