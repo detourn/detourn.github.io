@@ -265,22 +265,6 @@ sup {
   letter-spacing: 1px;
 }
 
-.content-wrap {
-  margin-top: 20px;
-  /*  margin: 0 auto;
-  margin-left: 10%;
-  margin-right: 10%;*/
-}
-
-#container {
-  padding: 0;
-  position: relative;
-  float: right;
-  margin-left: 0px 0px 0px 0px;
-  width: 100%;
-  height: 100%;
-}
-
 .datamap path.datamaps-graticule {
   pointer-events: all;
 }
