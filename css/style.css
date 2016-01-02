@@ -95,7 +95,7 @@ svg.datamap {
     cursor: crosshair;
 }
 
-#caption {
+.caption {
   float: right;
   position: absolute;
 }
