@@ -102,6 +102,7 @@ svg.datamap {
 
 #world {
   padding:1.5em;
+  float: right;
 }
 
 #world p {
