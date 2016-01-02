@@ -49,7 +49,7 @@ input:focus {
 body {
   background-color: #0d0d0d;
   text-rendering: optimizeLegibility;
-  padding: 15%;
+  padding: 5%;
 }
 
 body p {
