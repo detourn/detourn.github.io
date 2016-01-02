@@ -297,11 +297,7 @@ sup {
   animation: noise-1 .1s linear infinite;
   z-index: 0;
 }
-.info {
-  text-align: center;
-  margin: auto;
-  animation: noise .1s linear infinite;
-}
+
 .info1 {
   text-align: left;
   margin: auto;
