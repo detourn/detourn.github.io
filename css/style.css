@@ -242,8 +242,7 @@ sup {
   font-weight:200;
   line-height: 1.52;
   color: #404040;
-  display: inline-block;
-  position: absolute;
+  display: block;
   font-family: 'Source Code Pro', sans-serif;
 }
 
