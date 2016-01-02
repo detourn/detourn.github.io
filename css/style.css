@@ -92,8 +92,12 @@ body a:hover {
 svg.datamap {
     height: 650px;
     width: 600px;
-    float:right;
     cursor: crosshair;
+}
+
+#caption {
+  float: right;
+  position: absolute;
 }
 
 #world {
