@@ -231,13 +231,6 @@ header {
   font-family: 'Source Code Pro', sans-serif;
 }
 
-header a, header a:hover, header a:after, header a:hover:after {
-  text-decoration: none;
-  color: #c0c0c0;
-  border-bottom: 0px;
-  letter-spacing: 1px;
-}
-
 .datamap path.datamaps-graticule {
   pointer-events: all;
 }
@@ -252,6 +245,7 @@ header a, header a:hover, header a:after, header a:hover:after {
   }
 
   .info {
+    letter-spacing: 1px;
     color: #c0c0c0;
     font-size: 3em;
     animation: noise-0 .1s linear infinite;
