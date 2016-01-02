@@ -8,6 +8,7 @@ $(document).ready(function() {
       $('#div1').hide();
       $('#div2').hide();
       $('#div3').hide();
+      $('#more').hide();
       $('#error').hide();
 
       // Check on keydown
@@ -42,6 +43,12 @@ $(document).ready(function() {
             $('#error').show();
           }
 
+        }
+      });
+
+      $('html').keyup(function (e) {
+        if (e.keyCode == 32) {
+            $('#more').show();
         }
       });
     });
