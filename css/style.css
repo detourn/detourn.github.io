@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OCR A Extended';
-  src: url('//unilogue.github.io/fonts/OCRAEXT.TTF');
+  src: url('/fonts/OCRAEXT.TTF');
 }
 
 ::-webkit-scrollbar {
@@ -19,7 +19,7 @@ figure {
 -webkit-filter: grayscale(100%);
 }
 
-input, #error {
+input, #error, #more {
   border: 0px solid white;
   background: #0d0d0d;
   margin: 0 0 0 0;
@@ -99,7 +99,7 @@ svg.datamap {
   fill-opacity:0.7;
   border:0px solid #ccc;
   width:600px;
-  height:650px;
+  height:100%;
   margin-top:-50px;
   position:relative;
   padding:1.5em;
@@ -109,6 +109,7 @@ svg.datamap {
 #world p {
   font-size:24px;
   text-align:right;
+  position: relative;
   font-family: 'OCR A Extended';
 }
 
@@ -243,6 +244,7 @@ header {
   h1 {
     font-size: 1.5em;
   }
+}
 
   .info {
     letter-spacing: 1px;

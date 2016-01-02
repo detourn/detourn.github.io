@@ -26,10 +26,10 @@
   <body>
 
   <header>
-    <div id="example1"><span class="info">unilogue</span></div><br>
-    press 'space' for a list of commands.<br>
-    <div id ="more"><span class="info4"><br>COMMANDS : [map] [derive] [glossary]</span><br></div><br>
+    <div id="example1"><h2>unilogue</h2></div><br>
+    enter [?] for a list of commands.<br><br>
     &#62;   <input type="text" placeholder="ENTER COMMAND" />
+    <div id ="more"><br>COMMANDS : [map] [derive] [glossary]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[?] [ghost] [git]<br></div><br>
 
     <div id="error" style="margin-top:-5px; line-height:1.52;">
     <span class="info2">&#62; UNKNOWN COMMAND</span></div>
@@ -38,11 +38,14 @@
     <div id="div1"></div>
     <div id="div2"></div>
     <div id="div3"></div>
+    <div id="ghost" style="overflow:hidden;">
+      <p><iframe frameborder="0" seamless="seamless" scrolling="no" src="http://ojack.github.io/ghost-map/" width="100%" height="100%"> </iframe>
+</p><h2><a href="http://ojack.github.io/ghost-map/" target="_blank">Ghost Maps</a></h2><p>by <a href="https://www.chromeexperiments.com/experiment/ghost-maps" target="_blank">Olivia Jack</a></p></div>
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       //Define first typing example:
-          new TypingText(document.getElementById("example1"), 25);
+          new TypingText(document.getElementById("example1"), 50);
           //Type out examples:
           TypingText.runAll();
     </script>
