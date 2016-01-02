@@ -1,8 +1,8 @@
 <LANGUAGE="VBSCRIPT">
  <html>
-  
+
 <body>
-  <blockquote><p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[ ]]&nbsp; -&nbsp;&nbsp;this city is a coded spine&nbsp;</strong></p>
+  <blockquote><span class="info"><p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[ ]]&nbsp; -&nbsp;&nbsp;this city is a coded spine&nbsp;</strong></p>
 <p>globewars &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;chronogenic &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;digital voodoo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cyberotics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;antiproductive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; circuitry</p>
 <p>monotheology &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;morass of &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mutation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
@@ -15,6 +15,6 @@
 
 <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the story is many&nbsp;bodies without organs&nbsp;[[ ]]</strong>&nbsp;</p>
 
-<p><small><a href="http://viperslang.tumblr.com/post/63454146164">© Scherezade Siobhan</a></small></p></blockquote>
+<p><small><a href="http://viperslang.tumblr.com/post/63454146164">© Scherezade Siobhan</a></small></p></span></blockquote>
 </body>
 </html>
