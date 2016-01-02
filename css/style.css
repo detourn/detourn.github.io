@@ -15,7 +15,7 @@
   color: #0d0d0d; background: #c0c0c0;
 }
 
-figure{
+figure {
 -webkit-filter: grayscale(100%);
 }
 
@@ -39,7 +39,7 @@ input:focus {
 
 
 #example1 {
-      font-size: 24px;font-weight:200;line-height: 1.52;color: #404040;display: inline-block;font-family: 'Source Code Pro', sans-serif;
+      position:relative; display: inline-block;
     }
 
 #div1 {
