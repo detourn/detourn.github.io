@@ -26,14 +26,12 @@
   <body>
 
   <div class="header">
-    <p><div id="example1">
-    <a>&#62; unilogue<span class="blink">_</span></a></div><br>
+    <span class="info"><a>unilogue</a></span><br>
+    <div id="example1"><p><span class="info4">COMMANDS : [map] [derive] [glossary]</span></div><br>
     &#62;   <input type="text" placeholder="ENTER COMMAND" />
 
-    <div id="error" style="margin-top:-5px; line-height:1.52;">
-      > UNKNOWN COMMAND<br>
-      &nbsp;&nbsp;COMMANDS :
-      [ MAP ] [ DERIVE ] [ GLOSSARY ]</p></div>
+    <div id="error" style="margin-top:-10px; line-height:1.52;">
+    <span class="info2">&#62; UNKNOWN COMMAND</span></p></div>
 </div>
 
     <div id="div1"></div>
@@ -43,7 +41,7 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       //Define first typing example:
-          new TypingText(document.getElementById("example1"));
+          new TypingText(document.getElementById("example1"), 25);
           //Type out examples:
           TypingText.runAll();
     </script>
