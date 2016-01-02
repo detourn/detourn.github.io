@@ -95,11 +95,6 @@ svg.datamap {
     cursor: crosshair;
 }
 
-.caption {
-  float: right;
-  position: absolute;
-}
-
 #world {
   padding:1.5em;
   float: right;
