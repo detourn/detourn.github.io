@@ -107,10 +107,9 @@ svg.datamap {
 }
 
 #world p {
-  font-size:24px;
-  text-align:right;
-  position: relative;
-  font-family: 'OCR A Extended';
+   font-size:24px;
+   text-align:right;
+   font-family: 'OCR A Extended';
 }
 
 blockquote {
@@ -147,6 +146,11 @@ pre {
   white-space: pre-wrap;
 }
 
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
 .blink {
   -webkit-animation-name: blink-anim;
   -webkit-animation-iteration-count: infinite;
@@ -172,14 +176,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
-  margin-left: 0.4em;
-  margin-right: 0.4em;
-  font-weight: 400;
-  color: #404040;
-  font-family: 'OCR A Extended';
-  width:92%;
-  text-align:justify;
+   font-size: 1.5em;
+   font-weight: 400;
+   color: #404040;
+   font-family: 'OCR A Extended';
+   text-align:justify;
 }
 
 h3 {
