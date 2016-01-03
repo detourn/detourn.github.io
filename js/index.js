@@ -8,8 +8,7 @@ $(document).ready(function() {
       $('#div1').hide();
       $('#div2').hide();
       $('#div3').hide();
-      $('#more').hide();
-      $('#ghost').hide();
+      $('#cmd').hide();
       $('#error').hide();
 
       // Check on keydown
@@ -26,42 +25,35 @@ $(document).ready(function() {
  $("#div3").html(ajax_load).load(loadGlossary);
 
           var value = $(this).val();
-          $('#div1').hide();
-          $('#div2').hide();
-          $('#div3').hide();
-          $('#more').hide();
-          $('#ghost').hide();
-          $('#error').hide();
+            $('#div1').hide();
+            $('#div2').hide();
+            $('#div3').hide();
+            $('#error').hide();
 
-          if (value == 'map') { // If input value is div1
-            $('#div1').show();
+          var newLine = $("<br>&#62;   <input type=\"text\" placeholder=\"ENTER COMMAND\" />");
 
-          } else if (value == 'derive') { // If input value is div2
-            $('#div2').show();
-
-          } else if (value == 'glossary') { // If input value is div3
-            $('#div3').show();
-
-          } else if (value == '?') { // If input value is ?
-            $('#more').show();
-
-          } else if (value == 'git') { // If input value is git
-
-            window.open('https://github.com/unilogue', '_blank');
-
-          } else if (value == 'ghost') { // If input value is ?
-            $('#ghost').show();
-
-          } else if (value != '') { // If input value is wrong
-            $('#error').show();
+            if (value == 'map') { // If input value is div1
+              $('#div1').show();
+            } else if (value == 'derive') { // If input value is div2
+              $('#div2').show();
+            } else if (value == 'glossary') { // If input value is div3
+              $('#div3').show();
+            } else if (value != '') { // If input value is wrong
+              $('#error').show();
+              $('#error').append(newLine);
+            }
           }
+        });
 
-        }
+      $('input').blur(function () {
+        $('input').prop('disabled', false);
       });
 
       $('html').keyup(function (e) {
-        if (e.keyCode == 32) {
-            $('#more').show();
+        if (e.keyCode == 85) {
+            $('#cmd').show();
+            $('#prompt').hide();
         }
       });
+
     });

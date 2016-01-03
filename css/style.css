@@ -19,7 +19,7 @@ figure {
 -webkit-filter: grayscale(100%);
 }
 
-input, #error, #more {
+input, #error {
   border: 0px solid white;
   background: #0d0d0d;
   margin: 0 0 0 0;
@@ -42,8 +42,8 @@ input:focus {
       position:relative; display: inline-block;
     }
 
-#div1 {
-  font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; width:90%; text-align: justify; float:left;
+#div1, #div2 {
+  font-size: 24px; font-weight:200; line-height: 1.52; color: #404040; display: block; font-family: 'Source Code Pro', sans-serif; text-align: justify; float:left;
     }
 
 body {
@@ -89,7 +89,10 @@ body a:hover {
 }
 
 svg.datamap {
-    cursor: crosshair;
+  height: 650px;
+  width: 600px;
+  float:right;
+  cursor: crosshair;
 }
 
 #world {
@@ -99,13 +102,13 @@ svg.datamap {
   height:100%;
   position: relative;
   float: right;
-  padding: 1.5em;
+  margin-top: -140px;
 }
 
 #worldcontainer {
   width:600px;
   height:100%;
-  padding:1.5em;
+  padding:3em;
   float: right;
 }
 
@@ -125,17 +128,6 @@ blockquote {
   text-align:justify;
 }
 
-#div2 blockquote {
-  font-size: 2.2em;
-  margin-left: 0.4em;
-  margin-right: 0.4em;
-  font-weight: 400;
-  color: #404040;
-  font-family: 'OCR A Extended';
-  width:92%;
-  text-align:justify;
-}
-
 pre {
   font-size: 24px;
   font-weight:400;
@@ -144,8 +136,10 @@ pre {
   color: #c0c0c0;
   display: inline-block;
   font-family: 'Source Code Pro', sans-serif;
-  width:90%;
   padding: 1em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  width: 100%;
   white-space: pre-wrap;
 }
 
@@ -231,6 +225,13 @@ header {
   font-family: 'Source Code Pro', sans-serif;
 }
 
+.header a, .header a:hover, .header a:after, .header a:hover:after {
+  text-decoration: none;
+  color: #c0c0c0;
+  border-bottom: 0px;
+  letter-spacing: 1px;
+}
+
 .datamap path.datamaps-graticule {
   pointer-events: all;
 }
@@ -245,22 +246,23 @@ header {
   }
 }
 
-  .info {
-    letter-spacing: 1px;
-    color: #c0c0c0;
-    font-size: 3em;
+.cmd {
+  animation: noise-3 .5s linear;
+  }
+
+.info {
     animation: noise-0 .1s linear infinite;
   }
-  .info1 {
+.info1 {
     animation: noise-1 .2s linear infinite;
   }
-  .info2 {
+.info2 {
     animation: noise-2 .2s linear infinite;
   }
-  .info3 {
+.info3 {
     animation: noise-3 1s linear infinite;
   }
-  .info4 {
+.info4 {
     animation: noise-4 1s linear infinite;
   }
 .info5 {
