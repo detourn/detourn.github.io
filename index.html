@@ -24,21 +24,23 @@
   <script type="text/javascript" src="js/map/datamaps.world.min.js"></script>
   </head>
 
-  <body>
+   <body>
 
   <header>
     <div id="example1"><h2>unilogue<span class="blink">_</span></h2></div>
-    <div id="prompt">Press 'u' for a list of commands.</div>
-    <div id ="cmd"><span class="cmd">COMMANDS : [map] [derive] [glossary]</span><br></div>
-    <br> &#62;   <input class="inputs" type="text" placeholder="ENTER COMMAND" />
+    <div id="prompt">Click anywhere for a list of commands.<br><br></div>
+    <div id ="cmd"><span class="cmd">COMMANDS : [map] [derive] [glossary]</span><br><br></div>
+    <div id="line"><p>&#62;</p>   <input class="inputs" type="text" placeholder="ENTER COMMAND" /></div>
   </header>
 
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-      //Define first typing example:
-          new TypingText(document.getElementById("example1"), 50);
-          //Type out examples:
-          TypingText.runAll();
-    </script>
-  </body>
+   </body>
+
+   <script type="text/javascript" src="js/index.js"></script>
+   <script type="text/javascript">
+     //Define first typing example:
+         new TypingText(document.getElementById("example1"), 50);
+         //Type out examples:
+         TypingText.runAll();
+   </script>
+
 </html>
