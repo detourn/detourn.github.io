@@ -1,18 +1,17 @@
 <LANGUAGE="VBSCRIPT">
  <html>
-  
+
 <body>
 
-<p><h1>dérive <i class="fa fa-terminal"></i> <small><small><small>navigating the digital landscape</small></small></small></h1><p>     Have
-you ever wondered why social media sites like Twitter, Facebook, and Tumblr feel
+<h1>dérive <i class="fa fa-terminal"></i> <small><small><small>navigating the digital landscape</small></small></small></h1>
+<p>     Have you ever wondered why social media sites like Twitter, Facebook, and Tumblr feel
 so attuned to your personal interests? The explanation isn’t “There’s an app
 for that.” but rather, there’s an <i>algorithm</i>
 for that. Here is an example:
   </p><pre><code>\[r_{u_{}a,s_{}k} = \sum_{i \ne a} {I(u_{}i,s_{}k) w(u_{}a, u_{}i)}\]</code>
 </pre>
-  
-  <p>Memory-based algorithms such as this use the
-content that we generate to calculate “successful relationships” based on a
+
+  <p>&nbsp;Memory-based algorithms such as this use the content that we generate to calculate “successful relationships” based on a
 matrix of our similarities [Datar]. Tech
 companies have adopted to the human impulse for communication by making it
 easier to connect with others who share our interests, whether we know them IRL
@@ -91,6 +90,14 @@ they often perpetuate a single-story that lack nuance and simplify complex
 experiences. They rely on the constant creation of identities to subsist,
 making human experience into a spectacle. Although algorithms can
 help us build knowledge, they also limit our scope. It’s important that we
-stray from the paths that we’re expected to follow on the Internet.</p><hr><footer><p><a href="http://www.ra.ethz.ch/CDstore/www2007/www2007.org/papers/paper570.pdf">Datar, Mayur, et al. <i>Google News Personalization: Scalable Online.</i> Web.</a><br><a href="https://www.marxists.org/reference/archive/debord/society.htm">Debord, Guy. <i>The Society of the Spectacle.</i> Web.</a><br><a href="http://www.critical-theory.com/buzzfeed-founder-responds-to-his-marxist-roots-lol/">Wolters, Eugene. <i>Buzzfeed Founder Responds to His Marxist Roots, "Lol".</i> Web.</a></p></footer>
+stray from the paths that we’re expected to follow on the Internet.</p>
+<hr>
+<footer>
+<ol>
+<li><a href="http://www.ra.ethz.ch/CDstore/www2007/www2007.org/papers/paper570.pdf">Datar, Mayur, et al. <i>Google News Personalization: Scalable Online.</i> Web.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/debord/society.htm">Debord, Guy. <i>The Society of the Spectacle.</i> Web.</a></li>
+<li><a href="http://www.critical-theory.com/buzzfeed-founder-responds-to-his-marxist-roots-lol/">Wolters, Eugene. <i>Buzzfeed Founder Responds to His Marxist Roots, "Lol".</i> Web.</a></li>
+</ol>
+</footer>
 </body>
 </html>

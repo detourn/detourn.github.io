@@ -4,7 +4,7 @@ $(document).ready(function() {
      cache: false
  });
 
-      // Hide <div> by default
+      // Hide <divs> by default
       $('#cmd').hide();
 
 
@@ -12,65 +12,107 @@ $(document).ready(function() {
      $('.inputs').keyup(function (e) {
     		if (e.keyCode == 13) {
 
-          var ajax_load = "<p>LOADING<span class=\"blink\">_</span></p>";
+           var value = $(this).val();
+           var ajax_load = "<p>LOADING<span class=\"blink\">_</span></p>";
 
 
-          var loadMap = "https://unilogue.github.io/commands/map.asp";
-          var loadDerive = "https://unilogue.github.io/commands/derive.asp";
-          var loadGlossary = "https://unilogue.github.io/commands/glossary.asp";
+           var loadMap = "commands/map.asp";
+           var loadDerive = "commands/derive.asp";
+           var loadGlossary = "commands/glossary.asp";
 
-          var value = $(this).val();
-          var arrow = $("<p>&#62;   </p>").before('.inputs');
-          var errorLine = $("<p><span class=\"cmd\">&#62;   UNKNOWN COMMAND</span></p>");
-          var newLine = $('.inputs').clone(true).val('');
-          var map = $("<div id=\"div1\"></div>");
-          var derive = $("<div id=\"div2\"></div>");
-          var glossary = $("<div id=\"div3\"></div>");
-          var help = $("<p><span class=\"cmd\">COMMANDS : [map] [derive] [glossary]</span></p>");
+           var errorLine = $("<p><span class=\"cmd\">&#62;&nbsp;UNKNOWN COMMAND</span></p><br>");
+           var newLine = $('.inputs').clone(true).val('');
+           var help = $("<p><span class=\"cmd\"># COMMANDS : [m]ap&nbsp;&nbsp;&nbsp; [d]erive [g]lossary<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[?] help [clear]&nbsp; [git]</span></p><br>");
 
-            if (value == 'map') { // If input value is div1
-              $('body').append(map);
+           var map = $("<div id=\"div1\"></div>");
+           var derive = $("<div id=\"div2\"></div>");
+           var glossary = $("<div id=\"div3\"></div>");
+
+          // Tiny jQuery Plugin
+          // by Chris Goodchild
+          $.fn.exists = function(callback) {
+            var args = [].slice.call(arguments, 1);
+
+            if (this.length) {
+              callback.call(this, args);
+            }
+
+            return this;
+          };
+
+          // Usage
+          $(map).exists(function() {
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+          });
+          $(derive).exists(function() {
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+          });
+          $(glossary).exists(function() {
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+          });
+
+            if (value == 'm') { // If input value is div1
+              $('.container').append(map);
               $("#div1").html(ajax_load).load(loadMap);
-              $('body').append(newLine);
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);
-            } else if (value == 'derive') { // If input value is div2
-              $('body').append(derive);
+              $('.inputs:first').focus();
+            } else if (value == 'd') { // If input value is div2
+              $('.container').append(derive);
               $("#div2").html(ajax_load).load(loadDerive);
-              $('body').append(newLine);
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);
-            } else if (value == 'glossary') { // If input value is div3
-              $('body').append(glossary);
+              $('.inputs:first').focus();
+            } else if (value == 'g') { // If input value is div3
+              $('.container').append(glossary);
               $("#div3").html(ajax_load).load(loadGlossary);
-              $('body').append(newLine);
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);
+              $('.inputs:first').focus();
             } else if (value == '?') { // If input value is ?
-              $('body').append(help);
-              $('body').append(newLine);
+              $('.container').append(help);
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);
+              $('.inputs:first').focus();
+            } else if (value == 'clear') { // If input value is clear
+              $('.container').empty();
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
+              $(this).prop('disabled', true);
+              $(this).removeClass('inputs');
+              $('.inputs').replaceWith(newLine);
+              $('.inputs:first').focus();
+            } else if (value == 'git') { // If input value is clear
+              window.open('https://github.com/unilogue', '_blank');
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
+              $(this).prop('disabled', true);
+              $(this).removeClass('inputs');
+              $('.inputs').replaceWith(newLine);
+              $('.inputs:first').focus();
             } else if (value != '') { // If input value is wrong
-              $('body').append(errorLine);
-              $('body').append(newLine);
+              $('.container').append(errorLine);
+              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);
+              $('.inputs:first').focus();
             }
           }
         });
 
-
-
-      $('html').click(function () {
-          $('#cmd').show();
-          $('#prompt').hide();
-      });
+     $('html').keydown(function(e) {
+      if (e.which == 88 && e.ctrlKey) { // value = help
+        $('#cmd').show();
+        $('#prompt').hide();
+    }
+         });
 
 
     });
