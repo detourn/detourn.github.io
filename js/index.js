@@ -42,13 +42,13 @@ $(document).ready(function() {
 
           // Usage
           $(map).exists(function() {
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;[m]ap is already open!</span></p><br>');
           });
           $(derive).exists(function() {
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
           });
           $(glossary).exists(function() {
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;This is already open!</span></p><br>');
+            this.append('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
           });
 
             if (value == 'm') { // If input value is div1
@@ -91,7 +91,7 @@ $(document).ready(function() {
               $('.inputs:first').focus();
             } else if (value == 'git') { // If input value is clear
               window.open('https://github.com/unilogue', '_blank');
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
+              $('.container').append("<br><p>&#62;&nbsp;</p>").append(newLine);
               $(this).prop('disabled', true);
               $(this).removeClass('inputs');
               $('.inputs').replaceWith(newLine);

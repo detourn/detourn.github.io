@@ -86,7 +86,7 @@ sexism to capitalism. These articles generate thousands of notes, they are
 almost always the first result when searching any topic. It may seem positive
 that such a site exists; one that is accessible to many different types of
 readers as well as unique to the individual. The main problem however is that
-they often perpetuate a single-story that lack nuance and simplify complex
+they often perpetuate a single-story that lacks nuance and simplifies complex
 experiences. They rely on the constant creation of identities to subsist,
 making human experience into a spectacle. Although algorithms can
 help us build knowledge, they also limit our scope. It’s important that we
