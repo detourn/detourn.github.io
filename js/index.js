@@ -28,6 +28,29 @@ $(document).ready(function() {
            var derive = $("<div id=\"div2\"></div>");
            var glossary = $("<div id=\"div3\"></div>");
 
+           $.fn.mCmd = function() {
+             $('.container').append(map);
+             $("#div1").html(ajax_load).load(loadMap);
+           };
+
+           $.fn.dCmd = function() {
+             $('.container').append(derive);
+             $("#div2").html(ajax_load).load(loadDerive);
+           };
+
+           $.fn.gCmd = function() {
+             $('.container').append(glossary);
+             $("#div3").html(ajax_load).load(loadGlossary);
+           };
+
+           $.fn.newLine = function() {
+            $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
+            $(this).prop('disabled', true);
+            $(this).removeClass('inputs');
+            $('.inputs').replaceWith(newLine);
+            $('.inputs:first').focus();
+           };
+
           // Tiny jQuery Plugin
           // by Chris Goodchild
           $.fn.exists = function(callback) {
@@ -45,65 +68,31 @@ $(document).ready(function() {
             this.append('<p><span class=\"cmd\">&#62;&nbsp;[m]ap is already open!</span></p><br>');
           });
           $(derive).exists(function() {
+            return this;
             this.append('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
           });
           $(glossary).exists(function() {
+            this.gCmd().remove();
             this.append('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
           });
 
             if (value == 'm') { // If input value is div1
-              $('.container').append(map);
-              $("#div1").html(ajax_load).load(loadMap);
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $(this).mCmd();
             } else if (value == 'd') { // If input value is div2
-              $('.container').append(derive);
-              $("#div2").html(ajax_load).load(loadDerive);
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $(this).dCmd();
             } else if (value == 'g') { // If input value is div3
-              $('.container').append(glossary);
-              $("#div3").html(ajax_load).load(loadGlossary);
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $(this).gCmd();
             } else if (value == '?') { // If input value is ?
-              $('.container').append(help);
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
-              $('.container').empty();
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $('.container').empty();
             } else if (value == 'git') { // If input value is clear
-              window.open('https://github.com/unilogue', '_blank');
-              $('.container').append("<br><p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                window.open('https://github.com/unilogue', '_blank');
             } else if (value != '') { // If input value is wrong
-              $('.container').append(errorLine);
-              $('.container').append("<p>&#62;&nbsp;</p>").append(newLine);
-              $(this).prop('disabled', true);
-              $(this).removeClass('inputs');
-              $('.inputs').replaceWith(newLine);
-              $('.inputs:first').focus();
+                $('.container').append(errorLine);
             }
+
+/*appends2all*/ $(this).newLine();
           }
         });
 
