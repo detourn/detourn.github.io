@@ -24,23 +24,27 @@ $(document).ready(function() {
            var newLine = $('.inputs').clone(true).val('');
            var help = $("<p><span class=\"cmd\"># COMMANDS : [m]ap&nbsp;&nbsp;&nbsp; [d]erive [g]lossary<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[?] help [clear]&nbsp; [git]</span></p><br>");
 
-           var map = $("<div id=\"div1\"></div>");
-           var derive = $("<div id=\"div2\"></div>");
-           var glossary = $("<div id=\"div3\"></div>");
+           var map = $("<div class=\"map\"></div>");
+           var derive = $("<div class=\"derive\"></div>");
+           var glossary = $("<div class=\"glossary\"></div>");
+
+           var mOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[m]ap is already open!</span></p><br>');
+           var dOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
+           var gOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
 
            $.fn.mCmd = function() {
              $('.container').append(map);
-             $("#div1").html(ajax_load).load(loadMap);
+             $(".map").html(ajax_load).load(loadMap);
            };
 
            $.fn.dCmd = function() {
              $('.container').append(derive);
-             $("#div2").html(ajax_load).load(loadDerive);
+             $(".derive").html(ajax_load).load(loadDerive);
            };
 
            $.fn.gCmd = function() {
              $('.container').append(glossary);
-             $("#div3").html(ajax_load).load(loadGlossary);
+             $(".glossary").html(ajax_load).load(loadGlossary);
            };
 
            $.fn.newLine = function() {
@@ -51,57 +55,51 @@ $(document).ready(function() {
             $('.inputs:first').focus();
            };
 
-          // Tiny jQuery Plugin
-          // by Chris Goodchild
-          $.fn.exists = function(callback) {
-            var args = [].slice.call(arguments, 1);
-
-            if (this.length) {
-              callback.call(this, args);
-            }
-
-            return this;
-          };
-
-          // Usage
-          $(map).exists(function() {
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;[m]ap is already open!</span></p><br>');
-          });
-          $(derive).exists(function() {
-            return this;
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
-          });
-          $(glossary).exists(function() {
-            this.gCmd().remove();
-            this.append('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
-          });
-
-            if (value == 'm') { // If input value is div1
+            if (value == 'm' && !($('.map').length)) { // If input value is map
                 $(this).mCmd();
-            } else if (value == 'd') { // If input value is div2
+                $(this).newLine();
+            } else if (value == 'm'  && ($('.map').length)) { // If map is present
+                $(map).removeClass('map');
+                $('.container').append(mOpen);
+                $(this).newLine();
+            } else if (value == 'd' && !($('.derive').length)) { // If input value is derive
                 $(this).dCmd();
-            } else if (value == 'g') { // If input value is div3
+                $(this).newLine();
+            } else if (value == 'd'  && ($('.derive').length)) { // If derive is present
+                $(derive).removeClass('derive');
+                $('.container').append(dOpen);
+                $(this).newLine();
+            } else if (value == 'g' && !($('.glossary').length)) { // If input value is glossary
                 $(this).gCmd();
+                $(this).newLine();
+            } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
+                $(glossary).removeClass('glossary');
+                $('.container').append(gOpen);
+                $(this).newLine();
             } else if (value == '?') { // If input value is ?
                 $('.container').append(help);
+                $(this).newLine();
             } else if (value == 'clear') { // If input value is clear
                 $('.container').empty();
+                $(this).newLine();
             } else if (value == 'git') { // If input value is clear
                 window.open('https://github.com/unilogue', '_blank');
+                $('.container').append("<br>");
+                $(this).newLine();
             } else if (value != '') { // If input value is wrong
                 $('.container').append(errorLine);
+                $(this).newLine();
+            } else if (value == '') { // If input value is wrong
+                $('.container').append(errorLine);
+                $(this).newLine();
             }
-
-/*appends2all*/ $(this).newLine();
-          }
-        });
+        }
+    });
 
      $('html').keydown(function(e) {
       if (e.which == 88 && e.ctrlKey) { // value = help
         $('#cmd').show();
         $('#prompt').hide();
     }
-         });
-
-
-    });
+   });
+   });

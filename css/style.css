@@ -39,10 +39,11 @@ input:focus {
 
 
 #example1 {
-      position:relative; display: inline-block;
+      position: relative;
+      display: inline-block;
     }
 
-#div1, #div2 {
+.map, .derive {
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
@@ -183,6 +184,8 @@ h2 {
    color: #404040;
    font-family: 'OCR A Extended';
    text-align:justify;
+   -webkit-margin-before:0em;
+   -webkit-margin-after:0em;
 }
 
 h3 {
@@ -192,6 +195,8 @@ h3 {
   font-family: 'Source Code Pro', sans-serif;
   width:92%;
   text-align:justify;
+  -webkit-margin-before:0em;
+  -webkit-margin-after:0em;
 }
 
 ul { list-style-type: none; }
