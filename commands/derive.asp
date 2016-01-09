@@ -3,15 +3,10 @@
 
 <body>
 
-<h1>dérive <i class="fa fa-terminal"></i> <small><small><small>navigating the digital landscape</small></small></small></h1>
-<p>     Have you ever wondered why social media sites like Twitter, Facebook, and Tumblr feel
-so attuned to your personal interests? The explanation isn’t “There’s an app
-for that.” but rather, there’s an <i>algorithm</i>
-for that. Here is an example:
-  </p><pre><code>\[r_{u_{}a,s_{}k} = \sum_{i \ne a} {I(u_{}i,s_{}k) w(u_{}a, u_{}i)}\]</code>
-</pre>
-
-  <p>&nbsp;Memory-based algorithms such as this use the content that we generate to calculate “successful relationships” based on a
+<h1>dérive<h2>&nbsp;<i class="ion ion-merge"></i> navigating the digital landscape</h2></h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Have you ever wondered why social media sites like Twitter, Facebook, and Tumblr feel so attuned to your personal interests? The explanation isn’t “There’s an app for that.” but rather, there’s an <i>algorithm</i> for that. Here is an example:</p>
+<pre><code>\[r_{u_{}a,s_{}k} = \sum_{i \ne a} {I(u_{}i,s_{}k) w(u_{}a, u_{}i)}\]</code></pre>
+<p>Memory-based algorithms such as this use the content that we generate to calculate “successful relationships” based on a
 matrix of our similarities [Datar]. Tech
 companies have adopted to the human impulse for communication by making it
 easier to connect with others who share our interests, whether we know them IRL
@@ -36,8 +31,8 @@ believed that individual expression had shifted from being channeled through liv
 experience to individual expression by proxy. In more contemporary terms, an analogy
 of this would be the ‘self-obsessed’ millennial who would rather take selfies
 at the beach to view later on than enjoy the experience firsthand. Through this
-line of thought, it could be said that social media serves as this very proxy.</p><p>     But
-how could this be if what we post online is a digital replication of our lived
+line of thought, it could be said that social media serves as this very proxy.</p><br><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;But how could this be if what we post online is a digital replication of our lived
 experience? One could argue that social media is so far reaching that we often
 replicate even the most mundane experiences of our lives for the consumption of
 others. Scrolling through Facebook timelines and Tumblr dashboards has now
@@ -72,8 +67,8 @@ thus exploited. Subjectivity ceases to exist as our individualism becomes
 commodified into distinct “experiences” that can be bought and sold. The ultimate
 social alienation occurs when people view themselves as commodities and perform
 life as a business transaction. Being the creator of your own blog can
-certainly enable this commodity fetishism.</p><p>     Getting
-back to how this applies on social media, many users attempt to escape feelings
+certainly enable this commodity fetishism.</p><br><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Getting back to how this applies on social media, many users attempt to escape feelings
 of alienation by identifying themselves through signifiers and hashtags i.e. Wholock,
 SJW (Social Justice Warrior), #Meninist etc. Mainstream outlets pilfer as much content
 as they can from these users and repurpose them into bits of information that
