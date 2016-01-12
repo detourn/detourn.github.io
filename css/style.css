@@ -37,30 +37,15 @@ input:focus {
   outline: none;
 }
 
-
-#example1 {
-      position: relative;
-      display: inline-block;
-    }
-
-.map, .derive {
+header {
+  margin: 0em 0em 0em;
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
   color: #404040;
   display: block;
   font-family: 'Source Code Pro', sans-serif;
-  text-align: justify;
-    }
-
-    div.box {
-        width: 30em;
-        height: 3em;
-        background-color: #108040;
-      }
-      div.box.swipe {
-        background-color: #7ACEF4;
-      }
+}
 
 body {
   background-color: #0d0d0d;
@@ -106,6 +91,21 @@ body a:hover {
   color: #b8b8b8;
 }
 
+#example1 {
+  position: relative;
+  display: inline-block;
+    }
+
+.map, .derive {
+  font-size: 24px;
+  font-weight:200;
+  line-height: 1.52;
+  color: #404040;
+  display: block;
+  font-family: 'Source Code Pro', sans-serif;
+  text-align: justify;
+    }
+
 svg.datamap {
   height: 650px;
   width: 600px;
@@ -134,6 +134,14 @@ svg.datamap {
    font-size:24px;
    text-align:right;
    font-family: 'OCR A Extended';
+}
+
+.datamap path.datamaps-graticule {
+  pointer-events: all;
+}
+
+.datamap path.datamaps-subunit {
+  pointer-events: all;
 }
 
 blockquote {
@@ -237,50 +245,18 @@ li {
   text-align:justify;
  }
 
-hr { border: 0; border-top: 1px solid #303030; margin: 0; margin-top: 1.5em; margin-bottom: 1.5em; }
+hr { border: 0;
+     border-top: 1px solid #303030;
+     margin: 0;
+     margin-top: 1.5em;
+     margin-bottom: 1.5em; }
 
 sup {
   vertical-align: super;
   font-size: 0.7em;
   color: #404040;
   font-weight: 200;
-  font-family: 'Source Code Pro', sans-serif;
-}
-
-header {
-  margin: 0em 0em 0em;
-  font-size: 24px;
-  font-weight:200;
-  line-height: 1.52;
-  color: #404040;
-  display: block;
-  font-family: 'Source Code Pro', sans-serif;
-}
-
-footer p {
-  font-family: 'OCR A Extended';
-}
-
-.header a, .header a:hover, .header a:after, .header a:hover:after {
-  text-decoration: none;
-  color: #c0c0c0;
-  border-bottom: 0px;
-  letter-spacing: 1px;
-}
-
-.datamap path.datamaps-graticule {
-  pointer-events: all;
-}
-
-.datamap path.datamaps-subunit {
-  pointer-events: all;
-}
-
-@media (max-width: 690px) {
-  h1 {
-    font-size: 1.5em;
-  }
-}
+  font-family: 'Source Code Pro', sans-serif; }
 
 .cmd {
   animation: noise-3 .5s linear;

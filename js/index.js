@@ -33,6 +33,7 @@ $(document).ready(function() {
            var dOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
            var gOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
 
+
            $.fn.mCmd = function() {
              $('.container').append(map);
              $(".map").html(ajax_load).load("commands/map.asp", ajax_error);
@@ -56,59 +57,49 @@ $(document).ready(function() {
             $('.inputs:first').focus();
            };
 
+
             if (value == 'm' && !($('.map').length)) { // If input value is map
-                $(this).mCmd();
-                $(this).newLine();
+              $(this).mCmd();
             } else if (value == 'm'  && ($('.map').length)) { // If map is present
-                $(map).removeClass('map');
-                $('.container').append(mOpen);
-                $(this).newLine();
+              $(map).removeClass('map');
+              $('.container').append(mOpen);
             } else if (value == 'd' && !($('.derive').length)) { // If input value is derive
-                $(this).dCmd();
-                $(this).newLine();
+              $(this).dCmd();
             } else if (value == 'd'  && ($('.derive').length)) { // If derive is present
-                $(derive).removeClass('derive');
-                $('.container').append(dOpen);
-                $(this).newLine();
+              $(derive).removeClass('derive');
+              $('.container').append(dOpen);
+              $(this).newLine();
             } else if (value == 'g' && !($('.glossary').length)) { // If input value is glossary
-                $(this).gCmd();
-                $(this).newLine();
+              $(this).gCmd();
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
-                $(glossary).removeClass('glossary');
-                $('.container').append(gOpen);
-                $(this).newLine();
+              $(glossary).removeClass('glossary');
+              $('.container').append(gOpen);
             } else if (value == 'ok' && !($('.ok').length)) {
-               $('.container').append(ok);
-               $(".ok").html(ajax_load).load("commands/okc.html", ajax_error);
-               $(this).newLine();
+              $('.container').append(ok);
+              $(".ok").html(ajax_load).load("commands/okc.html", ajax_error);
             } else if (value == 'ok' && ($('.ok').length)) {
-               $(ok).removeClass('ok');
-               $('.container').append("<p><span class=\"cmd\">&#62;&nbsp;[ok] is already open!</span></p><br>");
-               $(this).newLine();
-            }  else if (value == '?') { // If input value is ?
-                $('.container').append(help);
-                $(this).newLine();
+              $(ok).removeClass('ok');
+              $('.container').append("<p class=\"cmd\">&#62;&nbsp;[ok] is already open!</p><br>");
+            } else if (value == '?') { // If input value is ?
+              $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
-                $('.container').empty();
-                $(this).newLine();
-            } else if (value == 'git') { // If input value is clear
-                window.open('https://github.com/unilogue', '_blank');
-                $('.container').append("<br>");
-                $(this).newLine();
+              $('.container').empty();
+            } else if (value == 'git') { // If input value is git
+              window.open('https://github.com/unilogue', '_blank');
+              $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
-                $('.container').append(errorLine);
-                $(this).newLine();
-            } else if (value == '') { // If input value is wrong
-                $('.container').append(errorLine);
-                $(this).newLine();
-            }
+               $('.container').append(errorLine);
+            } else if (value == '') { // If input value is blank
+               $('.container').append("<p class=\"cmd\">&#62;&nbsp;VALUE = null (0% DATA RECEIVED)</p><br>");
+            }  $(this).newLine();
+
         }
     });
 
      $('html').keydown(function(e) {
-      if (e.which == 88 && e.ctrlKey) { // value = help
+      if (e.which == 88 && e.ctrlKey) {
         $('#cmd').show();
         $('#prompt').hide();
     }
    });
-   });
+ });
