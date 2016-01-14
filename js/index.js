@@ -59,34 +59,33 @@ $(document).ready(function() {
 
 
             if (value == 'm' && !($('.map').length)) { // If input value is map
-              $(this).mCmd();
+               $(this).mCmd();
             } else if (value == 'm'  && ($('.map').length)) { // If map is present
-              $(map).removeClass('map');
-              $('.container').append(mOpen);
+               $(map).removeClass('map');
+               $('.container').append(mOpen);
             } else if (value == 'd' && !($('.derive').length)) { // If input value is derive
-              $(this).dCmd();
+               $(this).dCmd();
             } else if (value == 'd'  && ($('.derive').length)) { // If derive is present
-              $(derive).removeClass('derive');
-              $('.container').append(dOpen);
-              $(this).newLine();
+               $(derive).removeClass('derive');
+               $('.container').append(dOpen);
             } else if (value == 'g' && !($('.glossary').length)) { // If input value is glossary
               $(this).gCmd();
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
-              $(glossary).removeClass('glossary');
-              $('.container').append(gOpen);
+               $(glossary).removeClass('glossary');
+               $('.container').append(gOpen);
             } else if (value == 'ok' && !($('.ok').length)) {
-              $('.container').append(ok);
-              $(".ok").html(ajax_load).load("commands/okc.html", ajax_error);
+               $('.container').append(ok);
+               $(".ok").html(ajax_load).load("commands/okc.html", ajax_error);
             } else if (value == 'ok' && ($('.ok').length)) {
-              $(ok).removeClass('ok');
-              $('.container').append("<p class=\"cmd\">&#62;&nbsp;[ok] is already open!</p><br>");
+               $(ok).removeClass('ok');
+               $('.container').append("<p class=\"cmd\">&#62;&nbsp;[ok] is already open!</p><br>");
             } else if (value == '?') { // If input value is ?
-              $('.container').append(help);
+               $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
-              $('.container').empty();
+               $('.container').empty();
             } else if (value == 'git') { // If input value is git
-              window.open('https://github.com/unilogue', '_blank');
-              $('.container').append("<br>");
+               window.open('https://github.com/unilogue', '_blank');
+               $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
             } else if (value == '') { // If input value is blank
