@@ -1,11 +1,11 @@
 <LANGUAGE="VBSCRIPT">
- <html>
+<html>
 
 <body>
 
 <h1>dérive<h2>&nbsp;<i class="ion ion-merge"></i> navigating the digital landscape</h2></h1>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;Have you ever wondered why social media sites like Twitter, Facebook, and Tumblr feel so attuned to your personal interests? The explanation isn’t “There’s an app for that.” but rather, there’s an <i>algorithm</i> for that. Here is an example:</p>
-<pre><code>\[r_{u_{}a,s_{}k} = \sum_{i \ne a} {I(u_{}i,s_{}k) w(u_{}a, u_{}i)}\]</code></pre>
+<pre><code>\[r_{u_{}a,s_{}k} = \sum_{i \ne a} {I(u_{}i,s_{}k) w(u_{}a, u_{}i)}\] <a href="http://arachnoid.com/latex/">(view with LaTeX)</a></code></pre>
 <p>Memory-based algorithms such as this use the content that we generate to calculate “successful relationships” based on a
 matrix of our similarities [Datar]. Tech
 companies have adopted to the human impulse for communication by making it
