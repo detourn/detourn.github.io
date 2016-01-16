@@ -20,7 +20,7 @@ $(document).ready(function() {
                                 $('p#load').replaceWith("<p id=\"error\"></p>");
                                 $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );}}
 
-           var errorLine = $("<p><span class=\"cmd\">&#62;&nbsp;UNKNOWN COMMAND</span></p><br>");
+           var errorLine = $("<p class=\"cmd\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
            var help = $("<p><table style='width:75%' class='cmd'><tr><td><span class=\"blink2\">*</span> COMMANDS :</td><td>[m]ap</td><td>[d]erive</td><td>[g]lossary</td></tr><tr><td></td><td>[?] help</td><td>[clear]</td><td>[git]</td></tr></table></p>");
 
