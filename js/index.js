@@ -86,6 +86,9 @@ $(document).ready(function() {
             } else if (value == 'git') { // If input value is git
                window.open('https://github.com/unilogue', '_blank');
                $('.container').append("<br>");
+            } else if (value == 'clever') { // If input value is git
+               window.open('clever.html', '_self');
+               $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
             } else if (value == '') { // If input value is blank

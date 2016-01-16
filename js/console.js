@@ -1,4 +1,5 @@
 var bot = new cleverbot("BIsKhtIhZdmgbOPp", "DwikyXztHk6GEG7LcvHCKfObCxYduTMP");
+var ajax_load = "<p id=\"load\">LOADING<span class=\"blink\">_</span></p>";
 
 bot.setNick("sessionname")
 
@@ -20,6 +21,6 @@ else
 
 console.log = function(message) {
   console.olog(message);
-  $('.console').append('<br>' + '<p class=\"example1\">&#62;&nbsp;' + message + '</p>');
+  $('.console').append('<br>' + '<p>&#62;&nbsp;' + message + '</p>');
 };
 console.error = console.debug = console.info =  console.log
