@@ -19,26 +19,26 @@
     ****************************************************/
 </script>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/cleverbot/cleverbot.io.min.js"></script>
+<script type="text/javascript" src="js/cleverbot/cleverbot.io.js"></script>
 <script type="text/javascript" src="js/console.js"></script>
 </head>
 
 <body>
 
   <header>
-      <div id="example1"><h2>unilogue<span class="blink">_</span></h2></div><br>
-      <div id="prompt">refresh [F5] to continue unilogue.</div>
+    <div id="example1"><h2>unilogue<span class="blink">_</span></h2></div><br>
   </header>
 
-<div class="console"></div>
+<div class="console" style="width:75%;"></div>
+<div id="input"></div>
+<p class="cmd">&#62;&nbsp;</p><input id="clever" type="text" placeholder="say something clever." />
 
 
 </body>
 
-   <script type="text/javascript" src="js/index.js"></script>
+
    <script type="text/javascript">
-   console.log('hello world!');
-     //Define first typing example:
+      //Define first typing example:
          new TypingText(document.getElementById("example1"), 50);
          //Type out examples:
          TypingText.runAll();

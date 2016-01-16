@@ -1,5 +1,7 @@
+$(document).ready(function() {
+
 var bot = new cleverbot("BIsKhtIhZdmgbOPp", "DwikyXztHk6GEG7LcvHCKfObCxYduTMP");
-var ajax_load = "<p id=\"load\">LOADING<span class=\"blink\">_</span></p>";
+
 
 bot.setNick("sessionname")
 
@@ -9,8 +11,22 @@ bot.create(function (err, session) {
   // Woo, you initialized cleverbot.io.  Insert further code here
 });
 
-bot.ask("hello world!", function (err, response) {
-  console.log(response); // Will likely be: "Living in a lonely world"
+$('#clever').keyup(function (e) {
+   if (e.keyCode == 13) {
+
+      var value = $(this).val();
+      var input = value;
+
+       if (value == input) {
+          document.getElementById("input").innerHTML =
+          '<p>&#62;&nbsp;' + bot.ask(input, function (err, response) {
+            console.log(input);
+            console.log(response); // Will likely be: "Living in a lonely world"
+          }); + '</p>';
+          $(this).val('');
+       }
+
+   }
 });
 
 if (typeof console  != "undefined")
@@ -24,3 +40,4 @@ console.log = function(message) {
   $('.console').append('<br>' + '<p>&#62;&nbsp;' + message + '</p>');
 };
 console.error = console.debug = console.info =  console.log
+});
