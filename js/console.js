@@ -25,6 +25,7 @@ $('#clever').keyup(function (e) {
             console.log('cb > ' + response); // Will likely be: "Living in a lonely world"
           });
           $(this).val('');
+          $(".console").animate({ scrollTop: $(".console")[0].scrollHeight}, 1000);
        }
 
    }
