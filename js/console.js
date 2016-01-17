@@ -44,7 +44,7 @@ else
 
 console.log = function(message) {
   console.olog(message);
-  $('.console').append('<br>' + '<p>' + message + '</p>');
+  $('.console').append('<p>' + message + '</p>' + '<br>');
 };
 console.error = console.debug = console.info =  console.log
 });

@@ -22,16 +22,16 @@ $(document).ready(function() {
 
            var errorLine = $("<p class=\"cmd\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
-           var help = $("<p><table style='width:75%' class='cmd'><tr><td><span class=\"blink2\">*</span> COMMANDS :</td><td>[m]ap</td><td>[d]erive</td><td>[g]lossary</td></tr><tr><td></td><td>[?] help</td><td>[clear]</td><td>[git]</td></tr></table></p>");
+           var help = document.getElementById("cmd").innerHTML;
 
            var map = $("<div class=\"map\"></div>");
            var derive = $("<div class=\"derive\"></div>");
            var glossary = $("<div class=\"glossary\"></div>");
            var ok = $("<div class=\"ok\"></div>");
 
-           var mOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[m]ap is already open!</span></p><br>');
-           var dOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[d]erive is already open!</span></p><br>');
-           var gOpen = $('<p><span class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</span></p><br>');
+           var mOpen = $('<p class=\"cmd\">&#62;&nbsp;[m]ap is already open!</p><br>');
+           var dOpen = $('<p class=\"cmd\">&#62;&nbsp;[d]erive is already open!</p><br>');
+           var gOpen = $('<p class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</p><br>');
 
 
            $.fn.mCmd = function() {
