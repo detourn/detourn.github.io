@@ -3,6 +3,7 @@ $(document).ready(function() {
 var bot = new cleverbot("BIsKhtIhZdmgbOPp", "DwikyXztHk6GEG7LcvHCKfObCxYduTMP");
 
 
+
 bot.setNick("sessionname")
 
 bot.create(function (err, session) {
@@ -19,14 +20,20 @@ $('#clever').keyup(function (e) {
 
        if (value == input) {
           document.getElementById("input").innerHTML =
-          '<p>&#62;&nbsp;' + bot.ask(input, function (err, response) {
-            console.log(input);
-            console.log(response); // Will likely be: "Living in a lonely world"
-          }); + '</p>';
+            bot.ask(input, function (err, response) {
+            console.log('me > ' + input);
+            console.log('cb > ' + response); // Will likely be: "Living in a lonely world"
+          });
           $(this).val('');
        }
 
    }
+});
+
+$('html').keydown(function(e) {
+ if (e.which == 118) {
+    window.open('/', '_self');
+}
 });
 
 if (typeof console  != "undefined")
@@ -37,7 +44,7 @@ else
 
 console.log = function(message) {
   console.olog(message);
-  $('.console').append('<br>' + '<p>&#62;&nbsp;' + message + '</p>');
+  $('.console').append('<br>' + '<p>' + message + '</p>');
 };
 console.error = console.debug = console.info =  console.log
 });
