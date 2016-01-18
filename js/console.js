@@ -12,20 +12,27 @@ bot.create(function (err, session) {
   // Woo, you initialized cleverbot.io.  Insert further code here
 });
 
+bot.ask("hello!", function (err, response) {
+    console.log('me > ' + "hello!");
+    console.log('cb > ' + response); // Will likely be: "Living in a lonely world"
+});
+
 $('#clever').keyup(function (e) {
    if (e.keyCode == 13) {
 
-      var value = $(this).val();
-      var input = value;
+     var value = $(this).val();
+     var input = value;
 
-       if (value == input) {
+     if (value == input) {
           document.getElementById("input").innerHTML =
             bot.ask(input, function (err, response) {
             console.log('me > ' + input);
             console.log('cb > ' + response); // Will likely be: "Living in a lonely world"
           });
-          $(this).val('');
-          $(".console").animate({ scrollTop: $(".console")[0].scrollHeight}, 1000);
+            $(this).val('');
+            $('.console').animate({
+                scrollTop: $('.console').get(0).scrollHeight
+            }, 1500);
        }
 
    }
