@@ -27,7 +27,7 @@ $(document).ready(function() {
            var map = $("<div class=\"map\"></div>");
            var derive = $("<div class=\"derive\"></div>");
            var glossary = $("<div class=\"glossary\"></div>");
-           var ok = $("<div class=\"ok\"></div>");
+           var advice = $("<div id=\"advice\" class=\"advice\" style=\"max-height:350px; overflow-y: scroll;\"></div>");
 
            var mOpen = $('<p class=\"cmd\">&#62;&nbsp;[m]ap is already open!</p><br>');
            var dOpen = $('<p class=\"cmd\">&#62;&nbsp;[d]erive is already open!</p><br>');
@@ -73,12 +73,13 @@ $(document).ready(function() {
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
                $(glossary).removeClass('glossary');
                $('.container').append(gOpen);
-            } else if (value == 'ok' && !($('.ok').length)) {
-               $('.container').append(ok);
-               $(".ok").html(ajax_load).load("commands/okc.html", ajax_error);
-            } else if (value == 'ok' && ($('.ok').length)) {
-               $(ok).removeClass('ok');
-               $('.container').append("<p class=\"cmd\">&#62;&nbsp;[ok] is already open!</p><br>");
+            } else if (value == 'a' && !($('.advice').length)) {
+               $('.container').append(advice);
+               $(".advice").html(ajax_load).load("commands/advice.html", ajax_error);
+               $(".advice").animate({ scrollTop: $(".advice")[0].scrollHeight}, 1000);
+            } else if (value == 'a' && ($('.advice').length)) {
+               $(advice).removeClass('advice');
+               $('.container').append("<p class=\"cmd\">&#62;&nbsp;[a]dvice is already open!</p><br>");
             } else if (value == '?') { // If input value is ?
                $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
