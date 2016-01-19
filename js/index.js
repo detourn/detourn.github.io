@@ -20,7 +20,7 @@ $(document).ready(function() {
                                 $('p#load').replaceWith("<p id=\"error\"></p>");
                                 $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );}}
 
-           var errorLine = $("<p class=\"cmd\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
+           var errorLine = $("<p class=\"glitch\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
            var help = document.getElementById("cmd").innerHTML;
 
@@ -29,9 +29,10 @@ $(document).ready(function() {
            var glossary = $("<div class=\"glossary\"></div>");
            var advice = $("<div id=\"advice\" class=\"advice\" style=\"max-height:350px; overflow-y: scroll;\"></div>");
 
-           var mOpen = $('<p class=\"cmd\">&#62;&nbsp;[m]ap is already open!</p><br>');
-           var dOpen = $('<p class=\"cmd\">&#62;&nbsp;[d]erive is already open!</p><br>');
-           var gOpen = $('<p class=\"cmd\">&#62;&nbsp;[g]lossary is already open!</p><br>');
+           var mOpen = $('<p class=\"glitch\">&#62;&nbsp;[m]ap is already open!</p><br>');
+           var dOpen = $('<p class=\"glitch\">&#62;&nbsp;[d]erive is already open!</p><br>');
+           var gOpen = $('<p class=\"glitch\">&#62;&nbsp;[g]lossary is already open!</p><br>');
+           var aOpen = $('<p class=\"glitch\">&#62;&nbsp;[a]dvice is already open!</p><br>');
 
 
            $.fn.mCmd = function() {
@@ -47,6 +48,11 @@ $(document).ready(function() {
            $.fn.gCmd = function() {
              $('.container').append(glossary);
              $(".glossary").html(ajax_load).load("commands/glossary.asp", ajax_error);
+           };
+
+           $.fn.aCmd = function() {
+             $('.container').append(advice);
+             $(".advice").html(ajax_load).load("commands/advice.html", ajax_error);
            };
 
            $.fn.newLine = function() {
@@ -69,17 +75,15 @@ $(document).ready(function() {
                $(derive).removeClass('derive');
                $('.container').append(dOpen);
             } else if (value == 'g' && !($('.glossary').length)) { // If input value is glossary
-              $(this).gCmd();
+               $(this).gCmd();
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
                $(glossary).removeClass('glossary');
                $('.container').append(gOpen);
             } else if (value == 'a' && !($('.advice').length)) {
-               $('.container').append(advice);
-               $(".advice").html(ajax_load).load("commands/advice.html", ajax_error);
-               $(".advice").animate({ scrollTop: $(".advice")[0].scrollHeight}, 1000);
+               $(this).aCmd();
             } else if (value == 'a' && ($('.advice').length)) {
                $(advice).removeClass('advice');
-               $('.container').append("<p class=\"cmd\">&#62;&nbsp;[a]dvice is already open!</p><br>");
+               $('.container').append(aOpen);
             } else if (value == '?') { // If input value is ?
                $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
@@ -87,13 +91,19 @@ $(document).ready(function() {
             } else if (value == 'git') { // If input value is git
                window.open('https://github.com/unilogue', '_blank');
                $('.container').append("<br>");
+            } else if (value == 'b') { // If input value is git
+               window.open('https://ni-sui.tumblr.com', '_blank');
+               $('.container').append("<br>");
             } else if (value == 'clever') { // If input value is git
                window.open('clever.html', '_self');
+               $('.container').append("<br>");
+            } else if (value == 'gis') { // If input value is git
+               window.open('gis.html', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
             } else if (value == '') { // If input value is blank
-               $('.container').append("<p class=\"cmd\">&#62;&nbsp;VALUE = null (0% DATA RECEIVED)</p><br>");
+               $('.container').append("<p class=\"glitch\">&#62;&nbsp;VALUE = null (0% DATA RECEIVED)</p><br>");
             }  $(this).newLine();
 
         }

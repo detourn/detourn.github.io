@@ -138,7 +138,8 @@ body a:hover {
 }
 
 iframe {
-  width: 100%;
+  width: 107.9%;
+  margin-left:-4%;
   height: 450px;
 }
 
@@ -275,14 +276,14 @@ li {
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: 'OCR A Extended';
   padding: 1em;
   color:#404040;
   text-align:justify;
  }
 
 hr { border: 0;
-     border-top: 1px solid #303030;
+     border-top: 2px solid #303030;
      margin: 0;
      margin-top: 1.5em;
      margin-bottom: 1.5em; }
@@ -294,7 +295,7 @@ sup {
   font-weight: 200;
   font-family: 'Source Code Pro', sans-serif; }
 
-.cmd {
+.glitch {
   animation: noise-3 .5s linear;
   }
 
