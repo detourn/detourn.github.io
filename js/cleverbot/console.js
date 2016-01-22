@@ -38,12 +38,6 @@ $('#clever').keyup(function (e) {
    }
 });
 
-$('html').keydown(function(e) {
- if (e.which == 118) {
-    window.open('/', '_self');
-}
-});
-
 if (typeof console  != "undefined")
   if (typeof console.log != 'undefined')
     console.olog = console.log;

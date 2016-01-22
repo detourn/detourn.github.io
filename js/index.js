@@ -114,9 +114,7 @@ $(document).ready(function() {
     });
 
      $('html').keydown(function(e) {
-      if (e.which == 88 && e.ctrlKey) {
-        $('#cmd').show();
-        $('#prompt').hide();
-    }
+      if (e.which == 88 && e.ctrlKey) { $('#cmd').show(); $('#prompt').hide();}
+      else if (e.which == 118) {window.open('/', '_self');}
    });
  });
