@@ -7,7 +7,7 @@
     <title>unilogue</title>
 
 <link rel="icon" href="favi.png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/TypingText.js">
@@ -23,6 +23,13 @@
 </head>
 
 <style type="text/css">
+/*@font-face {
+  font-family: 'tinytots';
+  src: url('/fonts/tinytots.ttf');
+}
+body p, input {
+  font-family: 'tinytots';
+}*/
 .console {
 max-height: 400px;
 overflow-x:visible;
@@ -38,8 +45,8 @@ padding-bottom: 0px;
 <body>
 
   <header>
-    <div id="example1"><h2>unilogue<span class="blink">_</span></h2></div><br>
-    <div id="prompt"><span class="blink2">*</span> Press [F7] to go back.<br><br></div>
+    <div id="example1"><h2>unilogue > <small><small>clever.html<span class="blink">_</span></small></small></h2></div><br>
+    <div id="prompt"><span class="blink2">*</span> press [F7] to go back.<br><br></div>
   </header>
 
 <div class="console"><div id="input" style="display:none;"></div></div>
@@ -48,12 +55,6 @@ padding-bottom: 0px;
 
 </body>
 
-
-   <script type="text/javascript">
-      //Define first typing example:
-         new TypingText(document.getElementById("example1"), 50);
-         //Type out examples:
-         TypingText.runAll();
-   </script>
+   <script type="text/javascript" src="js/index.js"></script>
 
 </html>

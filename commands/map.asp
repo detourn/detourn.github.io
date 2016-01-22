@@ -3,7 +3,7 @@
 <head>
   <script>
   $('.parallax').parallax({
-  speed : 0.25
+  speed : 0.15
   });
   $('#cast').mouseenter(function(){
   $('#cast').attr('style', 'background-image: url(\'/images/cast2.PNG\');')

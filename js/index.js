@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  //Define first typing example:
+     new TypingText(document.getElementById("example1"), 50);
+     //Type out examples:
+     TypingText.runAll();
 
  $.ajaxSetup ({
      cache: false
