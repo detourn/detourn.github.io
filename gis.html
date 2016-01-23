@@ -8,9 +8,9 @@
 
 <link rel="icon" href="favi.png">
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/gis.css">
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,200' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/gis.css">
 <script type="text/javascript" src="js/TypingText.js">
     /****************************************************
     * Typing Text script- By Twey @ Dynamic Drive Forums
@@ -28,13 +28,24 @@
     <div id="prompt"><span class="blink2">*</span> press [F7] to go back.<br><br></div>
   </header>
 
-  <p id="intro" style="padding-left: 2%; padding-right: 2%; padding-bottom: 15%;">A <b>geographic information system</b> or <b>geographical information system</b> (<b>GIS</b>) is a system designed to capture, store, manipulate, analyze, manage, and present all types of spatial or geographical data. The acronym GIS is sometimes used for geographic information science (GIScience) to refer to the academic discipline that studies geographic information systems and is a large domain within the broader academic discipline of Geoinformatics. What goes beyond a GIS is a spatial data infrastructure, a concept that has no such restrictive boundaries.</p>
+  <table id="intro" style="padding-left: 2%; padding-right: 2%; padding-bottom: 15%; height: 250px; width: 100%;">
+    <tr>
+      <td>
+        <p>A <b>geographic information system</b> or <b>geographical information system</b> (<b>GIS</b>) is a system designed to capture, store, manipulate, analyze, manage, and present all types of spatial or geographical data. The acronym GIS is sometimes used for geographic information science (GIScience) to refer to the academic discipline that studies geographic information systems and is a large domain within the broader academic discipline of Geoinformatics. What goes beyond a GIS is a spatial data infrastructure, a concept that has no such restrictive boundaries.</p>
+      </td>
+    </tr>
+      <tr>
+        <td>
+          <div class="v"></div><div class="h"></div>
+        </td>
+      </tr>
+  </table>
 
   <div id="sticky-anchor"></div>
   <div id="sticky" align="center">
 <label>
   <select id="dropDown">
-      <option selected>VIEW A MAP</option>
+      <option selected>VIEW EXAMPLES</option>
       <option value="gdelt">GDELT Project&nbsp;</option>
       <option value="ghost">Ghost Maps&nbsp;</option>
   </select>
@@ -43,12 +54,12 @@
 
 <div id="gdelt" class="drop-down-show-hide">
   <div id="text"><p><a href="http://blog.gdeltproject.org/a-zoomable-map-of-the-twitterverse-2012-2014/">A Zoomable Map of The Twitterverse 2012-2014</a><br>Countries with high densities of geotagged Twitter penetration, such as the United States, Brazil, Western Europe, Turkey, Saudi Arabia, and Southeast Asia, capture exquisite detail of human activity and mobility, including the thin tendrils of roadways and transit corridors that connect nations.  At the same time, other countries like India illustrate the sparseness of geotagged Twitter penetration outside that handful of nations.  Reassuringly, this map aligns closely with Twitter’s own 2013 visualizations of 100% of its geotagged tweets, suggesting this map, while capturing slightly less fine detail, accurately reflects the contours of geotagged tweets.</p></div>
-  <iframe class="gdelt" frameborder="0" seamless="seamless" scrolling="no" src="http://data.gdeltproject.org/blog/twittervis-mastermap-2012-2014/index.html"> </iframe></div>
+  <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="http://data.gdeltproject.org/blog/twittervis-mastermap-2012-2014/index.html"> </iframe></div>
 
 <div id="ghost" class="drop-down-show-hide">
   <div id="text"><p><a href="https://www.chromeexperiments.com/experiment/ghost-maps">by Olivia Jack<br>
   Inspired by the Situationists International (1944).</a></p></div>
-  <iframe frameborder="0" seamless="seamless" scrolling="no" src="//ojack.github.io/ghost-map/"> </iframe></div>
+  <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="//ojack.github.io/ghost-map/"> </iframe></div>
 
 
 </body>
@@ -56,6 +67,10 @@
 <script type="text/javascript" src="js/index.js"></script>
 
    <script type="text/javascript">
+   $(window).mousemove( function(e){
+    $('.v').css('left', e.clientX + 'px');
+    $('.h').css('top', e.clientY + 'px');
+});
    function sticky_relocate() {
     var window_top = $(window).scrollTop();
     var div_top = $('#sticky-anchor').offset().top;
@@ -68,10 +83,9 @@
 
    $('#dropDown').change(function () {
        $('.drop-down-show-hide').hide();
-       $('#' + this.value).fadeIn();
+       $('#' + this.value).fadeIn(function(){$(this).find("iframe").prop("src", function(){return $(this).data("src");});});
        $('html, body, iframe').css('height', '100%');
-       $('body').css('background-color', '#000');
-       $('select').css('background', '#000');
+       $('select').css('background', 'rgba(7, 7, 7, 0.5)');
        $('select').css('color', '#ccc');
        $('label').addClass('changed');
        $('header').animate({height: 0, opacity: 0}, 'slow', function() {$(this).remove();});
@@ -79,7 +93,7 @@
        $('html, body').animate({scrollTop: $('#sticky').offset().top}, 1500);
        $(window).scroll(sticky_relocate);sticky_relocate();});
 
-       
+
    </script>
 
 </html>

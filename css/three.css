@@ -1,50 +1,25 @@
 html body {
   padding-bottom: 0%;
   margin-bottom: 0px;
-  overflow: hidden;
-  background: url('/images/london.png');
-  background-color: #000;
+  overflow-y: scroll;
+  background-color: #0d0d0d;
+  background: url('/images/octree2.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px), screen and (max-width: 480px) {
-  html body {
-      overflow-y: scroll;
-  }
-}
-
-table#intro, header, #example1 h2 {
-  background: rgba(7, 7, 7, 0.7);
+div#intro p, header, #example1 h2 {
+  background: rgba(7, 7, 7, 0.5);
   color: #444343;
 }
 
-* {cursor: none;}
-
-.v, .h {
-    background: #444343;
-    z-index: 1;
-    opacity: 0.5;
-    position:absolute;
-    pointer-events:none;
-    top:0;
-    left:0;
-}
-.v {
-    height: 100%;
-    width: 0.03em;
-    margin-left:-2px;
-    background: #444343;
-}
-.h {
-    width: 100%;
-    height: 0.03em;
-    margin-top:-2px;
+body p {
+  font-size: 18px;
 }
 
-body a {
+#text a {
   text-decoration:none;
   color:#ccc;
   border-bottom: solid 1px #ccc;
@@ -52,11 +27,24 @@ body a {
   font-family: 'Source Code Pro', ;
 }
 
-body p {
-  font-size: 20px;
+pre {
+  font-size: 12px;
+  line-height: 1.2;
+  background: rgba(7,7,7,0.6);
+  color: #505050;
+  display: block;
+  font-family: 'Source Code Pro', sans-serif;
+  white-space: pre-wrap;
+  width: 98%;
 }
 
-select:active, select:hover { outline: none }
+#bg {
+  width: 100%;
+  height: 248px;
+  border: 1px solid #303030;
+}
+
+select:active, select:hover {  outline: none }
 
 select {
     padding:3px;
@@ -115,47 +103,42 @@ label:before {
     top: 0; right: 0; left: 0; margin: auto;
     z-index: 10000;
 }
-
-#gdelt {
+#octree {
+  top: 0; left: -4%; margin: auto;
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-#gdelt iframe {
+#octree #text p {
+  opacity: 0.7;
+  text-align: justify;
+  position: absolute;
+  top: 7%; right: 0; left: 10%; margin: auto;
+  color: #ccc;
+  font-size: 0.6em;
+  width: 289px;
+  height: 30px;
+  overflow: scroll;
+}
+#tied, #smash {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#tied iframe, #smash iframe {
   margin-bottom: -4%;
 }
 
-#gdelt #text p {
+#tied #text p, #smash #text p {
   opacity: 0.7;
   text-align: justify;
   position: absolute;
   top: 7%; right: 0; left: 0; margin: auto;
-  background: rgba(0,0,0,0.5);
   color: #ccc;
   font-size: 0.6em;
-  width: 18%;
+  width: 289px;
   height: 45px;
   overflow: scroll;
-}
-
-#ghost {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-#ghost iframe {
-  margin-bottom: -4%;
-}
-
-#ghost #text p {
-  opacity: 0.7;
-  text-align: left;
-  position: absolute;
-  top: 7%; right: 0; left: 0; margin: auto;
-  background: rgba(0,0,0,0.5);
-  color: #ccc;
-  font-size: 0.7em;
-  width: 17%;
 }

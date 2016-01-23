@@ -28,6 +28,7 @@ $(document).ready(function() {
            var newLine = $('.inputs').clone(true).val('');
            var help = document.getElementById("cmd").innerHTML;
 
+
            var map = $("<div class=\"map\"></div>");
            var derive = $("<div class=\"derive\"></div>");
            var glossary = $("<div class=\"glossary\"></div>");
@@ -83,11 +84,6 @@ $(document).ready(function() {
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
                $(glossary).removeClass('glossary');
                $('.container').append(gOpen);
-            } else if (value == 'a' && !($('.advice').length)) {
-               $(this).aCmd();
-            } else if (value == 'a' && ($('.advice').length)) {
-               $(advice).removeClass('advice');
-               $('.container').append(aOpen);
             } else if (value == '?') { // If input value is ?
                $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
@@ -103,6 +99,9 @@ $(document).ready(function() {
                $('.container').append("<br>");
             } else if (value == 'gis') { // If input value is git
                window.open('gis.html', '_self');
+               $('.container').append("<br>");
+            } else if (value == '3') {
+               window.open('three.html', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
