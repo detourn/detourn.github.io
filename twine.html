@@ -47,19 +47,14 @@
   <label>
     <select id="dropDown">
         <option selected>PLAY</option>
-        <option value="attach">ATTACH</option>
-        <option value="mobd">mobd</option>
+        <option value="attach">ATTACH&nbsp;</option>
     </select>
   </label>
   </div>
 
   <div id="attach" class="drop-down-show-hide">
-    <div id="text"><p>a twine game by adsifer</p></div>
-    <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="attached.html"> </iframe></div>
-
-    <div id="mobd" class="drop-down-show-hide">
-      <div id="text"><p>a game by xra</p></div>
-      <iframe width="1280" height="898" src="https://www.youtube.com/embed/6G_IU5lK1E8" frameborder="0" allowfullscreen></iframe></div>
+    <div id="text"><p>a twine game by <a href="https://github.com/adrilar" target="_blank">adrilar</a></p></div>
+    <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="http://adrilar.github.io/projects/twine/attached/attached.html"> </iframe></div>
 
 
 
@@ -83,6 +78,8 @@
       $('html, body, iframe').css('height', '100%');
       $('select').css('color', '#ccc');
       $('label').addClass('changed');
+      $("#sticky").fadeOut(5000);
+      $("#text").fadeOut(5000);
       $('header').animate({height: 0, opacity: 0}, 'slow', function() {$(this).remove();});
       $('#intro').animate({height: 0, opacity: 0}, 'slow', function() {$(this).remove();});
       $('html, body').animate({scrollTop: $('#sticky').offset().top}, 1500);

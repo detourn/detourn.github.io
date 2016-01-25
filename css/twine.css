@@ -36,7 +36,7 @@ select:active, select:hover {  outline: none }
 select {
     padding:3px;
     margin: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     font-family: 'Source Code Pro', sans-serif;
     font-size: 24px;
     font-weight:200;
@@ -91,17 +91,17 @@ label:before {
     z-index: 10000;
 }
 
-#attach, #mobd {
+#attach {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-#attach iframe, #mobd iframe {
+#attach iframe {
   margin-bottom: -4%;
 }
 
-#attach #text p, #mobd #text p {
+#attach #text p {
   text-align: center;
   position: absolute;
   top: 7%; right: 0; left: 0; margin: auto;
