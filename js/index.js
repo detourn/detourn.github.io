@@ -10,6 +10,7 @@ $(document).ready(function() {
 
       // Hide <divs> by default
       $('#cmd').hide();
+      $('#about').hide();
 
 
       // Check on keydown
@@ -32,12 +33,12 @@ $(document).ready(function() {
            var map = $("<div class=\"map\"></div>");
            var derive = $("<div class=\"derive\"></div>");
            var glossary = $("<div class=\"glossary\"></div>");
-           var advice = $("<div id=\"advice\" class=\"advice\" style=\"max-height:350px; overflow-y: scroll;\"></div>");
+           var about = $("<div class=\"about\"></div>");
 
            var mOpen = $('<p class=\"glitch\">&#62;&nbsp;[m]ap is already open!</p><br>');
            var dOpen = $('<p class=\"glitch\">&#62;&nbsp;[d]erive is already open!</p><br>');
            var gOpen = $('<p class=\"glitch\">&#62;&nbsp;[g]lossary is already open!</p><br>');
-           var aOpen = $('<p class=\"glitch\">&#62;&nbsp;[a]dvice is already open!</p><br>');
+           var aOpen = $('<p class=\"glitch\">&#62;&nbsp;[a]bout is already open!</p><br>');
 
 
            $.fn.mCmd = function() {
@@ -56,8 +57,8 @@ $(document).ready(function() {
            };
 
            $.fn.aCmd = function() {
-             $('.container').append(advice);
-             $(".advice").html(ajax_load).load("commands/advice.html", ajax_error);
+             $('.container').append(about);
+             $(".about").html(ajax_load).load("/ #about", ajax_error);
            };
 
            $.fn.newLine = function() {
@@ -84,6 +85,11 @@ $(document).ready(function() {
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
                $(glossary).removeClass('glossary');
                $('.container').append(gOpen);
+            } else if (value == 'a' && !($('.about').length)) { // If input value is derive
+               $(this).aCmd();
+            } else if (value == 'a'  && ($('.about').length)) { // If derive is present
+               $(about).removeClass('about');
+               $('.container').append(aOpen);
             } else if (value == '?') { // If input value is ?
                $('.container').append(help);
             } else if (value == 'clear') { // If input value is clear
@@ -102,6 +108,9 @@ $(document).ready(function() {
                $('.container').append("<br>");
             } else if (value == '3') {
                window.open('three.html', '_self');
+               $('.container').append("<br>");
+            } else if (value == 't') {
+               window.open('twine.html', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);

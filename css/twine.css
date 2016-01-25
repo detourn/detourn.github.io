@@ -1,22 +1,26 @@
 html body {
   padding-bottom: 0%;
   margin-bottom: 0px;
-  overflow-y: scroll;
-  background-color: #0d0d0d;
-  background: url('/images/octree2.png');
+  overflow: hidden;
+  background: url('/images/macro2.jpg');
+  background-color: #000;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-div#intro p, header, #example1 h2 {
-  background: rgba(7, 7, 7, 0.5);
-  color: #444343;
+header, #example1 h2 {background: rgba(0, 0, 0, 0.5);}
+
+img {
+  opacity: 0.2;
+  height: 200px; width: 200px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 body p {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 #text a {
@@ -27,29 +31,12 @@ body p {
   font-family: 'Source Code Pro', ;
 }
 
-pre {
-  font-size: 12px;
-  line-height: 1.2;
-  background: rgba(7,7,7,0.6);
-  color: #505050;
-  display: block;
-  font-family: 'Source Code Pro', sans-serif;
-  white-space: pre-wrap;
-  width: 98%;
-}
-
-#bg {
-  width: 100%;
-  height: 248px;
-  border: 1px solid #303030;
-}
-
 select:active, select:hover {  outline: none }
 
 select {
     padding:3px;
     margin: 0;
-    background: rgba(7, 7, 7, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     font-family: 'Source Code Pro', sans-serif;
     font-size: 24px;
     font-weight:200;
@@ -69,7 +56,7 @@ select {
     select {padding-right:18px}
 }
 option {
-  background: rgba(7, 7, 7, 1);
+  background: rgba(0, 0, 0, 1);
 }
 label {position:relative}
 label:after {
@@ -103,42 +90,24 @@ label:before {
     top: 0; right: 0; left: 0; margin: auto;
     z-index: 10000;
 }
-#octree {
-  top: 0; left: -4%; margin: auto;
+
+#attach, #mobd {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-#octree #text p {
-  opacity: 0.7;
-  text-align: justify;
-  position: absolute;
-  top: 7%; right: 0; left: 10%; margin: auto;
-  color: #ccc;
-  font-size: 0.6em;
-  width: 289px;
-  height: 29px;
-  overflow: scroll;
-}
-#tied, #smash {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-#tied iframe, #smash iframe {
+#attach iframe, #mobd iframe {
   margin-bottom: -4%;
 }
 
-#tied #text p, #smash #text p {
-  opacity: 0.7;
-  text-align: justify;
+#attach #text p, #mobd #text p {
+  text-align: center;
   position: absolute;
   top: 7%; right: 0; left: 0; margin: auto;
   color: #ccc;
   font-size: 0.6em;
-  width: 289px;
+  width: 8%;
   height: 45px;
   overflow: scroll;
 }
