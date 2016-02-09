@@ -6,21 +6,21 @@
 
     <title>unilogue</title>
 
-<link rel="icon" href="favi.png">
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/three.css">
+<link rel="icon" href="/./favi.png">
+<link rel="stylesheet" href="/./css/index.css">
+<link rel="stylesheet" href="/./css/three.css">
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,200' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/TypingText.js">
+<script type="text/javascript" src="/./js/TypingText.js">
     /****************************************************
     * Typing Text script- By Twey @ Dynamic Drive Forums
     * Visit Dynamic Drive for this script and more: http://www.dynamicdrive.com
     * Please keep this notice intact
     ****************************************************/
 </script>
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/three/three.min.js"></script>
+<script type="text/javascript" src="/./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/./js/index.js"></script>
+<script type="text/javascript" src="/./js/three/three.min.js"></script>
 
 </head>
 
@@ -86,7 +86,7 @@
     </pre>
     </td>
     <td style="width: 25%;">
-      <div id="bg"></div>
+      <div id="box"></div>
         <script type="text/javascript">
         $( document ).ready(function() {
         var camera, scene, renderer;
@@ -97,7 +97,7 @@
 
         function init() {
 
-          camera = new THREE.PerspectiveCamera(75, $("#bg").innerWidth() / $("#bg").innerHeight(), 1, 10000);
+          camera = new THREE.PerspectiveCamera(75, $("#box").innerWidth() / $("#box").innerHeight(), 1, 10000);
           camera.position.z = 1000;
 
           scene = new THREE.Scene();
@@ -113,9 +113,9 @@
 
           renderer = new THREE.WebGLRenderer( { alpha: true } );
           renderer.setClearColor( 0xffffff, 0 ); // second param is opacity, 0 => transparent
-          renderer.setSize($("#bg").innerWidth(), $("#bg").innerHeight());
+          renderer.setSize($("#box").innerWidth(), $("#box").innerHeight());
 
-          document.getElementById("bg").appendChild(renderer.domElement);
+          document.getElementById("box").appendChild(renderer.domElement);
 
         }
 
@@ -150,7 +150,7 @@
 
   <div id="octree" class="drop-down-show-hide">
     <div id="text"><p>a rendition of <a href="http://threejs.org/examples/webgl_octree.html">this octree example.</a><br>right click + save as for screenshot</p></div>
-  <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="/octree.htm"> </iframe></div>
+  <iframe frameborder="0" seamless="seamless" scrolling="no" data-src="/./~/octree.html"> </iframe></div>
 
   <div id="tied" class="drop-down-show-hide">
     <div id="text"><p>WebGL experiment <a href="https://www.chromeexperiments.com/experiment/constraint">by edan kwan</a><br>

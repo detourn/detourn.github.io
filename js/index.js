@@ -28,6 +28,7 @@ $(document).ready(function() {
            var errorLine = $("<p class=\"glitch\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
            var help = document.getElementById("cmd").innerHTML;
+           var id = $.trim($(this).val().toLowerCase());
 
 
            var map = $("<div class=\"map\"></div>");
@@ -101,16 +102,16 @@ $(document).ready(function() {
                window.open('https://ni-sui.tumblr.com', '_blank');
                $('.container').append("<br>");
             } else if (value == 'clever') { // If input value is git
-               window.open('clever.html', '_self');
+               window.open('~/clever.html', '_self');
                $('.container').append("<br>");
             } else if (value == 'gis') { // If input value is git
-               window.open('gis.html', '_self');
+               window.open('~/gis.html', '_self');
                $('.container').append("<br>");
             } else if (value == '3') {
-               window.open('three.html', '_self');
+               window.open('~/three.html', '_self');
                $('.container').append("<br>");
             } else if (value == 't') {
-               window.open('twine.html', '_self');
+               window.open('~/twine.html', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
