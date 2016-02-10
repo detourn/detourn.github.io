@@ -102,16 +102,16 @@ $(document).ready(function() {
                window.open('https://ni-sui.tumblr.com', '_blank');
                $('.container').append("<br>");
             } else if (value == 'clever') { // If input value is git
-               window.open('0/clever.html', '_self');
+               window.open('clever/', '_self');
                $('.container').append("<br>");
             } else if (value == 'gis') { // If input value is git
-               window.open('0/gis.html', '_self');
+               window.open('gis/', '_self');
                $('.container').append("<br>");
             } else if (value == '3') {
-               window.open('0/three.html', '_self');
+               window.open('three/', '_self');
                $('.container').append("<br>");
             } else if (value == 't') {
-               window.open('0/twine.html', '_self');
+               window.open('twine/', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong
                $('.container').append(errorLine);
