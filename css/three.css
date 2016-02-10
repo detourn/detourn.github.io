@@ -103,18 +103,35 @@ label:before {
     top: 0; right: 0; left: 0; margin: auto;
     z-index: 10000;
 }
-
-#tied, #smash, #octree {
+#octree {
+  top: 0; left: -4%; margin: auto;
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-#tied iframe, #smash iframe, #octree iframe {
+#octree #text p {
+  opacity: 0.7;
+  text-align: justify;
+  position: absolute;
+  top: 7%; right: 0; left: 10%; margin: auto;
+  color: #ccc;
+  font-size: 0.6em;
+  width: 289px;
+  height: 29px;
+  overflow: scroll;
+}
+#tied, #smash {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#tied iframe, #smash iframe {
   margin-bottom: -4%;
 }
 
-#tied #text p, #smash #text p, #octree #text p {
+#tied #text p, #smash #text p {
   opacity: 0.7;
   text-align: justify;
   position: absolute;
