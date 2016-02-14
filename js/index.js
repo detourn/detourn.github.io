@@ -28,7 +28,6 @@ $(document).ready(function() {
            var errorLine = $("<p class=\"glitch\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
            var help = document.getElementById("cmd").innerHTML;
-           var id = $.trim($(this).val().toLowerCase());
 
 
            var map = $("<div class=\"map\"></div>");
