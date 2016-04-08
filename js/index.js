@@ -10,6 +10,8 @@ $(document).ready(function() {
 
       // Hide <divs> by default
       $('#cmd').hide();
+      $('#txt').hide();
+      $('#pages').hide();
       $('#about').hide();
 
 
@@ -28,15 +30,19 @@ $(document).ready(function() {
            var errorLine = $("<p class=\"glitch\">&#62;&nbsp;UNKNOWN COMMAND</p><br>");
            var newLine = $('.inputs').clone(true).val('');
            var help = document.getElementById("cmd").innerHTML;
+           var txt = document.getElementById("txt").innerHTML;
+           var pages = document.getElementById("pages").innerHTML;
 
 
            var map = $("<div class=\"map\"></div>");
            var derive = $("<div class=\"derive\"></div>");
+           var ecto = $("<div class=\"ecto\"></div>");
            var glossary = $("<div class=\"glossary\"></div>");
            var about = $("<div class=\"about\"></div>");
 
            var mOpen = $('<p class=\"glitch\">&#62;&nbsp;[m]ap is already open!</p><br>');
            var dOpen = $('<p class=\"glitch\">&#62;&nbsp;[d]erive is already open!</p><br>');
+           var eOpen = $('<p class=\"glitch\">&#62;&nbsp;[e]ctogenesis is already open!</p><br>');
            var gOpen = $('<p class=\"glitch\">&#62;&nbsp;[g]lossary is already open!</p><br>');
            var aOpen = $('<p class=\"glitch\">&#62;&nbsp;[a]bout is already open!</p><br>');
 
@@ -49,6 +55,11 @@ $(document).ready(function() {
            $.fn.dCmd = function() {
              $('.container').append(derive);
              $(".derive").html(ajax_load).load("commands/derive.asp", ajax_error);
+           };
+
+           $.fn.eCmd = function() {
+             $('.container').append(ecto);
+             $(".ecto").html(ajax_load).load("commands/ecto.asp", ajax_error);
            };
 
            $.fn.gCmd = function() {
@@ -80,36 +91,48 @@ $(document).ready(function() {
             } else if (value == 'd'  && ($('.derive').length)) { // If derive is present
                $(derive).removeClass('derive');
                $('.container').append(dOpen);
+            } else if (value == 'e' && !($('.ecto').length)) { // If input value is ecto
+               $(this).eCmd();
+            } else if (value == 'e'  && ($('.ecto').length)) { // If ecto is present
+               $(ecto).removeClass('ecto');
+               $('.container').append(eOpen);
             } else if (value == 'g' && !($('.glossary').length)) { // If input value is glossary
                $(this).gCmd();
             } else if (value == 'g'  && ($('.glossary').length)) { // If glossary is present
                $(glossary).removeClass('glossary');
                $('.container').append(gOpen);
-            } else if (value == 'a' && !($('.about').length)) { // If input value is derive
+            } else if (value == 'a' && !($('.about').length)) { // If input value is about
                $(this).aCmd();
-            } else if (value == 'a'  && ($('.about').length)) { // If derive is present
+            } else if (value == 'a'  && ($('.about').length)) { // If about is present
                $(about).removeClass('about');
                $('.container').append(aOpen);
             } else if (value == '?') { // If input value is ?
                $('.container').append(help);
+            } else if (value == 't') { // If input value is txt
+               $('.container').append(txt);
+            } else if (value == 'p') { // If input value is txt
+               $('.container').append(pages);
             } else if (value == 'clear') { // If input value is clear
                $('.container').empty();
             } else if (value == 'git') { // If input value is git
                window.open('https://github.com/unilogue', '_blank');
                $('.container').append("<br>");
-            } else if (value == 'b') { // If input value is git
+            } else if (value == 'b') { // If input value is b
                window.open('https://ni-sui.tumblr.com', '_blank');
                $('.container').append("<br>");
-            } else if (value == 'clever') { // If input value is git
+            } else if (value == 'l') { // If input value is lost
+               window.open('http://rdebath.github.io/LostKingdom/', '_blank');
+               $('.container').append("<br>");
+            } else if (value == 'clever') { // If input value is clever
                window.open('clever.html', '_self');
                $('.container').append("<br>");
-            } else if (value == 'gis') { // If input value is git
+            } else if (value == 'gis') { // If input value is gis
                window.open('gis.html', '_self');
                $('.container').append("<br>");
             } else if (value == '3') {
                window.open('three.html', '_self');
                $('.container').append("<br>");
-            } else if (value == 't') {
+            } else if (value == 'twine') {
                window.open('twine.html', '_self');
                $('.container').append("<br>");
             } else if (value != '') { // If input value is wrong

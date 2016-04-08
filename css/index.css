@@ -100,7 +100,7 @@ body a:hover {
   font-size: smaller;
 }
 
-.map, .derive {
+.map, .derive, .ecto {
   font-size: 24px;
   font-weight:200;
   line-height: 1.52;
